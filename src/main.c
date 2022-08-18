@@ -22,7 +22,7 @@ int main(void)
     
     while (!server_quit)
     {
-        server_receive();
+        server_recv();
         parse_request(client_message);
     }
 

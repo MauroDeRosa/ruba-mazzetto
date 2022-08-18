@@ -125,30 +125,26 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> game_init_3players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> game_init_4players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> game_state_start();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> game_state_serve();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> game_state_cycle();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> game_update();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> game_throw_on_table(<span class="keywordtype">size_t</span> hand_index);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> game_pick_from_table(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> table_index);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> game_pick_from_opponent(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> opponent_index);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_struct" href="structgame__data.html">game_data</a>* get_game_data();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> game_saves_init();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> game_save();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> game_load(<span class="keywordtype">size_t</span> save_index, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_list(<span class="keywordtype">size_t</span> *list_size);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_by_id(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">char</span> *game_data_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *gd);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">char</span> *game_save_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *save, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">char</span> *game_save_list_json();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">/* __GAME_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> game_update();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> game_throw_on_table(<span class="keywordtype">size_t</span> hand_index);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> game_pick_from_table(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> table_index);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> game_pick_from_opponent(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> opponent_index);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_struct" href="structgame__data.html">game_data</a>* get_game_data();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> game_saves_init();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> game_save();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> game_load(<span class="keywordtype">size_t</span> save_index, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_list(<span class="keywordtype">size_t</span> *list_size);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_by_id(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">char</span> *game_data_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *gd);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">char</span> *game_save_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *save, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">char</span> *game_save_list_json();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* __GAME_H__ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="acards_8h_html"><div class="ttname"><a href="cards_8h.html">cards.h</a></div><div class="ttdoc">cards and deck data structures and functions</div></div>
 <div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div><div class="ttdoc">player data structure and functions</div></div>
 <div class="ttc" id="astructdeck_html"><div class="ttname"><a href="structdeck.html">deck</a></div><div class="ttdoc">deck data structure</div><div class="ttdef"><b>Definition:</b> cards.h:43</div></div>

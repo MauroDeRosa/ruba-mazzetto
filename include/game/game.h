@@ -36,10 +36,6 @@ void game_init_2players(userid user1, userid user2);
 void game_init_3players(userid user1, userid user2, userid user3);
 void game_init_4players(userid user1, userid user2, userid user3, userid user4);
 
-void game_state_start();
-void game_state_serve();
-void game_state_cycle();
-
 void game_update();
 void game_throw_on_table(size_t hand_index);
 void game_pick_from_table(size_t hand_index, size_t table_index);

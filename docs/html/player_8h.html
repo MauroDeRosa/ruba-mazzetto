@@ -118,9 +118,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae909c1b4a843e6d75c13f5540057e14b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ae909c1b4a843e6d75c13f5540057e14b">hand_is_empty</a> (<a class="el" href="structplayer.html">player</a> *p)</td></tr>
-<tr class="memdesc:ae909c1b4a843e6d75c13f5540057e14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the hand is empty  <a href="player_8h.html#ae909c1b4a843e6d75c13f5540057e14b">More...</a><br /></td></tr>
-<tr class="separator:ae909c1b4a843e6d75c13f5540057e14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824fd647b9570ae2a1c4a90d27fae65b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a824fd647b9570ae2a1c4a90d27fae65b">is_hand_empty</a> (<a class="el" href="structplayer.html">player</a> *p)</td></tr>
+<tr class="memdesc:a824fd647b9570ae2a1c4a90d27fae65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the hand is empty  <a href="player_8h.html#a824fd647b9570ae2a1c4a90d27fae65b">More...</a><br /></td></tr>
+<tr class="separator:a824fd647b9570ae2a1c4a90d27fae65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60fe7995dda1e2a428a61a51d9c8f62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcard.html">card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a60fe7995dda1e2a428a61a51d9c8f62b">hand_at</a> (<a class="el" href="structplayer.html">player</a> *p, size_t index)</td></tr>
 <tr class="memdesc:a60fe7995dda1e2a428a61a51d9c8f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get te card from the hand at the given index  <a href="player_8h.html#a60fe7995dda1e2a428a61a51d9c8f62b">More...</a><br /></td></tr>
 <tr class="separator:a60fe7995dda1e2a428a61a51d9c8f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,35 +181,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae909c1b4a843e6d75c13f5540057e14b" name="ae909c1b4a843e6d75c13f5540057e14b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae909c1b4a843e6d75c13f5540057e14b">&#9670;&nbsp;</a></span>hand_is_empty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool hand_is_empty </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structplayer.html">player</a> *&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>check if the hand is empty </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p</td><td>the player </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true empty </dd>
-<dd>
-false contains cards </dd></dl>
-
-</div>
-</div>
 <a id="ab7f4ddcada1ba49e59c9b811ed3b969f" name="ab7f4ddcada1ba49e59c9b811ed3b969f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7f4ddcada1ba49e59c9b811ed3b969f">&#9670;&nbsp;</a></span>hand_throw()</h2>
 
@@ -245,6 +216,35 @@ false contains cards </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>card </dd></dl>
+
+</div>
+</div>
+<a id="a824fd647b9570ae2a1c4a90d27fae65b" name="a824fd647b9570ae2a1c4a90d27fae65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824fd647b9570ae2a1c4a90d27fae65b">&#9670;&nbsp;</a></span>is_hand_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_hand_empty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structplayer.html">player</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check if the hand is empty </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>the player </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true empty </dd>
+<dd>
+false contains cards </dd></dl>
 
 </div>
 </div>

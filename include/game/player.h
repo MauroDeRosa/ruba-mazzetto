@@ -50,7 +50,7 @@ typedef struct
  * @return true empty
  * @return false contains cards
  */
-bool hand_is_empty(player *p);
+bool is_hand_empty(player *p);
 
 /**
  * @brief get te card from the hand at the given index

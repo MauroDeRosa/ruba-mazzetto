@@ -49,7 +49,7 @@ void array_delete(size_t index, void* array, size_t *array_size, size_t data_siz
  * @param data_size byte size of array elements
  * @return size_t 
  */
-size_t array_index_from_ptr(void* array, void* element, size_t data_size);
+size_t array_index_from_pointer(void* array, void* element, size_t data_size);
 
 /**
  * @brief shuffle elements of the array (destructive) use srand() somewhere in the program to set the seed 

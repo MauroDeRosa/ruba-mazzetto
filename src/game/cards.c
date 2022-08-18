@@ -53,14 +53,14 @@ const card cards[DECK_SIZE] = {
 
 const char cards_representation[DECK_SIZE][3] = {"D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "DK", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "SK", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BK", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "CK"};
 
-bool card_is_valid(card c)
+bool is_card_valid(card c)
 {
     return (c.suit >= CARD_SUIT_DENARI && c.suit <= CARD_SUIT_COPPE) && (c.value >= 1 && c.value <= 10);
 }
 
-bool card_equal_by_value(card a, card b)
+bool is_card_equal(card a, card b)
 {
-    if (card_is_valid(a) == false || card_is_valid(b) == false)
+    if (is_card_valid(a) == false || is_card_valid(b) == false)
     {
         log_error("one of the cards is invalid");
     }
@@ -70,7 +70,7 @@ bool card_equal_by_value(card a, card b)
 
 const char *card_string(card c)
 {
-    if (card_is_valid(c))
+    if (is_card_valid(c))
     {
         return cards_representation[(c.suit - 1) * CARDS_FOR_SUIT + (c.value - 1)];
     }
@@ -80,7 +80,7 @@ const char *card_string(card c)
     }
 }
 
-bool deck_is_empty(deck *d)
+bool is_deck_empty(deck *d)
 {
     check_null_pointer(d);
     return d->length < 1;
@@ -102,7 +102,7 @@ void deck_init_full(deck *d)
 void deck_shuffle(deck *d)
 {
     check_null_pointer(d);
-    if (deck_is_empty(d) == false)
+    if (is_deck_empty(d) == false)
     {
         array_shuffle(d->cards, d->length, sizeof(card));
     }
@@ -160,7 +160,7 @@ void deck_append_card(deck *destination, card c)
 {
     check_null_pointer(destination);
 
-    if (card_is_valid(c) == false)
+    if (is_card_valid(c) == false)
     {
         log_error("invalid card");
     }
@@ -178,7 +178,7 @@ void deck_append(deck *destination, deck *source)
         log_error("sum of the two decks must be less or equal to 40");
     }
 
-    if (deck_is_empty(source))
+    if (is_deck_empty(source))
     {
         log_warning("nothing to add to destination deck");
     }

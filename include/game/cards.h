@@ -52,7 +52,7 @@ typedef struct {
  * @return true valid
  * @return false invalid
  */
-bool card_is_valid(card c);
+bool is_card_valid(card c);
 
 /**
  * @brief compare two cards by value
@@ -62,7 +62,7 @@ bool card_is_valid(card c);
  * @return true the two cards have same value
  * @return false the two cards have different value
  */
-bool card_equal_by_value(card a, card b);
+bool is_card_equal(card a, card b);
 
 /**
  * @brief string representation of a card
@@ -78,7 +78,7 @@ const char *card_string(card c);
  * @return true empty
  * @return false at least one card
  */
-bool deck_is_empty(deck *d);
+bool is_deck_empty(deck *d);
 
 /**
  * @brief initialize an empty deck

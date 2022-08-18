@@ -9,7 +9,7 @@ typedef struct tm datetime;
 
 datetime datetime_now();
 datetime datetime_time(unsigned int hours, unsigned int minutes, unsigned int seconds);
-datetime datetime_datetime(unsigned int year, unsigned int month, unsigned int day, unsigned int hours, unsigned int minutes, unsigned int seconds);
+datetime datetime_new(unsigned int year, unsigned int month, unsigned int day, unsigned int hours, unsigned int minutes, unsigned int seconds);
 void datetime_string(datetime dt, char string[DATETIME_STR_SIZE]);
 void datetime_date_string(datetime dt, char string[DATETIME_STR_SIZE]);
 void datetime_time_string(datetime dt, char string[DATETIME_STR_SIZE]);

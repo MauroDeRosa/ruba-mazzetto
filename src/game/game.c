@@ -1,4 +1,3 @@
-#include <io/common-io.h>
 #include <io/log.h>
 #include <game/game.h>
 #include <game/user.h>
@@ -72,20 +71,20 @@ void __game_init(userid user1, userid user2, userid user3, userid user4, size_t 
     game.players_count = count;
 
     game.players[0].id = user1;
-    strcpy(game.players[0].username, user_get_by_userid(user1)->username);
+    strcpy(game.players[0].username, get_user(user1)->username);
     game.players[1].id = user2;
-    strcpy(game.players[1].username, user_get_by_userid(user2)->username);
+    strcpy(game.players[1].username, get_user(user2)->username);
 
     if (count >= 3)
     {
         game.players[2].id = user3;
-        strcpy(game.players[2].username, user_get_by_userid(user3)->username);
+        strcpy(game.players[2].username, get_user(user3)->username);
     }
 
     if (count == 4)
     {
         game.players[3].id = user4;
-        strcpy(game.players[3].username, user_get_by_userid(user4)->username);
+        strcpy(game.players[3].username, get_user(user4)->username);
     }
 
     game.timestamp = datetime_now();
@@ -138,7 +137,7 @@ void game_state_serve()
 
 void game_state_cycle()
 {
-    if (hand_is_empty(current_player()) == false)
+    if (is_hand_empty(current_player()) == false)
     {
         game.state = GAME_WAITING;
         log_info("game waiting");
@@ -244,7 +243,7 @@ void game_pick_from_table(size_t hand_index, size_t table_index)
         return;
     }
 
-    if (card_equal_by_value(hand_at(p, hand_index), deck_at(&game.table, table_index)))
+    if (is_card_equal(hand_at(p, hand_index), deck_at(&game.table, table_index)))
     {
         card table_card = deck_pop_index(&game.table, table_index);
         card player_card = hand_throw(p, hand_index);
@@ -265,7 +264,7 @@ void game_pick_from_opponent(size_t hand_index, size_t opponent_index)
         return;
     }
 
-    if (card_equal_by_value(hand_at(p, hand_index), deck_top(&game.players[opponent_index].deck)))
+    if (is_card_equal(hand_at(p, hand_index), deck_top(&game.players[opponent_index].deck)))
     {
         p->steals++;
         deck_append(&p->deck, &game.players[opponent_index].deck);
@@ -292,8 +291,8 @@ player *current_player()
 
 void check_user_validity(userid id)
 {
-    if (user_is_valid(id) == false ||
-        user_is_logged(id) == false)
+    if (is_user_valid(id) == false ||
+        is_user_logged(id) == false)
     {
         log_error("invalid user");
     }

@@ -20,7 +20,7 @@ datetime datetime_time(unsigned int hours, unsigned int minutes, unsigned int se
     return dt;
 }
 
-datetime datetime_datetime(unsigned int year, unsigned int month, unsigned int day, unsigned int hours, unsigned int minutes, unsigned int seconds)
+datetime datetime_new(unsigned int year, unsigned int month, unsigned int day, unsigned int hours, unsigned int minutes, unsigned int seconds)
 {
     datetime dt = {0};
     dt.tm_year = year - 1900;

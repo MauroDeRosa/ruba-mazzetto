@@ -79,7 +79,7 @@ void response_history(userid id, history_entry *entries, size_t entries_len, siz
     char *history_str;
     size_t from = (page - 1) * 15;
     size_t to = from + 15 > entries_len ? entries_len : from + 15;
-    user *u = user_get_by_userid(id);
+    user *u = get_user(id);
 
     if (u != NULL)
     {

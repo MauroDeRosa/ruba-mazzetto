@@ -57,7 +57,7 @@ void array_delete(size_t index, void *array, size_t *array_size, size_t data_siz
     (*array_size)--;
 }
 
-size_t array_index_from_ptr(void *array, void *element, size_t data_size)
+size_t array_index_from_pointer(void *array, void *element, size_t data_size)
 {
     check_null_pointer(array);
     check_null_pointer(element);

@@ -9,7 +9,7 @@
 extern bool server_quit;
 extern char server_message[SRV_BUFF_SIZE], client_message[SRV_BUFF_SIZE];
 
-void server_receive();
+void server_recv();
 void server_send(const char *message);
 void server_init();
 void server_close();

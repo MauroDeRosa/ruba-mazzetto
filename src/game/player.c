@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 
-bool hand_is_empty(player *p)
+bool is_hand_empty(player *p)
 {
     check_null_pointer(p);
     return p->hand.length == 0;

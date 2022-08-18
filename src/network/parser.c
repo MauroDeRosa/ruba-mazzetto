@@ -16,6 +16,11 @@ char *tokens[1024];
 size_t tokens_count;
 size_t current_token;
 
+void parse_request_user();
+void parse_request_game();
+void parse_request_history();
+void parse_request_statistics();
+
 void tokenize_request(char *message)
 {
     check_null_pointer(message);
@@ -103,7 +108,7 @@ void parse_request_user()
         }
         else
         {
-            user *u = user_get_by_userid(id);
+            user *u = get_user(id);
             update_statistics_for(id);
             response_user(u);
         }
@@ -120,7 +125,7 @@ void parse_request_user()
         }
         else
         {
-            user *u = user_get_by_userid(id);
+            user *u = get_user(id);
             response_user(u);
         }
     }
@@ -136,7 +141,7 @@ void parse_request_user()
         }
         else
         {
-            user *u = user_get_by_userid(id);
+            user *u = get_user(id);
             response_user(u);
         }
     }
@@ -153,7 +158,7 @@ void parse_request_user()
         sscanf(token_next(), "%zu", &id);
         user_delete(id);
 
-        if (is_userid_in_table(id))
+        if (user_exists(id))
         {
             response_failed_message("user doesn't exist");
         }
@@ -167,13 +172,13 @@ void parse_request_user()
         userid id;
         sscanf(token_next(), "%zu", &id);
 
-        if (is_userid_in_table(id) == false)
+        if (user_exists(id) == false)
         {
             response_failed_message("user with the given id is not in table");
         }
         else
         {
-            user *u = user_get_by_userid(id);
+            user *u = get_user(id);
             response_user(u);
         }
     }

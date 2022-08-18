@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['is_5fuserid_5fin_5ftable_0',['is_userid_in_table',['../user_8h.html#a203644896de9b3f9d7a00bc154be590e',1,'user.c']]]
+  ['hand_5fat_0',['hand_at',['../player_8h.html#a60fe7995dda1e2a428a61a51d9c8f62b',1,'player.c']]],
+  ['hand_5fthrow_1',['hand_throw',['../player_8h.html#ab7f4ddcada1ba49e59c9b811ed3b969f',1,'player.c']]]
 ];

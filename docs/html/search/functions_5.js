@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['hand_5fat_0',['hand_at',['../player_8h.html#a60fe7995dda1e2a428a61a51d9c8f62b',1,'player.c']]],
-  ['hand_5fis_5fempty_1',['hand_is_empty',['../player_8h.html#ae909c1b4a843e6d75c13f5540057e14b',1,'player.c']]],
-  ['hand_5fthrow_2',['hand_throw',['../player_8h.html#ab7f4ddcada1ba49e59c9b811ed3b969f',1,'player.c']]]
+  ['get_5fuser_0',['get_user',['../user_8h.html#aeb5775256bbddb4a07257aeec43a5409',1,'user.c']]],
+  ['get_5fuser_5fby_5fusername_1',['get_user_by_username',['../user_8h.html#a3dc956fe95a2e713ea832c949a46a360',1,'user.c']]]
 ];

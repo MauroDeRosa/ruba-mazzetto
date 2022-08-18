@@ -291,9 +291,9 @@ char *statistics_entry_json(statistics_entry *entry)
     char *json_3players = statistics_data_json(&entry->players[1]);
     char *json_4players = statistics_data_json(&entry->players[2]);
 
-    if (is_userid_in_table(entry->id))
+    if (user_exists(entry->id))
     {
-        strcpy(username, user_get_by_userid(entry->id)->username);
+        strcpy(username, get_user(entry->id)->username);
     }
 
     sprintf(json,
@@ -322,9 +322,9 @@ char *leaderboard_json(leaderboard_entry *leaderboard, size_t leaderboard_size)
 
     for (size_t i = 0; i < leaderboard_size; i++)
     {
-        if (is_userid_in_table(leaderboard[i].id))
+        if (user_exists(leaderboard[i].id))
         {
-            strcpy(username, user_get_by_userid(leaderboard[i].id)->username);
+            strcpy(username, get_user(leaderboard[i].id)->username);
         }
 
         char *data = statistics_data_json(&leaderboard[i].data);

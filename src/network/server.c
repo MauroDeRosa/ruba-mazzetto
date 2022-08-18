@@ -19,7 +19,7 @@ socklen client_size;
 struct sockaddr_in server_addr, client_addr;
 char server_message[SRV_BUFF_SIZE], client_message[SRV_BUFF_SIZE];
 
-void server_receive()
+void server_recv()
 {
     memset(client_message, 0, SRV_BUFF_SIZE);
     if (recv(client_sock, client_message, SRV_BUFF_SIZE, 0) < 0)

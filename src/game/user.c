@@ -31,19 +31,19 @@ int compare_userid(const void *a, const void *b)
     return *au - *bu;
 }
 
-bool user_is_logged(userid id)
+bool is_user_logged(userid id)
 {
     userid *found = binary_search(&id, logged_table, logged_count, sizeof(userid), compare_userid);
     return found != NULL;
 }
 
-bool user_is_valid(userid id)
+bool is_user_valid(userid id)
 {
     if (id == USERID_INVALID)
     {
         return false;
     }
-    else if (is_userid_in_table(id) == false)
+    else if (user_exists(id) == false)
     {
         return false;
     }
@@ -60,9 +60,9 @@ int compare_by_username(const void *a, const void *b)
     return strcmp(ua->username, ub->username);
 }
 
-user *user_get_by_username(const char *username)
+user *get_user_by_username(const char *username)
 {
-    if (username_is_valid(username) == false)
+    if (is_username_valid(username) == false)
     {
         log_error("invalid username");
     }
@@ -82,23 +82,23 @@ int compare_by_id(const void *a, const void *b)
     return (int)(ua->id) - (int)(ub->id);
 }
 
-user *user_get_by_userid(userid id)
+user *get_user(userid id)
 {
     user value = (user){.id = id};
     return binary_search(&value, users->elements, users->count, sizeof(user), compare_by_id);
 }
 
-bool is_userid_in_table(userid id)
+bool user_exists(userid id)
 {
-    return user_get_by_userid(id) != NULL;
+    return get_user(id) != NULL;
 }
 
-bool user_username_in_table(const char *username)
+bool username_exists(const char *username)
 {
-    return user_get_by_username(username) != NULL;
+    return get_user_by_username(username) != NULL;
 }
 
-bool username_is_valid(const char *username)
+bool is_username_valid(const char *username)
 {
     size_t username_len = strlen(username);
 
@@ -118,7 +118,7 @@ bool username_is_valid(const char *username)
     return true;
 }
 
-bool password_is_valid(const char *password)
+bool is_password_valid(const char *password)
 {
     size_t password_len = strlen(password);
 
@@ -138,7 +138,7 @@ bool password_is_valid(const char *password)
     return true;
 }
 
-size_t users_get_count()
+size_t users_count()
 {
     return users->count;
 }
@@ -151,19 +151,19 @@ userid user_register(const char *username, const char *password)
         return USERID_INVALID;
     }
 
-    if (username_is_valid(username) == false)
+    if (is_username_valid(username) == false)
     {
         log_warning("invalid username");
         return USERID_INVALID;
     }
 
-    if (password_is_valid(password) == false)
+    if (is_password_valid(password) == false)
     {
         log_warning("invalid password");
         return USERID_INVALID;
     }
 
-    if (user_username_in_table(username))
+    if (username_exists(username))
     {
         log_warning("user %s already exist", username);
         return USERID_INVALID;
@@ -184,13 +184,13 @@ userid user_register(const char *username, const char *password)
 
 userid user_update(userid id, const char *password)
 {
-    if (password_is_valid(password) == false)
+    if (is_password_valid(password) == false)
     {
         log_warning("invalid password");
         return USERID_INVALID;
     }
 
-    user *u = user_get_by_userid(id);
+    user *u = get_user(id);
 
     if (u == NULL)
     {
@@ -208,26 +208,26 @@ userid user_update(userid id, const char *password)
 
 userid user_login(const char *username, const char *password)
 {
-    if (username_is_valid(username) == false)
+    if (is_username_valid(username) == false)
     {
         log_warning("invalid username");
         return USERID_INVALID;
     }
 
-    if (password_is_valid(password) == false)
+    if (is_password_valid(password) == false)
     {
         log_warning("invalid password");
         return USERID_INVALID;
     }
 
-    user *u = user_get_by_username(username);
+    user *u = get_user_by_username(username);
 
     if (u == NULL)
     {
         log_warning("user %s doesn't exist", username);
         return USERID_INVALID;
     }
-    else if (user_is_logged(u->id))
+    else if (is_user_logged(u->id))
     {
         log_warning("user %s is already logged in", u->username, u->id);
         return USERID_INVALID;
@@ -250,21 +250,21 @@ void user_logout(userid id)
     userid *found = binary_search(&id, logged_table, logged_count, sizeof(userid), compare_userid);
     if (found != NULL)
     {
-        size_t index = array_index_from_ptr(logged_table, found, sizeof(userid));
+        size_t index = array_index_from_pointer(logged_table, found, sizeof(userid));
         array_delete(index, logged_table, &logged_count, sizeof(userid));
     }
 }
 
 void user_delete(userid id)
 {
-    user *u = user_get_by_userid(id);
+    user *u = get_user(id);
 
     if (u == NULL)
     {
         log_error("user with id %zu doesn't exist", id);
     }
 
-    size_t index = array_index_from_ptr(users->elements, u, sizeof(user));
+    size_t index = array_index_from_pointer(users->elements, u, sizeof(user));
     VEC_DELETE(users, index);
     users_save();
 }
