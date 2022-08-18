@@ -1,4 +1,4 @@
 # RUBA MAZZETTO BACKEND
 
 ## External libraries
-- [json](https://github.com/rpz80/json) - [Alexander Kulikov](https://github.com/rpz80/) - MIT License
+- pywebview ([install dependencies](https://pygobject.readthedocs.io/en/latest/getting_started.html))
