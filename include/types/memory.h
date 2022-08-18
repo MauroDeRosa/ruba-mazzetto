@@ -2,6 +2,12 @@
 #define __MEMORY_H__
 
 #define check_null_pointer(pointer) __check_null_pointer(pointer, __FILE__, __FUNCTION__, __LINE__)
+#define memory_allocate(heap_size) __memory_allocate(heap_size, __FILE__, __FUNCTION__, __LINE__)
+#define memory_allocate_typed(n, data_size) __memory_allocate_typed(n, data_size, __FILE__, __FUNCTION__, __LINE__)
+#define memory_resize(pointer, heap_size) __memory_resize(pointer, heap_size, __FILE__, __FUNCTION__, __LINE__)
+#define memory_resize_typed(pointer, n, data_size) __memory_resize_typed(pointer, n, data_size, __FILE__, __FUNCTION__, __LINE__)
+#define memory_allocate_zero(n, data_size) __memory_allocate_zero(n, data_size, __FILE__, __FUNCTION__, __LINE__)
+
 
 /**
  * @file memory.h
@@ -31,7 +37,7 @@ void memory_swap(void *a, void *b, size_t data_size);
  * @param heap_size how many bites to allocate
  * @return void* pointer to the allocated memory
  */
-void* memory_allocate(size_t heap_size);
+void* __memory_allocate(size_t heap_size, const char *file, const char* function, size_t line);
 
 /**
  * @brief allocate heap memory and check for allocation errors
@@ -40,7 +46,7 @@ void* memory_allocate(size_t heap_size);
  * @param data_size size of sections
  * @return void* pointer to the allocated memory
  */
-void* memory_allocate_typed(size_t n, size_t data_size);
+void* __memory_allocate_typed(size_t n, size_t data_size, const char *file, const char* function, size_t line);
 
 /**
  * @brief resize allocated memory and check for reallocation errors
@@ -49,7 +55,7 @@ void* memory_allocate_typed(size_t n, size_t data_size);
  * @param heap_size how many bytes will the memory area become
  * @return void* pointer to the resized memory
  */
-void* memory_resize(void* base_pointer, size_t heap_size);
+void* __memory_resize(void* base_pointer, size_t heap_size, const char *file, const char* function, size_t line);
 
 /**
  * @brief resize allocated memory and check for reallocation errors
@@ -59,7 +65,17 @@ void* memory_resize(void* base_pointer, size_t heap_size);
  * @param data_size size of sections
  * @return void* pointer to the resized memory
  */
-void* memory_resize_typed(void* base_pointer, size_t n, size_t data_size);
+void* __memory_resize_typed(void* base_pointer, size_t n, size_t data_size, const char *file, const char* function, size_t line);
+
+
+/**
+ * @brief allocate heap memory setted to zero and check for allocation errors
+ * 
+ * @param n number of sections of the resized area
+ * @param data_size size of sections
+ * @return void* pointer to the allocated memory
+ */
+void* __memory_allocate_zero(size_t n, size_t data_size, const char *file, const char* function, size_t line);
 
 /**
  * @brief check for null pointer and throws error if necessary

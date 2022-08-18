@@ -45,7 +45,7 @@ char *player_json(player *p)
     check_null_pointer(p);
 
     char *hand_str = player_hand_json(&p->hand);
-    char *player_json = calloc(500, sizeof(char));
+    char *player_json = memory_allocate_zero(500, sizeof(char));
     sprintf(player_json, "{"
                          "\"id\":%zu,"
                          "\"username\":\"%s\","
@@ -66,7 +66,7 @@ char *player_json(player *p)
 char *player_hand_json(player_hand *ph)
 {
     check_null_pointer(ph);
-    char *json = calloc(25, sizeof(char)), tmp_card[10] = {0};
+    char *json = memory_allocate_zero(25, sizeof(char)), tmp_card[10] = {0};
 
     strcat(json, "[");
 

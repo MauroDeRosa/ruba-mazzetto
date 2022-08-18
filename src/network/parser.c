@@ -364,6 +364,7 @@ void parse_request_statistics()
         if (leaderboard != NULL)
         {
             response_leaderboard(leaderboard, leaderboard_size);
+            free(leaderboard);
         }
         else
         {

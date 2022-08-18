@@ -195,7 +195,7 @@ void deck_append(deck *destination, deck *source)
 char *deck_json(deck *d)
 {
     check_null_pointer(d);
-    char *json = calloc(250, sizeof(char)), tmp_card[10] = {0};
+    char *json = memory_allocate_zero(250, sizeof(char)), tmp_card[10] = {0};
 
     strcat(json, "[");
 

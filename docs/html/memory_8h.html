@@ -102,24 +102,42 @@ Macros</h2></td></tr>
 <tr class="memitem:ac0c902ea18e4ce9db346cb6a234bb299"><td class="memItemLeft" align="right" valign="top"><a id="ac0c902ea18e4ce9db346cb6a234bb299" name="ac0c902ea18e4ce9db346cb6a234bb299"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>check_null_pointer</b>(pointer)&#160;&#160;&#160;<a class="el" href="memory_8h.html#a80df105e7aa3383bb2f4da8f818335a6">__check_null_pointer</a>(pointer, __FILE__, __FUNCTION__, __LINE__)</td></tr>
 <tr class="separator:ac0c902ea18e4ce9db346cb6a234bb299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9ee68471fc001f8ef7a10666a0c8d8"><td class="memItemLeft" align="right" valign="top"><a id="a7d9ee68471fc001f8ef7a10666a0c8d8" name="a7d9ee68471fc001f8ef7a10666a0c8d8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>memory_allocate</b>(heap_size)&#160;&#160;&#160;<a class="el" href="memory_8h.html#aa67a4d584622cc77887701922266a413">__memory_allocate</a>(heap_size, __FILE__, __FUNCTION__, __LINE__)</td></tr>
+<tr class="separator:a7d9ee68471fc001f8ef7a10666a0c8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55f646c1a7f1633e7409e98a0d55f0f"><td class="memItemLeft" align="right" valign="top"><a id="ab55f646c1a7f1633e7409e98a0d55f0f" name="ab55f646c1a7f1633e7409e98a0d55f0f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>memory_allocate_typed</b>(n,  data_size)&#160;&#160;&#160;<a class="el" href="memory_8h.html#a2cf2717eebd023996d07f71abebfeec2">__memory_allocate_typed</a>(n, data_size, __FILE__, __FUNCTION__, __LINE__)</td></tr>
+<tr class="separator:ab55f646c1a7f1633e7409e98a0d55f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c422d0adbb16253e9d46b737b98c35"><td class="memItemLeft" align="right" valign="top"><a id="a93c422d0adbb16253e9d46b737b98c35" name="a93c422d0adbb16253e9d46b737b98c35"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>memory_resize</b>(pointer,  heap_size)&#160;&#160;&#160;<a class="el" href="memory_8h.html#a7f69c1bc4ff729a2b4f70b9f7027926e">__memory_resize</a>(pointer, heap_size, __FILE__, __FUNCTION__, __LINE__)</td></tr>
+<tr class="separator:a93c422d0adbb16253e9d46b737b98c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3bc6c693767a8ef8ef927a3aafa31c"><td class="memItemLeft" align="right" valign="top"><a id="a1f3bc6c693767a8ef8ef927a3aafa31c" name="a1f3bc6c693767a8ef8ef927a3aafa31c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>memory_resize_typed</b>(pointer,  n,  data_size)&#160;&#160;&#160;<a class="el" href="memory_8h.html#af1acf82d54622ecf71f2e390c6efc4f0">__memory_resize_typed</a>(pointer, n, data_size, __FILE__, __FUNCTION__, __LINE__)</td></tr>
+<tr class="separator:a1f3bc6c693767a8ef8ef927a3aafa31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218194f282c8ca355f9d2f63878d1190"><td class="memItemLeft" align="right" valign="top"><a id="a218194f282c8ca355f9d2f63878d1190" name="a218194f282c8ca355f9d2f63878d1190"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>memory_allocate_zero</b>(n,  data_size)&#160;&#160;&#160;<a class="el" href="memory_8h.html#a5990ad1f35bc0f7881ea535902c258c2">__memory_allocate_zero</a>(n, data_size, __FILE__, __FUNCTION__, __LINE__)</td></tr>
+<tr class="separator:a218194f282c8ca355f9d2f63878d1190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a88f37192c8d06d928c4d0e260f41a0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a88f37192c8d06d928c4d0e260f41a0cd">memory_swap</a> (void *a, void *b, size_t data_size)</td></tr>
 <tr class="memdesc:a88f37192c8d06d928c4d0e260f41a0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap memory sections  <a href="memory_8h.html#a88f37192c8d06d928c4d0e260f41a0cd">More...</a><br /></td></tr>
 <tr class="separator:a88f37192c8d06d928c4d0e260f41a0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639f371493f0c14a6ad4aeb962107e73"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a639f371493f0c14a6ad4aeb962107e73">memory_allocate</a> (size_t heap_size)</td></tr>
-<tr class="memdesc:a639f371493f0c14a6ad4aeb962107e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate heap memory and check for allocation errors  <a href="memory_8h.html#a639f371493f0c14a6ad4aeb962107e73">More...</a><br /></td></tr>
-<tr class="separator:a639f371493f0c14a6ad4aeb962107e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab50778ae234815b6688a4cdda1cbc0e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#aab50778ae234815b6688a4cdda1cbc0e">memory_allocate_typed</a> (size_t n, size_t data_size)</td></tr>
-<tr class="memdesc:aab50778ae234815b6688a4cdda1cbc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate heap memory and check for allocation errors  <a href="memory_8h.html#aab50778ae234815b6688a4cdda1cbc0e">More...</a><br /></td></tr>
-<tr class="separator:aab50778ae234815b6688a4cdda1cbc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e7e160700b55e2735e9c05bcb08d5c3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a5e7e160700b55e2735e9c05bcb08d5c3">memory_resize</a> (void *base_pointer, size_t heap_size)</td></tr>
-<tr class="memdesc:a5e7e160700b55e2735e9c05bcb08d5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize allocated memory and check for reallocation errors  <a href="memory_8h.html#a5e7e160700b55e2735e9c05bcb08d5c3">More...</a><br /></td></tr>
-<tr class="separator:a5e7e160700b55e2735e9c05bcb08d5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2689980b61d9dabf82064560e9d1db"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a5e2689980b61d9dabf82064560e9d1db">memory_resize_typed</a> (void *base_pointer, size_t n, size_t data_size)</td></tr>
-<tr class="memdesc:a5e2689980b61d9dabf82064560e9d1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize allocated memory and check for reallocation errors  <a href="memory_8h.html#a5e2689980b61d9dabf82064560e9d1db">More...</a><br /></td></tr>
-<tr class="separator:a5e2689980b61d9dabf82064560e9d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67a4d584622cc77887701922266a413"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#aa67a4d584622cc77887701922266a413">__memory_allocate</a> (size_t heap_size, const char *file, const char *function, size_t line)</td></tr>
+<tr class="memdesc:aa67a4d584622cc77887701922266a413"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate heap memory and check for allocation errors  <a href="memory_8h.html#aa67a4d584622cc77887701922266a413">More...</a><br /></td></tr>
+<tr class="separator:aa67a4d584622cc77887701922266a413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf2717eebd023996d07f71abebfeec2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a2cf2717eebd023996d07f71abebfeec2">__memory_allocate_typed</a> (size_t n, size_t data_size, const char *file, const char *function, size_t line)</td></tr>
+<tr class="memdesc:a2cf2717eebd023996d07f71abebfeec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate heap memory and check for allocation errors  <a href="memory_8h.html#a2cf2717eebd023996d07f71abebfeec2">More...</a><br /></td></tr>
+<tr class="separator:a2cf2717eebd023996d07f71abebfeec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f69c1bc4ff729a2b4f70b9f7027926e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a7f69c1bc4ff729a2b4f70b9f7027926e">__memory_resize</a> (void *base_pointer, size_t heap_size, const char *file, const char *function, size_t line)</td></tr>
+<tr class="memdesc:a7f69c1bc4ff729a2b4f70b9f7027926e"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize allocated memory and check for reallocation errors  <a href="memory_8h.html#a7f69c1bc4ff729a2b4f70b9f7027926e">More...</a><br /></td></tr>
+<tr class="separator:a7f69c1bc4ff729a2b4f70b9f7027926e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1acf82d54622ecf71f2e390c6efc4f0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#af1acf82d54622ecf71f2e390c6efc4f0">__memory_resize_typed</a> (void *base_pointer, size_t n, size_t data_size, const char *file, const char *function, size_t line)</td></tr>
+<tr class="memdesc:af1acf82d54622ecf71f2e390c6efc4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize allocated memory and check for reallocation errors  <a href="memory_8h.html#af1acf82d54622ecf71f2e390c6efc4f0">More...</a><br /></td></tr>
+<tr class="separator:af1acf82d54622ecf71f2e390c6efc4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5990ad1f35bc0f7881ea535902c258c2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a5990ad1f35bc0f7881ea535902c258c2">__memory_allocate_zero</a> (size_t n, size_t data_size, const char *file, const char *function, size_t line)</td></tr>
+<tr class="memdesc:a5990ad1f35bc0f7881ea535902c258c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate heap memory setted to zero and check for allocation errors  <a href="memory_8h.html#a5990ad1f35bc0f7881ea535902c258c2">More...</a><br /></td></tr>
+<tr class="separator:a5990ad1f35bc0f7881ea535902c258c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80df105e7aa3383bb2f4da8f818335a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a80df105e7aa3383bb2f4da8f818335a6">__check_null_pointer</a> (void *pointer, const char *file, const char *function, size_t line)</td></tr>
 <tr class="memdesc:a80df105e7aa3383bb2f4da8f818335a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">check for null pointer and throws error if necessary  <a href="memory_8h.html#a80df105e7aa3383bb2f4da8f818335a6">More...</a><br /></td></tr>
 <tr class="separator:a80df105e7aa3383bb2f4da8f818335a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,18 +198,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a639f371493f0c14a6ad4aeb962107e73" name="a639f371493f0c14a6ad4aeb962107e73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a639f371493f0c14a6ad4aeb962107e73">&#9670;&nbsp;</a></span>memory_allocate()</h2>
+<a id="aa67a4d584622cc77887701922266a413" name="aa67a4d584622cc77887701922266a413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67a4d584622cc77887701922266a413">&#9670;&nbsp;</a></span>__memory_allocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * memory_allocate </td>
+          <td class="memname">void * __memory_allocate </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>heap_size</em></td><td>)</td>
+          <td class="paramname"><em>heap_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -207,14 +247,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aab50778ae234815b6688a4cdda1cbc0e" name="aab50778ae234815b6688a4cdda1cbc0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab50778ae234815b6688a4cdda1cbc0e">&#9670;&nbsp;</a></span>memory_allocate_typed()</h2>
+<a id="a2cf2717eebd023996d07f71abebfeec2" name="a2cf2717eebd023996d07f71abebfeec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf2717eebd023996d07f71abebfeec2">&#9670;&nbsp;</a></span>__memory_allocate_typed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * memory_allocate_typed </td>
+          <td class="memname">void * __memory_allocate_typed </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -223,7 +263,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>data_size</em>&#160;</td>
+          <td class="paramname"><em>data_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,14 +303,70 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e7e160700b55e2735e9c05bcb08d5c3" name="a5e7e160700b55e2735e9c05bcb08d5c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e7e160700b55e2735e9c05bcb08d5c3">&#9670;&nbsp;</a></span>memory_resize()</h2>
+<a id="a5990ad1f35bc0f7881ea535902c258c2" name="a5990ad1f35bc0f7881ea535902c258c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5990ad1f35bc0f7881ea535902c258c2">&#9670;&nbsp;</a></span>__memory_allocate_zero()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * memory_resize </td>
+          <td class="memname">void * __memory_allocate_zero </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>data_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allocate heap memory setted to zero and check for allocation errors </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of sections of the resized area </td></tr>
+    <tr><td class="paramname">data_size</td><td>size of sections </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void* pointer to the allocated memory </dd></dl>
+
+</div>
+</div>
+<a id="a7f69c1bc4ff729a2b4f70b9f7027926e" name="a7f69c1bc4ff729a2b4f70b9f7027926e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f69c1bc4ff729a2b4f70b9f7027926e">&#9670;&nbsp;</a></span>__memory_resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * __memory_resize </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>base_pointer</em>, </td>
@@ -261,7 +375,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>heap_size</em>&#160;</td>
+          <td class="paramname"><em>heap_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -283,14 +415,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e2689980b61d9dabf82064560e9d1db" name="a5e2689980b61d9dabf82064560e9d1db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2689980b61d9dabf82064560e9d1db">&#9670;&nbsp;</a></span>memory_resize_typed()</h2>
+<a id="af1acf82d54622ecf71f2e390c6efc4f0" name="af1acf82d54622ecf71f2e390c6efc4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1acf82d54622ecf71f2e390c6efc4f0">&#9670;&nbsp;</a></span>__memory_resize_typed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * memory_resize_typed </td>
+          <td class="memname">void * __memory_resize_typed </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>base_pointer</em>, </td>
@@ -305,7 +437,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>data_size</em>&#160;</td>
+          <td class="paramname"><em>data_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

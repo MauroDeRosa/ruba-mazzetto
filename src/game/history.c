@@ -20,6 +20,7 @@ bool filter_by_matchid(void *entry, void *id);
 int compare_history_by_timestamp(const void *a, const void *b);
 void save_history();
 void load_history();
+void history_free();
 
 #pragma endregion prototypes
 
@@ -55,6 +56,7 @@ int compare_history_by_timestamp(const void *a, const void *b)
 
 void history_init()
 {
+    atexit(history_free);
     history = VEC_INIT(history_entry);
 
     if (access(HISTORY_PATH, F_OK) == 0)
@@ -98,8 +100,8 @@ void save_history()
 {
     FILE *f = fopen(HISTORY_PATH, "wb");
     check_null_pointer(f);
-    fwrite(&history->count, sizeof(size_t), 1, f);
     fwrite(&last_match_id, sizeof(matchid), 1, f);
+    fwrite(&history->count, sizeof(size_t), 1, f);
     fwrite(history->elements, history->element_size, history->count, f);
     fclose(f);
 }
@@ -108,9 +110,14 @@ void load_history()
 {
     FILE *f = fopen(HISTORY_PATH, "rb");
     check_null_pointer(f);
-    fread(&history->count, sizeof(size_t), 1, f);
     fread(&last_match_id, sizeof(matchid), 1, f);
-    VEC_RESIZE(history, history->count);
+    fread(&history->count, sizeof(size_t), 1, f);
+
+    if (history->count > history->size)
+    {
+        VEC_RESIZE(history, history->count);
+    }
+
     fread(history->elements, history->element_size, history->count, f);
     fclose(f);
 }
@@ -122,8 +129,8 @@ void load_history()
 history_entry *get_history_for(userid user, size_t *history_size)
 {
     check_null_pointer(history_size);
-    
-    if(history->count > 0 && is_userid_in_table(user))
+
+    if (history->count > 0 && is_userid_in_table(user))
     {
         history_entry *filtered = array_filter(history->elements, history->count, history->element_size, filter_by_userid, &user, history_size);
         qsort(filtered, *history_size, sizeof(history_entry), compare_history_by_timestamp);
@@ -140,7 +147,7 @@ history_entry *get_history_for(userid user, size_t *history_size)
 
 char *history_json(history_entry *entry)
 {
-    char *json = calloc(4096, sizeof(char));
+    char *json = memory_allocate_zero(4096, sizeof(char));
     char timestamp_str[DATETIME_STR_SIZE];
 
     datetime_string(entry->timestamp, timestamp_str);
@@ -164,4 +171,9 @@ char *history_json(history_entry *entry)
             entry->won ? "true" : "false");
 
     return json;
+}
+
+void history_free()
+{
+    VEC_FREE(history);
 }

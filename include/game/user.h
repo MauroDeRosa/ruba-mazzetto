@@ -191,4 +191,6 @@ void user_load();
  */
 char* user_json(user *u);
 
+void users_free();
+
 #endif /* __USER_H__ */

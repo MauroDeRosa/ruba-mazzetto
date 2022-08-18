@@ -36,6 +36,7 @@ void check_user_validity(userid id);
 void game_turn_advance();
 player *current_player();
 char *game_save_json(game_data *save, size_t id);
+void saves_free();
 
 #pragma endregion private_prototypes
 
@@ -110,35 +111,28 @@ void game_state_start()
 
 void game_state_serve()
 {
-    if(game.dealer_deck.length / 3 <= 0)
+    size_t cards_to_table = (game.dealer_deck.length >= 4) ? 4 : game.dealer_deck.length;
+
+    for (size_t i = 0; i < cards_to_table; i++)
     {
-        game.state = GAME_END;
-        return;
+        card c = deck_pop(&game.dealer_deck);
+        game.table.cards[game.table.length++] = c;
     }
 
-    size_t cards_to_players = game.dealer_deck.length >= (3 * game.players_count) ? 3 : game.dealer_deck.length / game.players_count;
+    size_t cards_to_players = (game.dealer_deck.length / game.players_count  >= 3 ) ? 3 : game.dealer_deck.length / game.players_count;
 
     for (size_t i = 0; i < game.players_count; i++)
     {
         for (size_t j = 0; j < cards_to_players; j++)
         {
-            card c = deck_pop(&(game.dealer_deck));
+            card c = deck_pop(&game.dealer_deck);
             game.players[i].hand.cards[j] = c;
         }
-        game.players[i].hand.length = 3;
-    }
-
-    size_t cards_to_table = game.dealer_deck.length >= 4 ? 4 : game.table.length;
-
-    for (size_t i = 0; i < cards_to_table; i++)
-    {
-        card c = deck_pop(&(game.dealer_deck));
-        game.table.cards[game.table.length++] = c;
+        game.players[i].hand.length = cards_to_players;
     }
 
     game.turn = 0;
     game.state = GAME_CYCLE;
-
     log_info("game serving");
 }
 
@@ -311,19 +305,31 @@ void game_turn_advance()
     game.turn = (game.turn + 1) % game.players_count;
 }
 
+
+void saves_free()
+{
+    VEC_FREE(saves);
+}
+
 #pragma endregion utility_functions
 
 #pragma region game_persistence
 
 void game_saves_init()
 {
+    atexit(saves_free);
     saves = VEC_INIT(game_data);
 
     if (access(GAME_SAVES_PATH, F_OK) == 0)
     {
         FILE *f = fopen(GAME_SAVES_PATH, "rb");
         fread(&saves->count, sizeof(size_t), 1, f);
-        VEC_RESIZE(saves, saves->count);
+
+        if (saves->count > saves->size)
+        {
+            VEC_RESIZE(saves, saves->count);
+        }
+        
         fread(saves->elements, sizeof(game_data), saves->count, f);
         fclose(f);
     }
@@ -402,7 +408,7 @@ game_data *game_save_by_id(size_t id)
 
 char *game_data_json(game_data *gd)
 {
-    char *json = calloc(4096, sizeof(char));
+    char *json = memory_allocate_zero(4096, sizeof(char));
     const char *state_string[5] = {
         "start",
         "serve",
@@ -469,7 +475,7 @@ char *game_save_json(game_data *save, size_t id)
 
 char *game_save_list_json()
 {
-    char *json = calloc(4096, sizeof(char));
+    char *json = memory_allocate_zero(4096, sizeof(char));
     char players[3][1024] = {0};
     char *current;
     char *tmp;

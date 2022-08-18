@@ -1,4 +1,7 @@
 .vscode/*
 build/*
 __pycache__
-.venv/
+frontend/.venv
+frontend/build
+frontend/dist
+frontend/*.spec

@@ -14,8 +14,6 @@
 #define LEADERBOARD_MAX_ENTRIES 15
 #define STATISTICS_PATH "statistics.bin"
 
-
-
 vector *statistics;
 
 #pragma region private_prototypes
@@ -23,6 +21,7 @@ vector *statistics;
 int compare_statistics_by_userid(const void *entry, const void *id);
 void save_statistics();
 void load_statistics();
+void statistics_free();
 
 #pragma endregion prototypes
 
@@ -79,6 +78,7 @@ int compare_statistics_by_userid(const void *entry, const void *id)
 
 void statistics_init()
 {
+    atexit(statistics_free);
     statistics = VEC_INIT(statistics_entry);
 
     if (access(STATISTICS_PATH, F_OK) == 0)
@@ -102,12 +102,6 @@ void save_statistics()
     check_null_pointer(f);
     fwrite(&statistics->count, sizeof(size_t), 1, f);
     fwrite(statistics->elements, statistics->element_size, statistics->count, f);
-    
-    for (size_t i = 0; i < statistics->count; i++)
-    {
-        fwrite(&VEC_GET(statistics_entry, statistics, i).players, sizeof(statistics_data), 3, f);
-    }
-    
     fclose(f);
 }
 
@@ -116,14 +110,13 @@ void load_statistics()
     FILE *f = fopen(STATISTICS_PATH, "rb");
     check_null_pointer(f);
     fread(&statistics->count, sizeof(size_t), 1, f);
-    VEC_RESIZE(statistics, statistics->count);
-    fread(statistics->elements, statistics->element_size, statistics->count, f);
 
-    for (size_t i = 0; i < statistics->count; i++)
+    if (statistics->count > statistics->size)
     {
-        fread(&VEC_GET(statistics_entry, statistics, i).players, sizeof(statistics_data), 3, f);
+        VEC_RESIZE(statistics, statistics->count);
     }
     
+    fread(statistics->elements, statistics->element_size, statistics->count, f);
     fclose(f);
 }
 
@@ -154,7 +147,11 @@ leaderboard_entry *get_leaderboard(size_t players_count, size_t *leaderboard_siz
     }
 
     qsort(leadeboard, statistics->count, sizeof(leaderboard_entry), compare_leaderboard_entries);
-    memory_resize_typed(leadeboard, *leaderboard_size, sizeof(leaderboard_entry));
+
+    if (*leaderboard_size < statistics->count)
+    {
+        memory_resize_typed(leadeboard, *leaderboard_size, sizeof(leaderboard_entry));
+    }
 
     return leadeboard;
 }
@@ -316,7 +313,7 @@ char *leaderboard_json(leaderboard_entry *leaderboard, size_t leaderboard_size)
 {
     check_null_pointer(leaderboard);
 
-    char *json = calloc(2048, sizeof(char));
+    char *json = memory_allocate_zero(2048, sizeof(char));
     char tmp[1024] = {0};
 
     char username[USERNAME_SIZE] = "invalid user";
@@ -333,10 +330,15 @@ char *leaderboard_json(leaderboard_entry *leaderboard, size_t leaderboard_size)
         char *data = statistics_data_json(&leaderboard[i].data);
         sprintf(tmp, "{\"id\":%zu, \"username\":\"%s\", \"data\":%s}%s",
                 leaderboard[i].id, username, data, i == leaderboard_size-1 ? "" : ",");
-        strcat(json, tmp);
         free(data);
+        strcat(json, tmp);
     }
 
     strcat(json, "]");
     return json;
+}
+
+void statistics_free()
+{
+    VEC_FREE(statistics);
 }

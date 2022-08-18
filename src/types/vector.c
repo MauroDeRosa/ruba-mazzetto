@@ -3,7 +3,7 @@
 #include <types/memory.h>
 #include <io/log.h>
 
-#define DEFAULT_VECTOR_SIZE 20
+#define DEFAULT_VECTOR_SIZE 5
 
 vector* generic_vector_init(size_t element_size)
 {
@@ -31,7 +31,7 @@ void* generic_vector_append(vector *v)
 {
     check_null_pointer(v);
 
-    if(v->count >= v->size)
+    if(v->count == v->size)
     {
         generic_vector_resize(v, v->size + DEFAULT_VECTOR_SIZE);
     }
