@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for index in range(context.players_count) %}
+<div class="bordered mb-1">
+    <div class="row text-center" id="player{{ index }}">
+        <label class="col-4">username</label>
+        <input class="col-8" type="text" id="username{{ index }}">
+        <label class="col-4">password</label>
+        <input class="col-8" type="password" id="password{{ index }}">
+        <label id="message{{ index }}" class="col-12"></label>
+        <input type="hidden" id="userid{{ index }}" value="0">
+        <a class="col-12 button" onclick="on_login({{ index }})">login</a>
+    </div>
+</div>
+{% endfor %}
+<div class="row mt-1">
+    <a onclick="on_play();" class="col-6 button">Play</a>
+    <a onclick="on_back();" class="col-6 button">Back</a>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    let loading = {% if context.load_index is defined %}true{% else %}false{% endif %};
+    let load_index = {% if context.load_index is defined %}{{ context.load_index }}{% else %}0{% endif %};
+    let players_count = {{ context.players_count }};
+</script>
+{% endblock script %}

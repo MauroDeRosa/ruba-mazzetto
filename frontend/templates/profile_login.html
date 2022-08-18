@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bordered">
+    <div class="row" style="text-align:right;">
+        <label class="col-3">Username:</label>
+        <input class="col-9" type="text" id="username"/>
+        <label class="col-3">Password:</label>
+        <input class="col-9" type="password" id="password"/>
+        <label class="col-12 orange" id="message"></label>
+    </div>
+    <div class="row">
+        <div class="col-6"></div>
+        <a class="col-6 button" onclick='on_login();'>Login</a>
+    </div>
+</div>
+<div class="row">
+    <a class="col-12 button" href="/">Back</a>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    function on_login_click(){
+
+        if( $('#username').val().length < 1 || $('#password').val().length < 1 )
+        {
+            $('#message').html('wrong username or password');
+            return;
+        }
+
+        backend('user login ' + $("#username").val() + ' ' + $("#password").val())
+        .then((user) => {
+            if(user === 'failed')
+            {
+                $('#message').html('wrong username or password');
+            }
+            else
+            {
+                $('#message').html('success');
+                varset('logged', user);
+                route('target');
+            }
+        });
+    }
+</script>
+{% endblock script %}

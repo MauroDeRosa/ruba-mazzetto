@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="game_div">
+    <div class="bordered mb-1">
+        <div class="row text-center">
+            <label class="col-12 separated mb-1">Decks</label>
+        </div>
+        <div class="row text-center" id="usernames_row">
+        </div>
+        <div class="row text-center" id="decks_row">
+            <div class="col-2">
+                <img class="card card-s" src="{{ cards }}D1.png" onclick="on_move(0, 'opponent');" alt="card">
+            </div>
+        </div>
+        <div class="row text-center" id="points_row">
+            <label class="col-2">points: 0</label>
+        </div>
+    </div>
+    <div class="bordered mb-1">
+        <div class="row text-center">
+            <label class="col-12 separated mb-1">Table</label>
+        </div>
+        <div class="row" id="table_row"> 
+            <div class="col-2">
+                <img class="card card-s" src="{{ cards }}BK.png" onclick="on_move(0, 'table');" alt="card">
+            </div>
+            <div class="col-2">
+                <img class="card card-s" src="{{ cards }}ZZ.png" alt="empty card" onclick="on_move(0, 'throw');" alt="empty slot">
+            </div>
+        </div>
+    </div>
+    <div class="bordered mb-1">
+    <div class="row text-center">
+        <label class="col-12 separated mb-1" id="current_username">current_player_username</label>
+    </div>
+    <div class="row" id="hand_row">
+        <div class="col-4">
+            <img class="card card-s card-selected" src="{{ cards }}S1.png" onclick="on_hand(0);" alt="card">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <a class="col-6 button" onclick="on_save();">Save & Quit</a>
+    <a class="col-6 button" onclick="on_quit();">Quit</a>
+</div>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    const cards_path = '{{ cards }}';
+</script>
+{% endblock script %}

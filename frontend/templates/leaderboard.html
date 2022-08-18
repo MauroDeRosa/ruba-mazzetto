@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row mb-1">
+        <a href="/leaderboard/2" class="col-4 button">2 players</a>
+        <a href="/leaderboard/3" class="col-4 button">3 players</a>
+        <a href="/leaderboard/4" class="col-4 button">4 players</a>
+</div>
+<div class="bordered mb-1">
+    <!-- <div class="row text-center"><label>{% for i in range(context.category) %}<i class="fa fa-user" aria-hidden="true"></i>{% endfor %}</label></div> -->
+    <div class="row text-center mb-1 separated">
+        <label class="col-2">username</label>
+        <label class="col-2">wins</label>
+        <label class="col-2">losses</label>
+        <label class="col-2">win rate</label>
+        <label class="col-4">{% for i in range(context.category) %}<i class="fa fa-user" aria-hidden="true"></i>{% endfor %}</label>
+    </div>
+    <div id="leaderboard">
+    </div>
+</div>
+<div class="row">
+    <a class="button col-12" href="/">Back</a>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    let players_count = {{ context.category }};
+</script>
+{% endblock script %}

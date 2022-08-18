@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row bordered text-center mb-1">
+    <label class="col-12 mb-1"><span class="orange" id="username"></span>'s match history</label>
+    <label class="col-3"><i class="fa-far fa-clock"></i></label>
+    <label class="col-2">players</label>
+    <label class="col-2">points</label>
+    <label class="col-2">steals</label>
+</div>
+<div class="bordered text-center mb-1" id="entries_div">
+    <div class="row">
+        <label class="col-12">No games played</label>
+    </div>
+</div>
+<div class="row" id="controls_div">
+    <a onclick="history.back()" class="button col-12">Back</a>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    let id = {{ context.id }}
+</script>
+{% endblock script %}

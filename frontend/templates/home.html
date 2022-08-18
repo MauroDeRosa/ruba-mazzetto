@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="row">
+            <a id="new_game" href="/game/new/2" class="col-12 button">New Game</a>
+        </div>
+        <div class="row text-center">
+            {% for index in range(2,5) %}
+            <label class="col-4 button">
+                <input name="players" type="radio" onclick="on_players_click({{ index }});" {% if index == 2 %}checked{% endif %} /> {{ index }} Players
+            </label>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <a class="col-12 button" href="/load">Load Game</a>
+        </div>
+        <div class="row">
+            <a class="col-4 button" href="/register">Register</a>
+            <a class="col-4 button" href="/login">Profile</a>
+            <a class="col-4 button" href="/leaderboard/2">Leaderboard</a>
+        </div>
+        <div class="row">
+            <a class="col-12 button" href="/api/quit">Quit</a>
+        </div>
+{% endblock content %}
+{% block script %}
+<script>
+    function on_players_click(count){
+        $('#new_game').attr('href', `/game/new/${count}`);
+    }
+</script>
+{% endblock script %}

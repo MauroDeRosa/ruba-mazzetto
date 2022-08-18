@@ -1,0 +1,8 @@
+beautifulsoup4==4.11.1
+bs4==0.0.1
+keyboard==0.13.5
+lxml==4.9.1
+neutron-web==0.2.2.1
+proxy-tools==0.1.0
+pywebview==3.6.3
+soupsieve==2.3.2.post1

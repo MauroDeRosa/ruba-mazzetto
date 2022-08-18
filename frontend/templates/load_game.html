@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="page">
+    {% for pc in range(2, 5) %}
+    <div class="bordered mb-1">
+        {% set col_sz = 8 // pc %}
+        <div class="row text-center">
+            <i class="col-2 fa-far fa-clock"></i>
+            {% for i in range(pc) %}
+            <i class="col-2 fa-far fa-user"></i>
+            {% endfor %}
+            <div class="col-{{ 8 - pc*2}}"></div>
+        </div>
+        <div id="players{{ pc }}"></div>
+    </div>
+    {% endfor %}
+</div>
+<div class="row">
+    <a class="col-12 button" href="/">Back</a>
+</div>
+{% endblock content %}
+{% block script %}
+{% endblock script %}

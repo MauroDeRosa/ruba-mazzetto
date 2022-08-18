@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row bordered text-center mb-1">
+    <label class="col-12"><span class="orange" id="username"></span class="orange">'s statistics</label>
+</div>
+{% for index in range(3) %}
+<div class="bordered mb-1">
+    <div class="row text-center separated mb-1">
+            <label class="col-12" style="text-shadow: 0px 0px 2px darkorange;">{% for j in range(index+2) %}<i class="fa fa-user" aria-hidden="true"></i>{% endfor %} Players</label>
+    </div>
+    <div class="row text-center">
+        <label class="col-4">matches: <span class="orange" id="matches{{ index }}"></span class="orange"></label>
+        <label class="col-4">wins: <span class="orange" id="wins{{ index }}"></span class="orange"></label>
+        <label class="col-4">losses: <span class="orange" id="losses{{ index }}"></span class="orange"></label>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div style="width:10em;height:10em; margin: auto;">
+                <canvas id="pie_chart{{ index }}"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center separated">
+        <label class="col-6">win rate: <span class="orange" id="win_rate{{ index }}"></span class="orange"></label>
+        <label class="col-6">longest win streak: <span class="orange" id="max_win_streak{{ index }}"></span class="orange"></label>
+    </div>
+    <div class="row text-center"><label class="col-12">points</label></div>
+    <div class="row text-center separated">
+        <label class="col-4">min: <span class="orange" id="min_points{{ index }}"></span class="orange"></label>
+        <label class="col-4">max: <span class="orange" id="max_points{{ index }}"></span class="orange"></label>
+        <label class="col-4">average: <span class="orange" id="avg_points{{ index }}"></span class="orange"></label>
+    </div>
+    <div class="row text-center"><label class="col-12">steals</label></div>
+    <div class="row text-center">
+        <label class="col-4">min: <span class="orange" id="min_steals{{ index }}"></span class="orange"></label>
+        <label class="col-4">max: <span class="orange" id="max_steals{{ index }}"></span class="orange"></label>
+        <label class="col-4">average: <span class="orange" id="avg_steals{{ index }}"></span class="orange"></label>
+    </div>
+</div>
+{% endfor %}
+<div class="row"><a class="button col-12 mb-1" onclick="history.back();">Back</a></div>
+{% endblock content %}
+{% block script %}
+<script src="{{ js }}chart.min.js"></script>
+<script>
+    let id = {{ context.id }};
+</script>
+{% endblock script %}

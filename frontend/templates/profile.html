@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="bordered mb-1">
+            <div class="row text-center">
+                <label class="col-12"><span class='orange' id="username"></span>'s profile</label>
+                <label class="col-12">created: <span class="orange" id="created"></span></label>
+                <label class="col-12">modified: <span class="orange" id="modified"></span></label>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <a href="/statistics/{{ context.id }}" class="col-6 button">Statistics</a>
+            <a href="/history/{{ context.id }}" class="col-6 button">History</a>
+        </div>
+        <div class="bordered">
+            <div class="row" style="text-align:right;">
+                <label class="col-4">new password:</label>
+                <input class="col-8" type="password" id="password1"></label>
+                <label class="col-4">repeat:</label>
+                <input class="col-8" type="password" id="password2"></label>
+                <label class="col-12"><span id="message" class="orange"></span></label>
+            </div>
+            <div class="row">
+                <div class="col-7"></div>
+                <a class='col-4 button' onclick='on_change_password();'>Change password</a>
+            </div>
+        </div>
+        <div class="row">
+            <a class="col-12 button" onclick="on_back();">Back</a>
+        </div>
+{% endblock content %}
+{% block script %}
+<script>
+    let id = {{ context.id }};
+</script>
+{% endblock script %}
