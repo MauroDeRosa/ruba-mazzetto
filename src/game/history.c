@@ -133,8 +133,17 @@ history_entry *get_history_for(userid user, size_t *history_size)
     if (history->count > 0 && user_exists(user))
     {
         history_entry *filtered = array_filter(history->elements, history->count, history->element_size, filter_by_userid, &user, history_size);
-        qsort(filtered, *history_size, sizeof(history_entry), compare_history_by_timestamp);
-        return filtered;
+        
+        if (filtered != NULL)
+        {
+            qsort(filtered, *history_size, sizeof(history_entry), compare_history_by_timestamp);
+            return filtered;
+        }
+        else
+        {
+            *history_size = 0;
+            return NULL;
+        }
     }
     else
     {

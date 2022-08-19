@@ -115,5 +115,17 @@ void* array_filter(void *array, size_t array_size, size_t data_size, filter_call
     }
 
     *filtered_size = new_size;
-    return memory_resize_typed(filtered, new_size, data_size);
+
+    if(*filtered_size == array_size)
+    {
+        return filtered;
+    }
+    else if (*filtered_size == 0)
+    {
+        return NULL;
+    }
+    else
+    {
+        return memory_resize_typed(filtered, new_size, data_size);
+    }
 }

@@ -7,10 +7,10 @@
 #include <game/history.h>
 #include <game/statistics.h>
 
-void response_json(const char *outcome, const char *json);
+void response_json(const char *result, const char *json);
 void response_failed_json(const char *json);
 void response_success_json(const char *json);
-void response_message(const char *outcome, const char *message);
+void response_message(const char *result, const char *message);
 void response_failed_message(const char *message);
 void response_success_message(const char *message);
 void response_quit();

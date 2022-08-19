@@ -2,7 +2,7 @@ import socket
 
 SERVER_HOSTNAME = 'localhost'
 SERVER_PORT = 11666
-SERVER_BUFFER_SIZE = 4096
+SERVER_BUFFER_SIZE = 8192
 
 class GameClient:
     

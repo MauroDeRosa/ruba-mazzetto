@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 #define SRV_PORT_NUMBER 11666
-#define SRV_BUFF_SIZE 4096
+#define SRV_BUFF_SIZE 8192
 
 extern bool server_quit;
 extern char server_message[SRV_BUFF_SIZE], client_message[SRV_BUFF_SIZE];

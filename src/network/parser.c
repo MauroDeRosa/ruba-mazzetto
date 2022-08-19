@@ -10,7 +10,6 @@
 #include <game/statistics.h>
 #include <stdio.h>
 #include <utils/timeutils.h>
-#include <utils/stringutils.h>
 
 char *tokens[1024];
 size_t tokens_count;
@@ -52,7 +51,11 @@ bool token_next_equal_to(const char *str)
         log_error("no more tokens");
     }
 
-    if (is_string_equal(tokens[current_token], str))
+    if(tokens[current_token] == NULL)
+    {
+        return false;
+    }
+    else if (strcmp(tokens[current_token], str) == 0)
     {
         current_token++;
         return true;

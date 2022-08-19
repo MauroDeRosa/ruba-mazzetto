@@ -11,10 +11,10 @@
 
 #pragma region basic_response_json
 
-void response_json(const char *outcome, const char *json)
+void response_json(const char *result, const char *json)
 {
     char buffer[SRV_BUFF_SIZE] = {0};
-    sprintf(buffer, "{\"result\":\"%s\",\"type\":\"json\",\"data\":%s}", outcome, json);
+    sprintf(buffer, "{\"result\":\"%s\",\"type\":\"json\",\"data\":%s}", result, json);
     server_send(buffer);
 }
 
@@ -32,10 +32,10 @@ void response_success_json(const char *json)
 
 #pragma region basic_response_message
 
-void response_message(const char *outcome, const char *message)
+void response_message(const char *result, const char *message)
 {
     char buffer[SRV_BUFF_SIZE] = {0};
-    sprintf(buffer, "{\"result\":\"%s\",\"type\":\"message\",\"message\":\"%s\"}", outcome, message);
+    sprintf(buffer, "{\"result\":\"%s\",\"type\":\"message\",\"message\":\"%s\"}", result, message);
     server_send(buffer);
 }
 
@@ -108,28 +108,28 @@ void response_history(userid id, history_entry *entries, size_t entries_len, siz
 
 void response_statistics(statistics_entry *stats)
 {
-    char *json = statistics_entry_json(stats);
-    response_success_json(json);
-    free(json);
+    char *buffer = statistics_entry_json(stats);
+    response_success_json(buffer);
+    free(buffer);
 }
 
 void response_leaderboard(leaderboard_entry *leaderboard, size_t leaderboard_size)
 {
-    char *json = leaderboard_json(leaderboard, leaderboard_size);
-    response_success_json(json);
-    free(json);
+    char *buffer = leaderboard_json(leaderboard, leaderboard_size);
+    response_success_json(buffer);
+    free(buffer);
 }
 
 void response_game_saves_list(game_data *saves, size_t count)
 {
-    char *json = game_save_list_json(saves, count);
-    response_success_json(json);
-    free(json);
+    char *buffer = game_save_list_json(saves, count);
+    response_success_json(buffer);
+    free(buffer);
 }
 
 void response_game_save(game_data *save, size_t id)
 {
-    char *json = game_save_json(save, id);
-    response_success_json(json);
-    free(json);
+    char *buffer = game_save_json(save, id);
+    response_success_json(buffer);
+    free(buffer);
 }

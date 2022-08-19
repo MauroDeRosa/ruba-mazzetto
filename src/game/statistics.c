@@ -10,8 +10,7 @@
 #include <unistd.h>
 #include <utils/mathutils.h>
 
-#define DEFAULT_STATISTICS_SIZE 20
-#define LEADERBOARD_MAX_ENTRIES 15
+#define LEADERBOARD_MAX_ENTRIES 10
 #define STATISTICS_PATH "statistics.bin"
 
 vector *statistics;
@@ -261,7 +260,7 @@ void update_statistics_for(userid user)
 char *statistics_data_json(statistics_data *data)
 {
     check_null_pointer(data);
-    char *json = memory_allocate(1024);
+    char *json = memory_allocate(2048);
     sprintf(json,
             "{"
             "\"matches\": %zu,"
@@ -312,13 +311,10 @@ char *statistics_entry_json(statistics_entry *entry)
 char *leaderboard_json(leaderboard_entry *leaderboard, size_t leaderboard_size)
 {
     check_null_pointer(leaderboard);
-
-    char *json = memory_allocate_zero(2048, sizeof(char));
-    char tmp[1024] = {0};
-
-    char username[USERNAME_SIZE] = "invalid user";
-
-    strcat(json, "[");
+    char *json = memory_allocate(4096), *data;
+    char tmp[2048] = {0};
+    char username[USERNAME_SIZE];
+    sprintf(json, "[");
 
     for (size_t i = 0; i < leaderboard_size; i++)
     {
@@ -326,14 +322,17 @@ char *leaderboard_json(leaderboard_entry *leaderboard, size_t leaderboard_size)
         {
             strcpy(username, get_user(leaderboard[i].id)->username);
         }
+        else
+        {
+            strcpy(username, "invalid user");
+        }
 
-        char *data = statistics_data_json(&leaderboard[i].data);
+        data = statistics_data_json(&leaderboard[i].data);
         sprintf(tmp, "{\"id\":%zu, \"username\":\"%s\", \"data\":%s}%s",
                 leaderboard[i].id, username, data, i == leaderboard_size-1 ? "" : ",");
         free(data);
         strcat(json, tmp);
     }
-
     strcat(json, "]");
     return json;
 }
