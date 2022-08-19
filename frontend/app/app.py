@@ -11,12 +11,10 @@ class App:
         self.server:WebServer = server
         self.server.app = self
         self.window = webview.create_window(title=title, url='http://localhost:8080/')
-        self.window._js_api = server.js_api
-        server.js_api.set_window(self.window)
         
     def start(self):
         while not game_client.connect():
             pass
         game_client.recv() # TODO: fix empty message at connection
         self.server.start()
-        webview.start(debug=True, gui='gtk')
+        webview.start(debug=False, gui='gtk')
