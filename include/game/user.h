@@ -29,7 +29,8 @@ typedef struct
 {
     userid id; ///< id of the user
     char username[USERNAME_SIZE]; ///< the username of the user of length
-    char password[PASSWORD_SIZE]; ///< plain text user password @todo TODO: add hashing functions
+    // char password[PASSWORD_SIZE]; ///< plain text user password @todo TODO: add hashing functions
+    unsigned long password; ///< @todo document this
     struct tm created; ///< timestamp of the user creation
     struct tm modified; ///< timestamp fo the last user update
 } user; ///< user data structure

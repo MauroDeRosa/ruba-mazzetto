@@ -4,6 +4,7 @@
 #include <types/memory.h>
 #include <io/log.h>
 #include <utils/timeutils.h>
+#include <utils/mathutils.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -174,7 +175,7 @@ userid user_register(const char *username, const char *password)
     new_user.created = datetime_now();
     new_user.modified = new_user.created;
     strcpy(new_user.username, username);
-    strcpy(new_user.password, password);
+    new_user.password = hash(password);
     new_user.id = ++last_id;
 
     VEC_APPEND(user, users, new_user);
@@ -200,8 +201,7 @@ userid user_update(userid id, const char *password)
 
     time_t time_now = time(NULL);
     u->modified = *localtime(&time_now);
-    strcpy(u->password, password);
-    u->password[PASSWORD_MAX_LEN] = '\0';
+    u->password = hash(password);
     users_save();
     return id;
 }
@@ -232,8 +232,7 @@ userid user_login(const char *username, const char *password)
         log_warning("user %s is already logged in", u->username, u->id);
         return USERID_INVALID;
     }
-
-    if (strcmp(u->password, password) == 0)
+    else if (u->password == hash(password))
     {
         logged_table[logged_count++] = u->id;
         return u->id;
@@ -319,7 +318,7 @@ char *user_json(user *u)
     char created[DATETIME_STR_SIZE] = {0}, modified[DATETIME_STR_SIZE] = {0};
     datetime_string(u->created, created);
     datetime_string(u->modified, modified);
-    sprintf(json, "{\"id\": %zu,\"username\": \"%s\",\"password\": \"%s\",\"created\": \"%s\",\"modified\": \"%s\"}", u->id, u->username, u->password, created, modified);
+    sprintf(json, "{\"id\": %zu,\"username\": \"%s\",\"created\": \"%s\",\"modified\": \"%s\"}", u->id, u->username, created, modified);
     return json;
 }
 
