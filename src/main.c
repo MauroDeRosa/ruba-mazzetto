@@ -16,7 +16,7 @@ int main(void)
     statistics_init();
     game_saves_init();
 
-    system("sh ../frontend/launch.sh &");
+    system("./gui &");
 
     server_init();
     
