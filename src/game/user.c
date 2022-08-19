@@ -120,22 +120,22 @@ bool is_username_valid(const char *username)
 
 bool is_password_valid(const char *password)
 {
+    check_null_pointer((void*) password);
+    size_t nupper = 0, nlower = 0, ndigit = 0, nspecial = 0;
+    char *p = (char*) password, c;
     size_t password_len = strlen(password);
 
-    if (password_len < PASSWORD_MIN_LEN || password_len > PASSWORD_MAX_LEN)
+    while (*p != '\0')
     {
-        return false;
-    }
+        c = *p++;
+        if(isupper(c)) nupper++;
+        else if(islower(c)) nlower++;
+        else if(isdigit(c)) ndigit++;
+        else if(ispunct(c)) nspecial++;
+        else return false;
+    } 
 
-    for (size_t i = 0; i < password_len; i++)
-    {
-        if (!isalnum(password[i]) && !ispunct(password[i]))
-        {
-            return false;
-        }
-    }
-
-    return true;
+    return (nupper && nlower && ndigit && nspecial) && (password_len >= PASSWORD_MIN_LEN && password_len <= PASSWORD_MAX_LEN);
 }
 
 size_t users_count()
@@ -153,13 +153,13 @@ userid user_register(const char *username, const char *password)
 
     if (is_username_valid(username) == false)
     {
-        log_warning("invalid username");
+        log_warning("username must be at least 5 characters long, maximum 25. can contain only letters and numbers and underscore '_'");
         return USERID_INVALID;
     }
 
     if (is_password_valid(password) == false)
     {
-        log_warning("invalid password");
+        log_warning("password must contain at least 1 upper character, 1 lower character, 1 digit, 1 special character. and must be at least 8 characters long, max 25");
         return USERID_INVALID;
     }
 
