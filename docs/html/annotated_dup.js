@@ -2,7 +2,7 @@ var annotated_dup =
 [
     [ "card", "structcard.html", "structcard" ],
     [ "deck", "structdeck.html", "structdeck" ],
-    [ "game_data", "structgame__data.html", null ],
+    [ "game_data", "structgame__data.html", "structgame__data" ],
     [ "history_entry", "structhistory__entry.html", "structhistory__entry" ],
     [ "leaderboard_entry", "structleaderboard__entry.html", null ],
     [ "player", "structplayer.html", "structplayer" ],

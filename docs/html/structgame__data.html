@@ -89,37 +89,70 @@ $(document).ready(function(){initNavTree('structgame__data.html',''); initResiza
   <div class="headertitle"><div class="title">game_data Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>game's data used for current game and saves  
+ <a href="structgame__data.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="game_8h_source.html">game.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a0bfc38a9f95fb8ee81d1b2a73c25b05c"><td class="memItemLeft" align="right" valign="top"><a id="a0bfc38a9f95fb8ee81d1b2a73c25b05c" name="a0bfc38a9f95fb8ee81d1b2a73c25b05c"></a>
-<a class="el" href="structplayer.html">player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>players</b> [4]</td></tr>
+<tr class="memitem:a0bfc38a9f95fb8ee81d1b2a73c25b05c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplayer.html">player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgame__data.html#a0bfc38a9f95fb8ee81d1b2a73c25b05c">players</a> [4]</td></tr>
+<tr class="memdesc:a0bfc38a9f95fb8ee81d1b2a73c25b05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">players array  <a href="structgame__data.html#a0bfc38a9f95fb8ee81d1b2a73c25b05c">More...</a><br /></td></tr>
 <tr class="separator:a0bfc38a9f95fb8ee81d1b2a73c25b05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c1430038688e67d10d3d1c1d041676"><td class="memItemLeft" align="right" valign="top"><a id="ac1c1430038688e67d10d3d1c1d041676" name="ac1c1430038688e67d10d3d1c1d041676"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>players_count</b></td></tr>
+<tr class="memdesc:ac1c1430038688e67d10d3d1c1d041676"><td class="mdescLeft">&#160;</td><td class="mdescRight">how many players in this match (2, 3 or 4 players) <br /></td></tr>
 <tr class="separator:ac1c1430038688e67d10d3d1c1d041676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c127d3c94dec53dccaa14dad09ae154"><td class="memItemLeft" align="right" valign="top"><a id="a5c127d3c94dec53dccaa14dad09ae154" name="a5c127d3c94dec53dccaa14dad09ae154"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>last_take</b></td></tr>
+<tr class="memdesc:a5c127d3c94dec53dccaa14dad09ae154"><td class="mdescLeft">&#160;</td><td class="mdescRight">index of the last player who took cards from the game's table or from another player's deck <br /></td></tr>
 <tr class="separator:a5c127d3c94dec53dccaa14dad09ae154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd3750ceec61fccaa66a0b87c8a7e3c"><td class="memItemLeft" align="right" valign="top"><a id="adfd3750ceec61fccaa66a0b87c8a7e3c" name="adfd3750ceec61fccaa66a0b87c8a7e3c"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>turn</b></td></tr>
+<tr class="memdesc:adfd3750ceec61fccaa66a0b87c8a7e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">index of the currently playing player <br /></td></tr>
 <tr class="separator:adfd3750ceec61fccaa66a0b87c8a7e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb2be5bbd214ff9b8214954582658c4"><td class="memItemLeft" align="right" valign="top"><a id="a7cb2be5bbd214ff9b8214954582658c4" name="a7cb2be5bbd214ff9b8214954582658c4"></a>
 <a class="el" href="structdeck.html">deck</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dealer_deck</b></td></tr>
+<tr class="memdesc:a7cb2be5bbd214ff9b8214954582658c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the game's dealer deck (full at game start) <br /></td></tr>
 <tr class="separator:a7cb2be5bbd214ff9b8214954582658c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c6c0fdc15826983e4aa65c0ed28441"><td class="memItemLeft" align="right" valign="top"><a id="a99c6c0fdc15826983e4aa65c0ed28441" name="a99c6c0fdc15826983e4aa65c0ed28441"></a>
 <a class="el" href="structdeck.html">game_table</a>&#160;</td><td class="memItemRight" valign="bottom"><b>table</b></td></tr>
+<tr class="memdesc:a99c6c0fdc15826983e4aa65c0ed28441"><td class="mdescLeft">&#160;</td><td class="mdescRight">the game's table (initialized with 4 cards) <br /></td></tr>
 <tr class="separator:a99c6c0fdc15826983e4aa65c0ed28441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84914ee11812a1b78f26f7d22654e9c7"><td class="memItemLeft" align="right" valign="top"><a id="a84914ee11812a1b78f26f7d22654e9c7" name="a84914ee11812a1b78f26f7d22654e9c7"></a>
 game_state&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="memdesc:a84914ee11812a1b78f26f7d22654e9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current game's state <br /></td></tr>
 <tr class="separator:a84914ee11812a1b78f26f7d22654e9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340b1cf2a6e5c8c869c8fd0ef044a15f"><td class="memItemLeft" align="right" valign="top"><a id="a340b1cf2a6e5c8c869c8fd0ef044a15f" name="a340b1cf2a6e5c8c869c8fd0ef044a15f"></a>
 <a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a>&#160;</td><td class="memItemRight" valign="bottom"><b>winner</b></td></tr>
+<tr class="memdesc:a340b1cf2a6e5c8c869c8fd0ef044a15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the game's winner <br /></td></tr>
 <tr class="separator:a340b1cf2a6e5c8c869c8fd0ef044a15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fe20219b6d310ca4a977ca034fec62e"><td class="memItemLeft" align="right" valign="top"><a id="a5fe20219b6d310ca4a977ca034fec62e" name="a5fe20219b6d310ca4a977ca034fec62e"></a>
 datetime&#160;</td><td class="memItemRight" valign="bottom"><b>timestamp</b></td></tr>
+<tr class="memdesc:a5fe20219b6d310ca4a977ca034fec62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">when the game started <br /></td></tr>
 <tr class="separator:a5fe20219b6d310ca4a977ca034fec62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >game's data used for current game and saves </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a0bfc38a9f95fb8ee81d1b2a73c25b05c" name="a0bfc38a9f95fb8ee81d1b2a73c25b05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfc38a9f95fb8ee81d1b2a73c25b05c">&#9670;&nbsp;</a></span>players</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structplayer.html">player</a> game_data::players[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>players array </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structplayer.html" title="player data structure">player</a> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/game/<a class="el" href="game_8h_source.html">game.h</a></li>
 </ul>

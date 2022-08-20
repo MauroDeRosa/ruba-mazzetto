@@ -9,6 +9,7 @@ var searchData=
   ['player_5fhand_6',['player_hand',['../structplayer__hand.html',1,'']]],
   ['player_5fhand_5fjson_7',['player_hand_json',['../player_8h.html#ad1e8abfe49d27090a012cb3ec517286b',1,'player.c']]],
   ['player_5fjson_8',['player_json',['../player_8h.html#aa3275b99a2e5ca09ec78f72bd5d552e9',1,'player.c']]],
-  ['players_9',['players',['../structhistory__entry.html#aec3a52bd33a4b847119626030146f020',1,'history_entry']]],
-  ['points_10',['points',['../structhistory__entry.html#a36e205ba411fe5673f907f7746c229d3',1,'history_entry']]]
+  ['players_9',['players',['../structgame__data.html#a0bfc38a9f95fb8ee81d1b2a73c25b05c',1,'game_data::players()'],['../structhistory__entry.html#aec3a52bd33a4b847119626030146f020',1,'history_entry::players()']]],
+  ['players_5fcount_10',['players_count',['../structgame__data.html#ac1c1430038688e67d10d3d1c1d041676',1,'game_data']]],
+  ['points_11',['points',['../structhistory__entry.html#a36e205ba411fe5673f907f7746c229d3',1,'history_entry']]]
 ];

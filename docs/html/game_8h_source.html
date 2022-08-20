@@ -97,58 +97,75 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    GAME_START,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    GAME_SERVE,</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GAME_CYCLE,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    GAME_WAITING,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    GAME_END</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>} game_state;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">typedef</span> <a class="code hl_struct" href="structdeck.html">deck</a> <a class="code hl_struct" href="structdeck.html">game_table</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structgame__data.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_struct" href="structplayer.html">player</a> players[4];</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">size_t</span> players_count;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">size_t</span> last_take;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">size_t</span> turn;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_struct" href="structdeck.html">deck</a> dealer_deck;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_struct" href="structdeck.html">game_table</a> table;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    game_state state;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> winner;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    datetime timestamp;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <a class="code hl_struct" href="structgame__data.html">game_data</a>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> game_init_2players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> game_init_3players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> game_init_4players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> game_update();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> game_throw_on_table(<span class="keywordtype">size_t</span> hand_index);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> game_pick_from_table(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> table_index);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> game_pick_from_opponent(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> opponent_index);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_struct" href="structgame__data.html">game_data</a>* get_game_data();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> game_saves_init();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> game_save();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> game_load(<span class="keywordtype">size_t</span> save_index, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_list(<span class="keywordtype">size_t</span> *list_size);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_by_id(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    GAME_START, </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    GAME_SERVE, </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GAME_CYCLE, </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    GAME_WAITING, </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GAME_END </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} game_state;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">typedef</span> <a class="code hl_struct" href="structdeck.html">deck</a> <a class="code hl_struct" href="structdeck.html">game_table</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structgame__data.html">   31</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structgame__data.html#a0bfc38a9f95fb8ee81d1b2a73c25b05c">   33</a></span>    <a class="code hl_struct" href="structplayer.html">player</a> players[4]; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgame__data.html#ac1c1430038688e67d10d3d1c1d041676">   34</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structgame__data.html#ac1c1430038688e67d10d3d1c1d041676">players_count</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154">   35</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154">last_take</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structgame__data.html#adfd3750ceec61fccaa66a0b87c8a7e3c">   36</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structgame__data.html#adfd3750ceec61fccaa66a0b87c8a7e3c">turn</a>;  </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structgame__data.html#a7cb2be5bbd214ff9b8214954582658c4">   37</a></span>    <a class="code hl_struct" href="structdeck.html">deck</a> <a class="code hl_variable" href="structgame__data.html#a7cb2be5bbd214ff9b8214954582658c4">dealer_deck</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structgame__data.html#a99c6c0fdc15826983e4aa65c0ed28441">   38</a></span>    <a class="code hl_struct" href="structdeck.html">game_table</a> <a class="code hl_variable" href="structgame__data.html#a99c6c0fdc15826983e4aa65c0ed28441">table</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structgame__data.html#a84914ee11812a1b78f26f7d22654e9c7">   39</a></span>    game_state <a class="code hl_variable" href="structgame__data.html#a84914ee11812a1b78f26f7d22654e9c7">state</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structgame__data.html#a340b1cf2a6e5c8c869c8fd0ef044a15f">   40</a></span>    <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> <a class="code hl_variable" href="structgame__data.html#a340b1cf2a6e5c8c869c8fd0ef044a15f">winner</a>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structgame__data.html#a5fe20219b6d310ca4a977ca034fec62e">   41</a></span>    datetime <a class="code hl_variable" href="structgame__data.html#a5fe20219b6d310ca4a977ca034fec62e">timestamp</a>; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <a class="code hl_struct" href="structgame__data.html">game_data</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> game_init_2players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">char</span> *game_data_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *gd);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">char</span> *game_save_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *save, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">char</span> *game_save_list_json();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* __GAME_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> game_init_3players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> game_init_4players(<a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> game_update();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> game_throw_on_table(<span class="keywordtype">size_t</span> hand_index);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> game_pick_from_table(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> table_index);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> game_pick_from_opponent(<span class="keywordtype">size_t</span> hand_index, <span class="keywordtype">size_t</span> opponent_index);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><a class="code hl_struct" href="structgame__data.html">game_data</a>* get_game_data();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keywordtype">void</span> game_saves_init();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> game_save();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keywordtype">void</span> game_load(<span class="keywordtype">size_t</span> save_index, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user1, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user2, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user3, <a class="code hl_typedef" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> user4);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_list(<span class="keywordtype">size_t</span> *list_size);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><a class="code hl_struct" href="structgame__data.html">game_data</a> *game_save_by_id(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">char</span> *game_data_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *gd);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keywordtype">char</span> *game_save_json(<a class="code hl_struct" href="structgame__data.html">game_data</a> *save, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keywordtype">char</span> *game_save_list_json();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#endif </span><span class="comment">/* __GAME_H__ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="acards_8h_html"><div class="ttname"><a href="cards_8h.html">cards.h</a></div><div class="ttdoc">cards and deck data structures and functions</div></div>
 <div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div><div class="ttdoc">player data structure and functions</div></div>
 <div class="ttc" id="astructdeck_html"><div class="ttname"><a href="structdeck.html">deck</a></div><div class="ttdoc">deck data structure</div><div class="ttdef"><b>Definition:</b> cards.h:43</div></div>
-<div class="ttc" id="astructgame__data_html"><div class="ttname"><a href="structgame__data.html">game_data</a></div><div class="ttdef"><b>Definition:</b> game.h:23</div></div>
+<div class="ttc" id="astructgame__data_html"><div class="ttname"><a href="structgame__data.html">game_data</a></div><div class="ttdoc">game's data used for current game and saves</div><div class="ttdef"><b>Definition:</b> game.h:32</div></div>
+<div class="ttc" id="astructgame__data_html_a340b1cf2a6e5c8c869c8fd0ef044a15f"><div class="ttname"><a href="structgame__data.html#a340b1cf2a6e5c8c869c8fd0ef044a15f">game_data::winner</a></div><div class="ttdeci">userid winner</div><div class="ttdoc">the game's winner</div><div class="ttdef"><b>Definition:</b> game.h:40</div></div>
+<div class="ttc" id="astructgame__data_html_a5c127d3c94dec53dccaa14dad09ae154"><div class="ttname"><a href="structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154">game_data::last_take</a></div><div class="ttdeci">size_t last_take</div><div class="ttdoc">index of the last player who took cards from the game's table or from another player's deck</div><div class="ttdef"><b>Definition:</b> game.h:35</div></div>
+<div class="ttc" id="astructgame__data_html_a5fe20219b6d310ca4a977ca034fec62e"><div class="ttname"><a href="structgame__data.html#a5fe20219b6d310ca4a977ca034fec62e">game_data::timestamp</a></div><div class="ttdeci">datetime timestamp</div><div class="ttdoc">when the game started</div><div class="ttdef"><b>Definition:</b> game.h:41</div></div>
+<div class="ttc" id="astructgame__data_html_a7cb2be5bbd214ff9b8214954582658c4"><div class="ttname"><a href="structgame__data.html#a7cb2be5bbd214ff9b8214954582658c4">game_data::dealer_deck</a></div><div class="ttdeci">deck dealer_deck</div><div class="ttdoc">the game's dealer deck (full at game start)</div><div class="ttdef"><b>Definition:</b> game.h:37</div></div>
+<div class="ttc" id="astructgame__data_html_a84914ee11812a1b78f26f7d22654e9c7"><div class="ttname"><a href="structgame__data.html#a84914ee11812a1b78f26f7d22654e9c7">game_data::state</a></div><div class="ttdeci">game_state state</div><div class="ttdoc">the current game's state</div><div class="ttdef"><b>Definition:</b> game.h:39</div></div>
+<div class="ttc" id="astructgame__data_html_a99c6c0fdc15826983e4aa65c0ed28441"><div class="ttname"><a href="structgame__data.html#a99c6c0fdc15826983e4aa65c0ed28441">game_data::table</a></div><div class="ttdeci">game_table table</div><div class="ttdoc">the game's table (initialized with 4 cards)</div><div class="ttdef"><b>Definition:</b> game.h:38</div></div>
+<div class="ttc" id="astructgame__data_html_ac1c1430038688e67d10d3d1c1d041676"><div class="ttname"><a href="structgame__data.html#ac1c1430038688e67d10d3d1c1d041676">game_data::players_count</a></div><div class="ttdeci">size_t players_count</div><div class="ttdoc">how many players in this match (2, 3 or 4 players)</div><div class="ttdef"><b>Definition:</b> game.h:34</div></div>
+<div class="ttc" id="astructgame__data_html_adfd3750ceec61fccaa66a0b87c8a7e3c"><div class="ttname"><a href="structgame__data.html#adfd3750ceec61fccaa66a0b87c8a7e3c">game_data::turn</a></div><div class="ttdeci">size_t turn</div><div class="ttdoc">index of the currently playing player</div><div class="ttdef"><b>Definition:</b> game.h:36</div></div>
 <div class="ttc" id="astructplayer_html"><div class="ttname"><a href="structplayer.html">player</a></div><div class="ttdoc">player data structure</div><div class="ttdef"><b>Definition:</b> player.h:37</div></div>
 <div class="ttc" id="auser_8h_html"><div class="ttname"><a href="user_8h.html">user.h</a></div><div class="ttdoc">basic user system</div></div>
 <div class="ttc" id="auser_8h_html_af5849791e8146f8f7da65a6808a59a4e"><div class="ttname"><a href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a></div><div class="ttdeci">size_t userid</div><div class="ttdoc">user id</div><div class="ttdef"><b>Definition:</b> user.h:26</div></div>
