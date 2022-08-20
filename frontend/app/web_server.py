@@ -8,7 +8,7 @@ class WebServer(Flask):
     
     def __init__(self, import_name):
         Flask.__init__(self, import_name)
-        self.config['TEMPLATES_AUTO_RELOAD'] = True
+        #self.config['TEMPLATES_AUTO_RELOAD'] = True
     
     def start(self):
         t = threading.Thread(target=lambda: self.run(host='0.0.0.0', port=8080))

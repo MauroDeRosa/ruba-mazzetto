@@ -26,7 +26,7 @@ void server_recv()
     {
         log_error("Socket couldn't receive message from the connected client");
     }
-    log_info("client says %s", client_message);
+    log_debug("client says %s", client_message);
 }
 
 void server_send(const char *message)
@@ -45,7 +45,7 @@ void server_send(const char *message)
     {
         log_error("Socket can't send message back to the client");
     }
-    log_info("Message sent: %s", server_message);
+    log_debug("Message sent: %s", server_message);
 }
 
 void server_init()
