@@ -149,9 +149,15 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a774d0c59879da7247a69fe5d06a244e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8h.html#a774d0c59879da7247a69fe5d06a244e3">compare_userid</a> (const void *a, const void *b)</td></tr>
-<tr class="memdesc:a774d0c59879da7247a69fe5d06a244e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare userids  <a href="user_8h.html#a774d0c59879da7247a69fe5d06a244e3">More...</a><br /></td></tr>
-<tr class="separator:a774d0c59879da7247a69fe5d06a244e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5a943ccecf2afa48ba64f50f9c0578"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8h.html#adc5a943ccecf2afa48ba64f50f9c0578">compare_userids</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:adc5a943ccecf2afa48ba64f50f9c0578"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare userids  <a href="user_8h.html#adc5a943ccecf2afa48ba64f50f9c0578">More...</a><br /></td></tr>
+<tr class="separator:adc5a943ccecf2afa48ba64f50f9c0578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff168abf1985eacb6e61d913758883b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8h.html#a2ff168abf1985eacb6e61d913758883b">compare_by_userid</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:a2ff168abf1985eacb6e61d913758883b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare users by userids  <a href="user_8h.html#a2ff168abf1985eacb6e61d913758883b">More...</a><br /></td></tr>
+<tr class="separator:a2ff168abf1985eacb6e61d913758883b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8h.html#a6f2fcc32cd775bdae9cae35f77fa5eb1">compare_by_username</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare users by usernames  <a href="user_8h.html#a6f2fcc32cd775bdae9cae35f77fa5eb1">More...</a><br /></td></tr>
+<tr class="separator:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add670f14f875b99b3985c1c862b3bfde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8h.html#add670f14f875b99b3985c1c862b3bfde">is_user_logged</a> (<a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> id)</td></tr>
 <tr class="memdesc:add670f14f875b99b3985c1c862b3bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if user is logged  <a href="user_8h.html#add670f14f875b99b3985c1c862b3bfde">More...</a><br /></td></tr>
 <tr class="separator:add670f14f875b99b3985c1c862b3bfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,7 +218,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >basic user system </p>
 <dl class="section author"><dt>Author</dt><dd>Mauro De Rosa (<a href="#" onclick="location.href='mai'+'lto:'+'it.'+'ma'+'uro'+'.d'+'ero'+'sa'+'@gm'+'ai'+'l.c'+'om'; return false;">it.ma<span class="obfuscator">.nosp@m.</span>uro.<span class="obfuscator">.nosp@m.</span>deros<span class="obfuscator">.nosp@m.</span>a@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.0 alpha </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2022-07-26</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -346,14 +352,90 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a774d0c59879da7247a69fe5d06a244e3" name="a774d0c59879da7247a69fe5d06a244e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a774d0c59879da7247a69fe5d06a244e3">&#9670;&nbsp;</a></span>compare_userid()</h2>
+<a id="a2ff168abf1985eacb6e61d913758883b" name="a2ff168abf1985eacb6e61d913758883b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff168abf1985eacb6e61d913758883b">&#9670;&nbsp;</a></span>compare_by_userid()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int compare_userid </td>
+          <td class="memname">int compare_by_userid </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare users by userids </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first user </td></tr>
+    <tr><td class="paramname">b</td><td>second user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int userid difference </dd></dl>
+
+</div>
+</div>
+<a id="a6f2fcc32cd775bdae9cae35f77fa5eb1" name="a6f2fcc32cd775bdae9cae35f77fa5eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2fcc32cd775bdae9cae35f77fa5eb1">&#9670;&nbsp;</a></span>compare_by_username()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compare_by_username </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare users by usernames </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first user </td></tr>
+    <tr><td class="paramname">b</td><td>second user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int username difference </dd></dl>
+
+</div>
+</div>
+<a id="adc5a943ccecf2afa48ba64f50f9c0578" name="adc5a943ccecf2afa48ba64f50f9c0578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5a943ccecf2afa48ba64f50f9c0578">&#9670;&nbsp;</a></span>compare_userids()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compare_userids </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -375,12 +457,12 @@ Functions</h2></td></tr>
 <p>compare userids </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>first userid </td></tr>
-    <tr><td class="paramname">b</td><td>second userid </td></tr>
+    <tr><td class="paramname">a</td><td>1st userid </td></tr>
+    <tr><td class="paramname">b</td><td>2nd userid </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int userid difference </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int difference between the two </dd></dl>
 
 </div>
 </div>

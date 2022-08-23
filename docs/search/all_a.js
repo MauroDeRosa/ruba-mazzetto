@@ -20,7 +20,6 @@ var searchData=
   ['log_5ftype_5finfo_17',['LOG_TYPE_INFO',['../log_8h.html#a8b181b7eaaab11e988e2c6b7cdc0d80a',1,'log.h']]],
   ['log_5ftype_5fwarning_18',['LOG_TYPE_WARNING',['../log_8h.html#a5781a92890ba75559c17d6c7f613ab29',1,'log.h']]],
   ['log_5fwarning_19',['log_warning',['../log_8h.html#ace74930da408748431f70d185fa9ec0c',1,'log.h']]],
-  ['logged_5fcount_20',['logged_count',['../user_8c.html#adb5bd88f85dc855b8724d468c22901bd',1,'user.c']]],
-  ['logged_5ftable_21',['logged_table',['../user_8c.html#a3f7c7e0d8fa22e8401d8ce41704a0e43',1,'user.c']]],
-  ['losses_22',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
+  ['logged_20',['logged',['../user_8c.html#ad1836025f087ea16c28385367d4c1422',1,'user.c']]],
+  ['losses_21',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
 ];

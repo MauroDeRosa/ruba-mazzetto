@@ -5,7 +5,7 @@
  * @file user.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
  * @brief basic user system
- * @version 0.1
+ * @version 1.0.0 alpha
  * @date 2022-07-26
  * 
  * @copyright Copyright (c) 2022
@@ -40,11 +40,29 @@ typedef struct
 /**
  * @brief compare userids
  * 
- * @param a first userid
- * @param b second userid
+ * @param a 1st userid
+ * @param b 2nd userid
+ * @return int difference between the two
+ */
+int compare_userids(const void *a, const void *b);
+
+/**
+ * @brief compare users by userids
+ * 
+ * @param a first user
+ * @param b second user
  * @return int userid difference
  */
-int compare_userid(const void* a, const void* b);
+int compare_by_userid(const void* a, const void* b);
+
+/**
+ * @brief compare users by usernames
+ * 
+ * @param a first user
+ * @param b second user
+ * @return int username difference
+ */
+int compare_by_username(const void *a, const void *b);
 
 /**
  * @brief check if user is logged

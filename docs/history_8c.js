@@ -1,6 +1,5 @@
 var history_8c =
 [
-    [ "DEFAULT_HISTORY_SIZE", "history_8c.html#a03279e3a908f5d4c42f0333c2f80a887", null ],
     [ "HISTORY_PATH", "history_8c.html#a32f7389f2a161bbbb128130ca37ef8e1", null ],
     [ "add_history_entry", "history_8c.html#a06329fce2f00e192f8a0fbba55c86196", null ],
     [ "compare_history_by_timestamp", "history_8c.html#a040a829e730802599b52a8d958c830ac", null ],

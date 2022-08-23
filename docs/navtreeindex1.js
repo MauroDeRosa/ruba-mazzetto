@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"history_8h.html#afb1f3ff6c3cf71ca3379ac1385239545":[1,0,0,0,2,5],
 "history_8h_source.html":[1,0,0,0,2],
 "index.html":[],
 "log_8c.html":[1,0,1,1,0],
@@ -246,8 +245,9 @@ var NAVTREEINDEX1 =
 "timeutils_8h.html#ac82a970ed97b2e8242909413534ee730":[1,0,0,4,1,3],
 "timeutils_8h_source.html":[1,0,0,4,1],
 "user_8c.html":[1,0,1,0,5],
-"user_8c.html#a07509d9b997db6bdea566c04eaf20dd2":[1,0,1,0,5,21],
-"user_8c.html#a0b1fb2b5154d65624cf8ac346656e918":[1,0,1,0,5,10],
-"user_8c.html#a136d26039e848fa53d7915727724e297":[1,0,1,0,5,0],
-"user_8c.html#a1f5bb15e839d96fd3967dfeec2a51052":[1,0,1,0,5,23]
+"user_8c.html#a07509d9b997db6bdea566c04eaf20dd2":[1,0,1,0,5,20],
+"user_8c.html#a0b1fb2b5154d65624cf8ac346656e918":[1,0,1,0,5,9],
+"user_8c.html#a1f5bb15e839d96fd3967dfeec2a51052":[1,0,1,0,5,22],
+"user_8c.html#a2350e5e64aae16fbaa21de544b91f6f8":[1,0,1,0,5,26],
+"user_8c.html#a2ff168abf1985eacb6e61d913758883b":[1,0,1,0,5,2]
 };

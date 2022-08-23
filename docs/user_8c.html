@@ -119,20 +119,17 @@ $(document).ready(function(){initNavTree('user_8c.html',''); initResizable(); })
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad0fe3c49ffff064fed8690c046261be7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#ad0fe3c49ffff064fed8690c046261be7">USER_TABLE_PATH</a>&#160;&#160;&#160;&quot;./users.bin&quot;</td></tr>
-<tr class="memdesc:ad0fe3c49ffff064fed8690c046261be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the user table binary file path  <a href="user_8c.html#ad0fe3c49ffff064fed8690c046261be7">More...</a><br /></td></tr>
+<tr class="memdesc:ad0fe3c49ffff064fed8690c046261be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the user vector binary file path  <a href="user_8c.html#ad0fe3c49ffff064fed8690c046261be7">More...</a><br /></td></tr>
 <tr class="separator:ad0fe3c49ffff064fed8690c046261be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a136d26039e848fa53d7915727724e297"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a136d26039e848fa53d7915727724e297">USER_TABLE_DEFAULT_SIZE</a>&#160;&#160;&#160;20</td></tr>
-<tr class="memdesc:a136d26039e848fa53d7915727724e297"><td class="mdescLeft">&#160;</td><td class="mdescRight">the user table default size (or how much the table size will increase if space's needed)  <a href="user_8c.html#a136d26039e848fa53d7915727724e297">More...</a><br /></td></tr>
-<tr class="separator:a136d26039e848fa53d7915727724e297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3c94f9f0f16091fd07bf0cbbf43c2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a9e3c94f9f0f16091fd07bf0cbbf43c2d">USERID_MAX</a>&#160;&#160;&#160;UINT_MAX</td></tr>
-<tr class="memdesc:a9e3c94f9f0f16091fd07bf0cbbf43c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum user size  <a href="user_8c.html#a9e3c94f9f0f16091fd07bf0cbbf43c2d">More...</a><br /></td></tr>
+<tr class="memdesc:a9e3c94f9f0f16091fd07bf0cbbf43c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum user id  <a href="user_8c.html#a9e3c94f9f0f16091fd07bf0cbbf43c2d">More...</a><br /></td></tr>
 <tr class="separator:a9e3c94f9f0f16091fd07bf0cbbf43c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a774d0c59879da7247a69fe5d06a244e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a774d0c59879da7247a69fe5d06a244e3">compare_userid</a> (const void *a, const void *b)</td></tr>
-<tr class="memdesc:a774d0c59879da7247a69fe5d06a244e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare userids  <a href="user_8c.html#a774d0c59879da7247a69fe5d06a244e3">More...</a><br /></td></tr>
-<tr class="separator:a774d0c59879da7247a69fe5d06a244e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5a943ccecf2afa48ba64f50f9c0578"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#adc5a943ccecf2afa48ba64f50f9c0578">compare_userids</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:adc5a943ccecf2afa48ba64f50f9c0578"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare userids  <a href="user_8c.html#adc5a943ccecf2afa48ba64f50f9c0578">More...</a><br /></td></tr>
+<tr class="separator:adc5a943ccecf2afa48ba64f50f9c0578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add670f14f875b99b3985c1c862b3bfde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#add670f14f875b99b3985c1c862b3bfde">is_user_logged</a> (<a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> id)</td></tr>
 <tr class="memdesc:add670f14f875b99b3985c1c862b3bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if user is logged  <a href="user_8c.html#add670f14f875b99b3985c1c862b3bfde">More...</a><br /></td></tr>
 <tr class="separator:add670f14f875b99b3985c1c862b3bfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,14 +137,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0b1fb2b5154d65624cf8ac346656e918"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if user id is not invalid and is in table  <a href="user_8c.html#a0b1fb2b5154d65624cf8ac346656e918">More...</a><br /></td></tr>
 <tr class="separator:a0b1fb2b5154d65624cf8ac346656e918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a6f2fcc32cd775bdae9cae35f77fa5eb1">compare_by_username</a> (const void *a, const void *b)</td></tr>
-<tr class="memdesc:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator used for qsort and binary_search  <a href="user_8c.html#a6f2fcc32cd775bdae9cae35f77fa5eb1">More...</a><br /></td></tr>
+<tr class="memdesc:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare users by usernames  <a href="user_8c.html#a6f2fcc32cd775bdae9cae35f77fa5eb1">More...</a><br /></td></tr>
 <tr class="separator:a6f2fcc32cd775bdae9cae35f77fa5eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc956fe95a2e713ea832c949a46a360"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuser.html">user</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a3dc956fe95a2e713ea832c949a46a360">get_user_by_username</a> (const char *username)</td></tr>
 <tr class="memdesc:a3dc956fe95a2e713ea832c949a46a360"><td class="mdescLeft">&#160;</td><td class="mdescRight">find a user  <a href="user_8c.html#a3dc956fe95a2e713ea832c949a46a360">More...</a><br /></td></tr>
 <tr class="separator:a3dc956fe95a2e713ea832c949a46a360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaf520afc04a02826cad76edab115e62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#acaf520afc04a02826cad76edab115e62">compare_by_id</a> (const void *a, const void *b)</td></tr>
-<tr class="memdesc:acaf520afc04a02826cad76edab115e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator used for qsort and binary_search  <a href="user_8c.html#acaf520afc04a02826cad76edab115e62">More...</a><br /></td></tr>
-<tr class="separator:acaf520afc04a02826cad76edab115e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff168abf1985eacb6e61d913758883b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a2ff168abf1985eacb6e61d913758883b">compare_by_userid</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:a2ff168abf1985eacb6e61d913758883b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare users by userids  <a href="user_8c.html#a2ff168abf1985eacb6e61d913758883b">More...</a><br /></td></tr>
+<tr class="separator:a2ff168abf1985eacb6e61d913758883b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5775256bbddb4a07257aeec43a5409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuser.html">user</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#aeb5775256bbddb4a07257aeec43a5409">get_user</a> (<a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> id)</td></tr>
 <tr class="memdesc:aeb5775256bbddb4a07257aeec43a5409"><td class="mdescLeft">&#160;</td><td class="mdescRight">find a user  <a href="user_8c.html#aeb5775256bbddb4a07257aeec43a5409">More...</a><br /></td></tr>
 <tr class="separator:aeb5775256bbddb4a07257aeec43a5409"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,35 +196,16 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2350e5e64aae16fbaa21de544b91f6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvector.html">vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a2350e5e64aae16fbaa21de544b91f6f8">users</a></td></tr>
+<tr class="memdesc:a2350e5e64aae16fbaa21de544b91f6f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the users vector  <a href="user_8c.html#a2350e5e64aae16fbaa21de544b91f6f8">More...</a><br /></td></tr>
 <tr class="separator:a2350e5e64aae16fbaa21de544b91f6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cd6651585cf2110611ca2fdc2abca53"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a8cd6651585cf2110611ca2fdc2abca53">table_file</a></td></tr>
-<tr class="memdesc:a8cd6651585cf2110611ca2fdc2abca53"><td class="mdescLeft">&#160;</td><td class="mdescRight">the user table file descriptor  <a href="user_8c.html#a8cd6651585cf2110611ca2fdc2abca53">More...</a><br /></td></tr>
-<tr class="separator:a8cd6651585cf2110611ca2fdc2abca53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1836025f087ea16c28385367d4c1422"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvector.html">vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#ad1836025f087ea16c28385367d4c1422">logged</a></td></tr>
+<tr class="memdesc:ad1836025f087ea16c28385367d4c1422"><td class="mdescLeft">&#160;</td><td class="mdescRight">the logged users vector  <a href="user_8c.html#ad1836025f087ea16c28385367d4c1422">More...</a><br /></td></tr>
+<tr class="separator:ad1836025f087ea16c28385367d4c1422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47fcf3cc611ce094cee35d5cc31c735c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a47fcf3cc611ce094cee35d5cc31c735c">last_id</a></td></tr>
 <tr class="memdesc:a47fcf3cc611ce094cee35d5cc31c735c"><td class="mdescLeft">&#160;</td><td class="mdescRight">last used id  <a href="user_8c.html#a47fcf3cc611ce094cee35d5cc31c735c">More...</a><br /></td></tr>
 <tr class="separator:a47fcf3cc611ce094cee35d5cc31c735c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f7c7e0d8fa22e8401d8ce41704a0e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#a3f7c7e0d8fa22e8401d8ce41704a0e43">logged_table</a></td></tr>
-<tr class="separator:a3f7c7e0d8fa22e8401d8ce41704a0e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5bd88f85dc855b8724d468c22901bd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#adb5bd88f85dc855b8724d468c22901bd">logged_count</a></td></tr>
-<tr class="separator:adb5bd88f85dc855b8724d468c22901bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a136d26039e848fa53d7915727724e297" name="a136d26039e848fa53d7915727724e297"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a136d26039e848fa53d7915727724e297">&#9670;&nbsp;</a></span>USER_TABLE_DEFAULT_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USER_TABLE_DEFAULT_SIZE&#160;&#160;&#160;20</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>the user table default size (or how much the table size will increase if space's needed) </p>
-
-</div>
-</div>
 <a id="ad0fe3c49ffff064fed8690c046261be7" name="ad0fe3c49ffff064fed8690c046261be7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0fe3c49ffff064fed8690c046261be7">&#9670;&nbsp;</a></span>USER_TABLE_PATH</h2>
 
@@ -240,7 +218,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>the user table binary file path </p>
+<p>the user vector binary file path </p>
 
 </div>
 </div>
@@ -256,19 +234,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum user size </p>
+<p>maximum user id </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="acaf520afc04a02826cad76edab115e62" name="acaf520afc04a02826cad76edab115e62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaf520afc04a02826cad76edab115e62">&#9670;&nbsp;</a></span>compare_by_id()</h2>
+<a id="a2ff168abf1985eacb6e61d913758883b" name="a2ff168abf1985eacb6e61d913758883b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff168abf1985eacb6e61d913758883b">&#9670;&nbsp;</a></span>compare_by_userid()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int compare_by_id </td>
+          <td class="memname">int compare_by_userid </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -287,7 +265,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>comparator used for qsort and binary_search </p>
+<p>compare users by userids </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first user </td></tr>
+    <tr><td class="paramname">b</td><td>second user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int userid difference </dd></dl>
 
 </div>
 </div>
@@ -317,18 +303,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>comparator used for qsort and binary_search </p>
+<p>compare users by usernames </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first user </td></tr>
+    <tr><td class="paramname">b</td><td>second user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int username difference </dd></dl>
 
 </div>
 </div>
-<a id="a774d0c59879da7247a69fe5d06a244e3" name="a774d0c59879da7247a69fe5d06a244e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a774d0c59879da7247a69fe5d06a244e3">&#9670;&nbsp;</a></span>compare_userid()</h2>
+<a id="adc5a943ccecf2afa48ba64f50f9c0578" name="adc5a943ccecf2afa48ba64f50f9c0578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5a943ccecf2afa48ba64f50f9c0578">&#9670;&nbsp;</a></span>compare_userids()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int compare_userid </td>
+          <td class="memname">int compare_userids </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -350,12 +344,12 @@ Variables</h2></td></tr>
 <p>compare userids </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>first userid </td></tr>
-    <tr><td class="paramname">b</td><td>second userid </td></tr>
+    <tr><td class="paramname">a</td><td>1st userid </td></tr>
+    <tr><td class="paramname">b</td><td>2nd userid </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int userid difference </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int difference between the two </dd></dl>
 
 </div>
 </div>
@@ -910,47 +904,19 @@ false user not found </dd></dl>
 
 </div>
 </div>
-<a id="adb5bd88f85dc855b8724d468c22901bd" name="adb5bd88f85dc855b8724d468c22901bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb5bd88f85dc855b8724d468c22901bd">&#9670;&nbsp;</a></span>logged_count</h2>
+<a id="ad1836025f087ea16c28385367d4c1422" name="ad1836025f087ea16c28385367d4c1422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1836025f087ea16c28385367d4c1422">&#9670;&nbsp;</a></span>logged</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t logged_count</td>
+          <td class="memname"><a class="el" href="structvector.html">vector</a>* logged</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a3f7c7e0d8fa22e8401d8ce41704a0e43" name="a3f7c7e0d8fa22e8401d8ce41704a0e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f7c7e0d8fa22e8401d8ce41704a0e43">&#9670;&nbsp;</a></span>logged_table</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="user_8h.html#af5849791e8146f8f7da65a6808a59a4e">userid</a>* logged_table</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8cd6651585cf2110611ca2fdc2abca53" name="a8cd6651585cf2110611ca2fdc2abca53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cd6651585cf2110611ca2fdc2abca53">&#9670;&nbsp;</a></span>table_file</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE* table_file</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>the user table file descriptor </p>
+<p>the logged users vector </p>
 
 </div>
 </div>
@@ -965,6 +931,8 @@ false user not found </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>the users vector </p>
 
 </div>
 </div>

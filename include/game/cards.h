@@ -5,7 +5,7 @@
  * @file cards.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
  * @brief cards and deck data structures and functions
- * @version 0.1
+ * @version 1.0.0 alpha
  * @date 2022-07-28
  * 
  * @copyright Copyright (c) 2022

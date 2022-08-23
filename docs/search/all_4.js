@@ -17,11 +17,10 @@ var searchData=
   ['deck_5finit_5fempty_14',['deck_init_empty',['../cards_8h.html#ac44fb9b5d6f56e0f0f19e2d95f9f5a84',1,'deck_init_empty(deck *d):&#160;cards.c'],['../cards_8c.html#ac44fb9b5d6f56e0f0f19e2d95f9f5a84',1,'deck_init_empty(deck *d):&#160;cards.c']]],
   ['deck_5finit_5ffull_15',['deck_init_full',['../cards_8h.html#abbb553f0e8ed66de3e9565b4e8e9b0e7',1,'deck_init_full(deck *d):&#160;cards.c'],['../cards_8c.html#abbb553f0e8ed66de3e9565b4e8e9b0e7',1,'deck_init_full(deck *d):&#160;cards.c']]],
   ['deck_5fjson_16',['deck_json',['../cards_8h.html#aeabe5f011758ed3d01308ee66e255171',1,'deck_json(deck *d):&#160;cards.c'],['../cards_8c.html#aeabe5f011758ed3d01308ee66e255171',1,'deck_json(deck *d):&#160;cards.c']]],
-  ['deck_5fpop_17',['deck_pop',['../cards_8c.html#a75cec1a642499cbd242429c3d8d24ad3',1,'deck_pop(deck *d):&#160;cards.c'],['../cards_8h.html#a75cec1a642499cbd242429c3d8d24ad3',1,'deck_pop(deck *d):&#160;cards.c']]],
+  ['deck_5fpop_17',['deck_pop',['../cards_8h.html#a75cec1a642499cbd242429c3d8d24ad3',1,'deck_pop(deck *d):&#160;cards.c'],['../cards_8c.html#a75cec1a642499cbd242429c3d8d24ad3',1,'deck_pop(deck *d):&#160;cards.c']]],
   ['deck_5fpop_5findex_18',['deck_pop_index',['../cards_8h.html#a1c98812d15247f208e067732ea748593',1,'deck_pop_index(deck *d, size_t index):&#160;cards.c'],['../cards_8c.html#a1c98812d15247f208e067732ea748593',1,'deck_pop_index(deck *d, size_t index):&#160;cards.c']]],
   ['deck_5fshuffle_19',['deck_shuffle',['../cards_8h.html#abff5c204861b3169cdbea7dd3cda1461',1,'deck_shuffle(deck *d):&#160;cards.c'],['../cards_8c.html#abff5c204861b3169cdbea7dd3cda1461',1,'deck_shuffle(deck *d):&#160;cards.c']]],
   ['deck_5fsize_20',['DECK_SIZE',['../cards_8h.html#ab48a679225d82ec51e09e62d14313b34',1,'cards.h']]],
   ['deck_5ftop_21',['deck_top',['../cards_8h.html#a22b45fddb7859c304974eb291691f299',1,'deck_top(deck *d):&#160;cards.c'],['../cards_8c.html#a22b45fddb7859c304974eb291691f299',1,'deck_top(deck *d):&#160;cards.c']]],
-  ['default_5fhistory_5fsize_22',['DEFAULT_HISTORY_SIZE',['../history_8c.html#a03279e3a908f5d4c42f0333c2f80a887',1,'history.c']]],
-  ['default_5fvector_5fsize_23',['DEFAULT_VECTOR_SIZE',['../vector_8c.html#aa1fbc5c401441fea94177fc0b1c5c115',1,'vector.c']]]
+  ['default_5fvector_5fsize_22',['DEFAULT_VECTOR_SIZE',['../vector_8c.html#aa1fbc5c401441fea94177fc0b1c5c115',1,'vector.c']]]
 ];

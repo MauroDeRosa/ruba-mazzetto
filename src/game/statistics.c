@@ -1,3 +1,15 @@
+/**
+ * @file statistics.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief statistics module implementation @see statistics.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-23
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <game/history.h>
 #include <game/statistics.h>
 #include <io/log.h>

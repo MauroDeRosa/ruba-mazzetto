@@ -1,11 +1,10 @@
 var user_8c =
 [
-    [ "USER_TABLE_DEFAULT_SIZE", "user_8c.html#a136d26039e848fa53d7915727724e297", null ],
     [ "USER_TABLE_PATH", "user_8c.html#ad0fe3c49ffff064fed8690c046261be7", null ],
     [ "USERID_MAX", "user_8c.html#a9e3c94f9f0f16091fd07bf0cbbf43c2d", null ],
-    [ "compare_by_id", "user_8c.html#acaf520afc04a02826cad76edab115e62", null ],
+    [ "compare_by_userid", "user_8c.html#a2ff168abf1985eacb6e61d913758883b", null ],
     [ "compare_by_username", "user_8c.html#a6f2fcc32cd775bdae9cae35f77fa5eb1", null ],
-    [ "compare_userid", "user_8c.html#a774d0c59879da7247a69fe5d06a244e3", null ],
+    [ "compare_userids", "user_8c.html#adc5a943ccecf2afa48ba64f50f9c0578", null ],
     [ "get_user", "user_8c.html#aeb5775256bbddb4a07257aeec43a5409", null ],
     [ "get_user_by_username", "user_8c.html#a3dc956fe95a2e713ea832c949a46a360", null ],
     [ "is_password_valid", "user_8c.html#a674171272b2884bbfa1b5c9b9fc376f1", null ],
@@ -26,8 +25,6 @@ var user_8c =
     [ "users_init", "user_8c.html#a1f5bb15e839d96fd3967dfeec2a51052", null ],
     [ "users_save", "user_8c.html#ae115e53e41071da9190140e94fe19854", null ],
     [ "last_id", "user_8c.html#a47fcf3cc611ce094cee35d5cc31c735c", null ],
-    [ "logged_count", "user_8c.html#adb5bd88f85dc855b8724d468c22901bd", null ],
-    [ "logged_table", "user_8c.html#a3f7c7e0d8fa22e8401d8ce41704a0e43", null ],
-    [ "table_file", "user_8c.html#a8cd6651585cf2110611ca2fdc2abca53", null ],
+    [ "logged", "user_8c.html#ad1836025f087ea16c28385367d4c1422", null ],
     [ "users", "user_8c.html#a2350e5e64aae16fbaa21de544b91f6f8", null ]
 ];

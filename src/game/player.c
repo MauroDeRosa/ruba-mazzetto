@@ -1,3 +1,15 @@
+/**
+ * @file player.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief player module implementation @see player.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-23
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <game/player.h>
 #include <types/memory.h>
 #include <types/array.h>

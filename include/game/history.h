@@ -5,7 +5,7 @@
  * @file history.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
  * @brief match history module
- * @version 0.1
+ * @version 1.0.0 alpha
  * @date 2022-08-22
  * 
  * @copyright Copyright (c) 2022

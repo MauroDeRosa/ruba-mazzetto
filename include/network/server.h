@@ -5,7 +5,7 @@
  * @file server.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
  * @brief local server for IPC between backend and frontend
- * @version 0.1
+ * @version 1.0.0 alpha
  * @date 2022-08-23
  * 
  * @copyright Copyright (c) 2022

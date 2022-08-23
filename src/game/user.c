@@ -12,52 +12,43 @@
 #include <stdio.h>
 #include <limits.h>
 
-#define USER_TABLE_PATH "./users.bin" ///< the user table binary file path
-#define USER_TABLE_DEFAULT_SIZE 20    ///< the user table default size (or how much the table size will increase if space's needed)
-#define USERID_MAX UINT_MAX           ///< maximum user size
+#define USER_TABLE_PATH "./users.bin" ///< the user vector binary file path
+#define USERID_MAX UINT_MAX           ///< maximum user id
 
-vector *users;
-// user *users->elements; ///< the user table
-// size_t table_count; ///< the number of users in the table
-// size_t table_size; ///< the size of the user table (the allocated memory is resized when needed)
-FILE *table_file; ///< the user table file descriptor
+vector *users; ///< the users vector
+vector *logged; ///< the logged users vector
 size_t last_id;   ///< last used id
 
-userid *logged_table;
-size_t logged_count;
-
-int compare_userid(const void *a, const void *b)
+int compare_userids(const void *a, const void *b)
 {
     const userid *au = a, *bu = b;
+    // return user ids numeric difference
     return *au - *bu;
 }
 
 bool is_user_logged(userid id)
 {
-    userid *found = binary_search(&id, logged_table, logged_count, sizeof(userid), compare_userid);
+    userid *found = binary_search(&id, logged->elements, logged->count, logged->element_size, compare_userids);
+    // if userid is in logged vector return true
     return found != NULL;
 }
 
 bool is_user_valid(userid id)
 {
-    if (id == USERID_INVALID)
+    if (id == USERID_INVALID || user_exists(id) == false)
     {
         return false;
     }
-    else if (user_exists(id) == false)
-    {
-        return false;
-    }
-
+    
+    // return true if user id is valid and exists in users vector
     return true;
 }
 
-/**
- * @brief comparator used for qsort and binary_search
- */
 int compare_by_username(const void *a, const void *b)
 {
     const user *ua = a, *ub = b;
+
+    // return username string comparision 
     return strcmp(ua->username, ub->username);
 }
 
@@ -71,31 +62,33 @@ user *get_user_by_username(const char *username)
     user value;
     strcpy(value.username, username);
     value.username[USERNAME_MAX_LEN] = '\0';
+    // return pointer to the found user or NULL if user wasn't fount
     return binary_search(&value, users->elements, users->count, sizeof(user), compare_by_username);
 }
 
-/**
- * @brief comparator used for qsort and binary_search
- */
-int compare_by_id(const void *a, const void *b)
+int compare_by_userid(const void *a, const void *b)
 {
     const user *ua = a, *ub = b;
+    // users id difference
     return (int)(ua->id) - (int)(ub->id);
 }
 
 user *get_user(userid id)
 {
     user value = (user){.id = id};
-    return binary_search(&value, users->elements, users->count, sizeof(user), compare_by_id);
+    // return user pointer if user with specified id exist else return NULL
+    return binary_search(&value, users->elements, users->count, sizeof(user), compare_by_userid);
 }
 
 bool user_exists(userid id)
 {
+    // true if user was found
     return get_user(id) != NULL;
 }
 
 bool username_exists(const char *username)
 {
+    // true if user was found
     return get_user_by_username(username) != NULL;
 }
 
@@ -105,11 +98,13 @@ bool is_username_valid(const char *username)
 
     if (username_len < USERNAME_MIN_LEN || username_len > USERNAME_MAX_LEN)
     {
+        // if user exceeds max length or is too short return false
         return false;
     }
 
     for (size_t i = 0; i < username_len; i++)
     {
+        // user can contain only alphanumeric characters or underscores
         if (!isalnum(username[i]) && username[i] != '_')
         {
             return false;
@@ -133,9 +128,10 @@ bool is_password_valid(const char *password)
         else if(islower(c)) nlower++;
         else if(isdigit(c)) ndigit++;
         else if(ispunct(c)) nspecial++;
-        else return false;
+        else return false; // if invalid character return not valid
     } 
 
+    // returns true if password contains at least 1 uppercase char, 1 punctuation symbol and 1 digit, and it's of the right length
     return (nupper && nlower && ndigit && nspecial) && (password_len >= PASSWORD_MIN_LEN && password_len <= PASSWORD_MAX_LEN);
 }
 
@@ -160,7 +156,7 @@ userid user_register(const char *username, const char *password)
 
     if (is_password_valid(password) == false)
     {
-        log_warning("password must contain at least 1 upper character, 1 lower character, 1 digit, 1 special character. and must be at least 8 characters long, max 25");
+        log_warning("password must contain at least 1 upper character, 1 digit, 1 special character. and must be at least 8 characters long, max 25");
         return USERID_INVALID;
     }
 
@@ -172,14 +168,20 @@ userid user_register(const char *username, const char *password)
 
     user new_user;
 
+    // set creation and modified timestamp to current time
     new_user.created = datetime_now();
     new_user.modified = new_user.created;
+    // set username and hashed password
     strcpy(new_user.username, username);
     new_user.password = hash((unsigned char*) password);
+    // increase last id and set it to the user
     new_user.id = ++last_id;
 
+    // append newly created user to the vector and save users file
     VEC_APPEND(user, users, new_user);
     users_save();
+
+    // return created user id
     return new_user.id;
 }
 
@@ -199,9 +201,11 @@ userid user_update(userid id, const char *password)
         return USERID_INVALID;
     }
 
-    time_t time_now = time(NULL);
-    u->modified = *localtime(&time_now);
+    // update modified timestamp to current time
+    u->modified = datetime_now();
+    // update hashed password
     u->password = hash((unsigned char*) password);
+    // save users file and return updated user id
     users_save();
     return id;
 }
@@ -220,25 +224,30 @@ userid user_login(const char *username, const char *password)
         return USERID_INVALID;
     }
 
+    // get user with the given username
     user *u = get_user_by_username(username);
 
     if (u == NULL)
     {
+        // if not found
         log_warning("user %s doesn't exist", username);
         return USERID_INVALID;
     }
     else if (is_user_logged(u->id))
     {
+        // if user is already logged in
         log_warning("user %s is already logged in", u->username, u->id);
         return USERID_INVALID;
     }
     else if (u->password == hash((unsigned char*) password))
     {
-        logged_table[logged_count++] = u->id;
+        // if hashed password matched append to logged vector and return logged user id
+        VEC_APPEND(userid, logged, u->id);
         return u->id;
     }
     else
     {
+        // if wrong password
         log_warning("wrong password");
         return USERID_INVALID;
     }
@@ -246,14 +255,22 @@ userid user_login(const char *username, const char *password)
 
 void user_logout(userid id)
 {
-    userid *found = binary_search(&id, logged_table, logged_count, sizeof(userid), compare_userid);
+    // get logged user with the given id
+    userid *found = binary_search(&id, logged->elements, logged->count, logged->element_size, compare_by_userid);
+    
     if (found != NULL)
     {
-        size_t index = array_index_from_pointer(logged_table, found, sizeof(userid));
-        array_delete(index, logged_table, &logged_count, sizeof(userid));
+        // if userid exist remove it from the logged vector
+        size_t index = array_index_from_pointer(logged->elements, found, logged->element_size);
+        VEC_DELETE(logged, index);
+    }
+    else
+    {
+        log_warning("%zu id isn't logged in", id);
     }
 }
 
+// TODO: unused for now
 void user_delete(userid id)
 {
     user *u = get_user(id);
@@ -268,8 +285,10 @@ void user_delete(userid id)
     users_save();
 }
 
+
 void users_save()
 {
+    // open users file and write last id, users count and users vector
     FILE *f = fopen(USER_TABLE_PATH, "wb");
     fwrite(&last_id, sizeof(userid), 1, f);
     fwrite(&users->count, sizeof(size_t), 1, f);
@@ -279,6 +298,7 @@ void users_save()
 
 void user_load()
 {
+    // open users file load last id, users count, resize vector if necessary and load vector data
     FILE *f = fopen(USER_TABLE_PATH, "rb");
     fread(&last_id, sizeof(userid), 1, f);
     fread(&users->count, sizeof(size_t), 1, f);
@@ -294,21 +314,24 @@ void user_load()
 
 void users_init()
 {
+    // on program closure free users and logged vectors
     atexit(users_free);
+
+    //initialize vectors
     users = VEC_INIT(user);
+    logged = VEC_INIT(userid);
 
     // file exists
     if (access(USER_TABLE_PATH, F_OK) == 0)
     {
+        // load users file
         user_load();
     }
     else
     {
+        // set last_id to initial invalid id
         last_id = USERID_INVALID;
     }
-
-    logged_count = 0;
-    logged_table = memory_allocate_typed(USER_TABLE_DEFAULT_SIZE, sizeof(user));
 }
 
 char *user_json(user *u)
@@ -324,5 +347,5 @@ char *user_json(user *u)
 
 void users_free() {
     VEC_FREE(users);
-    free(logged_table);
+    VEC_FREE(logged);
 }

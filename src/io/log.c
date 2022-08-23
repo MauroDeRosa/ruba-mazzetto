@@ -1,7 +1,17 @@
+/**
+ * @file log.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief log module implementation @see log.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-24
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <io/log.h>
-
 #include <io/ansi-color.h>
-
 #include <stdarg.h>
 #include <errno.h>
 #include <time.h>
