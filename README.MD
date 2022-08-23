@@ -1,7 +1,14 @@
 # RUBA MAZZETTO
 
-## Project description
+## Guidelines
+[Italian [pdf]](docs/traccia.pdf)
 
+[English [pdf]](#)
+## Documentation
+
+[Doxygen documentation](https://mauroderosa.github.io/ruba-mazzetto/)
+
+[Project overview [pdf]](#)
 ## Dependencies
 
 ### Ubuntu/Debian
