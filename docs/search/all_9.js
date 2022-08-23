@@ -1,18 +1,14 @@
 var searchData=
 [
-  ['last_5flog_0',['last_log',['../log_8h.html#ad15001b42f3f6460a8348d1897c1b38d',1,'log.c']]],
-  ['last_5ftake_1',['last_take',['../structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154',1,'game_data']]],
-  ['leaderboard_5fentry_2',['leaderboard_entry',['../structleaderboard__entry.html',1,'']]],
-  ['leaderboard_5fjson_3',['leaderboard_json',['../statistics_8h.html#aef65549682b6de521ba1fd096515f0f7',1,'statistics.c']]],
-  ['length_4',['length',['../structdeck.html#a37aad061db94f21c10a20956917c5134',1,'deck::length()'],['../structplayer__hand.html#aa94f752091772340abc2bb00007ebe51',1,'player_hand::length()']]],
-  ['log_2eh_5',['log.h',['../log_8h.html',1,'']]],
-  ['log_5fdebug_6',['log_debug',['../log_8h.html#a0e37223ab9f5df7af8cb2a59b7c4dc18',1,'log.h']]],
-  ['log_5ferror_7',['log_error',['../log_8h.html#a887f83dbb884a13949e4f2ad710e5ddf',1,'log.h']]],
-  ['log_5finfo_8',['log_info',['../log_8h.html#a442f23202cd03383ed8e3ec6bbae5bd2',1,'log.h']]],
-  ['log_5ftype_5fdebug_9',['LOG_TYPE_DEBUG',['../log_8h.html#a542529c1654a19379e8db5625bc7801e',1,'log.h']]],
-  ['log_5ftype_5ferror_10',['LOG_TYPE_ERROR',['../log_8h.html#a7c5fd30f5e43b34be24326642d1a4c6d',1,'log.h']]],
-  ['log_5ftype_5finfo_11',['LOG_TYPE_INFO',['../log_8h.html#a8b181b7eaaab11e988e2c6b7cdc0d80a',1,'log.h']]],
-  ['log_5ftype_5fwarning_12',['LOG_TYPE_WARNING',['../log_8h.html#a5781a92890ba75559c17d6c7f613ab29',1,'log.h']]],
-  ['log_5fwarning_13',['log_warning',['../log_8h.html#ace74930da408748431f70d185fa9ec0c',1,'log.h']]],
-  ['losses_14',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
+  ['id_0',['id',['../structplayer.html#ae1efed0740823624a63b9d009aa500e7',1,'player::id()'],['../structstatistics__entry.html#aea95fa3e1b26c842c1f19be1b77db7c9',1,'statistics_entry::id()'],['../structleaderboard__entry.html#a65d6e1b99d18cb9e0cd71c50fadf26a8',1,'leaderboard_entry::id()'],['../structuser.html#aee76e1455bfebae159feb17fcb87b1fa',1,'user::id()'],['../structhistory__entry.html#a82556d767bdcb162cf73eb79fc0c6b3a',1,'history_entry::id()']]],
+  ['invalid_5ftable_5findex_1',['INVALID_TABLE_INDEX',['../game_8c.html#a56ee75574303fe8fdf3300fba2cc6bb0',1,'game.c']]],
+  ['is_5fcard_5fequal_2',['is_card_equal',['../cards_8h.html#aa1d76d51ac2c7bc6f23e0998c1ed5493',1,'is_card_equal(card a, card b):&#160;cards.c'],['../cards_8c.html#aa1d76d51ac2c7bc6f23e0998c1ed5493',1,'is_card_equal(card a, card b):&#160;cards.c']]],
+  ['is_5fcard_5fvalid_3',['is_card_valid',['../cards_8h.html#a80629371dd58177fe8ae93503f676b2b',1,'is_card_valid(card c):&#160;cards.c'],['../cards_8c.html#a80629371dd58177fe8ae93503f676b2b',1,'is_card_valid(card c):&#160;cards.c']]],
+  ['is_5fdeck_5fempty_4',['is_deck_empty',['../cards_8c.html#a6d9b7a49d65bf0112297abff628eaff9',1,'is_deck_empty(deck *d):&#160;cards.c'],['../cards_8h.html#a6d9b7a49d65bf0112297abff628eaff9',1,'is_deck_empty(deck *d):&#160;cards.c']]],
+  ['is_5fgame_5frunning_5',['is_game_running',['../game_8c.html#a7306ded375b05cc9eb204ac76979d5a7',1,'game.c']]],
+  ['is_5fhand_5fempty_6',['is_hand_empty',['../player_8h.html#a824fd647b9570ae2a1c4a90d27fae65b',1,'is_hand_empty(player *p):&#160;player.c'],['../player_8c.html#a824fd647b9570ae2a1c4a90d27fae65b',1,'is_hand_empty(player *p):&#160;player.c']]],
+  ['is_5fpassword_5fvalid_7',['is_password_valid',['../user_8h.html#a674171272b2884bbfa1b5c9b9fc376f1',1,'is_password_valid(const char *password):&#160;user.c'],['../user_8c.html#a674171272b2884bbfa1b5c9b9fc376f1',1,'is_password_valid(const char *password):&#160;user.c']]],
+  ['is_5fuser_5flogged_8',['is_user_logged',['../user_8h.html#add670f14f875b99b3985c1c862b3bfde',1,'is_user_logged(userid id):&#160;user.c'],['../user_8c.html#add670f14f875b99b3985c1c862b3bfde',1,'is_user_logged(userid id):&#160;user.c']]],
+  ['is_5fuser_5fvalid_9',['is_user_valid',['../user_8h.html#a0b1fb2b5154d65624cf8ac346656e918',1,'is_user_valid(userid id):&#160;user.c'],['../user_8c.html#a0b1fb2b5154d65624cf8ac346656e918',1,'is_user_valid(userid id):&#160;user.c']]],
+  ['is_5fusername_5fvalid_10',['is_username_valid',['../user_8h.html#ade3ed6ac8c3b3daf06b62bf09d12e14f',1,'is_username_valid(const char *username):&#160;user.c'],['../user_8c.html#ade3ed6ac8c3b3daf06b62bf09d12e14f',1,'is_username_valid(const char *username):&#160;user.c']]]
 ];

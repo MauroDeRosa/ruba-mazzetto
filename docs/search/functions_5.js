@@ -1,24 +1,5 @@
 var searchData=
 [
-  ['game_5fdata_5fjson_0',['game_data_json',['../game_8h.html#a727ef9688245df5ecdebca9d70ac97d3',1,'game.c']]],
-  ['game_5finit_5f2players_1',['game_init_2players',['../game_8h.html#ace25f96ce52cb4311e8d056913b5d121',1,'game.c']]],
-  ['game_5finit_5f3players_2',['game_init_3players',['../game_8h.html#aadb9543bc88171097f14abcbc9714b8c',1,'game.c']]],
-  ['game_5finit_5f4players_3',['game_init_4players',['../game_8h.html#abb6ef18bbc772f1566a34dea43a38c54',1,'game.c']]],
-  ['game_5fload_4',['game_load',['../game_8h.html#a649da25035f4273889a810a959ea6bc9',1,'game.c']]],
-  ['game_5fpick_5ffrom_5fopponent_5',['game_pick_from_opponent',['../game_8h.html#ad65053bebda8211c6da6e83fec5ecd64',1,'game.c']]],
-  ['game_5fpick_5ffrom_5ftable_6',['game_pick_from_table',['../game_8h.html#abcbdc3a067535009928399aec3e3ed20',1,'game.c']]],
-  ['game_5fsave_7',['game_save',['../game_8h.html#aaca84e750c9612423fd7e72e58cea0a9',1,'game.c']]],
-  ['game_5fsave_5fby_5fid_8',['game_save_by_id',['../game_8h.html#ab4a7276ac2aeab7b463d63d83e40968e',1,'game.c']]],
-  ['game_5fsave_5fjson_9',['game_save_json',['../game_8h.html#a768d870313bea8d4a677c7814b8809fc',1,'game.c']]],
-  ['game_5fsave_5flist_10',['game_save_list',['../game_8h.html#ae6d7079cd4ca3618b4fb1867edf465be',1,'game.c']]],
-  ['game_5fsave_5flist_5fjson_11',['game_save_list_json',['../game_8h.html#a11ee1906af2714040b582663b049b99d',1,'game.c']]],
-  ['game_5fsaves_5finit_12',['game_saves_init',['../game_8h.html#a9c8adc59cf8da3cda6006ab427a2ddd4',1,'game.c']]],
-  ['game_5fthrow_5fon_5ftable_13',['game_throw_on_table',['../game_8h.html#a9b5503c531e6919aace2af097927b1e5',1,'game.c']]],
-  ['game_5fupdate_14',['game_update',['../game_8h.html#ac5254959a1940bb1fdaa4d884da8115d',1,'game.c']]],
-  ['get_5fgame_5fdata_15',['get_game_data',['../game_8h.html#aff609c6d2a1e6a422efb699331404657',1,'game.c']]],
-  ['get_5fhistory_5ffor_16',['get_history_for',['../history_8h.html#a4feba307059830839ac4302d7aae2fc2',1,'history.c']]],
-  ['get_5fleaderboard_17',['get_leaderboard',['../statistics_8h.html#aaa015a0631c3cf2f959be57d9f14f3f1',1,'statistics.c']]],
-  ['get_5fstatistics_5ffor_18',['get_statistics_for',['../statistics_8h.html#a49671ff29b95b827924c983675d4c01b',1,'statistics.c']]],
-  ['get_5fuser_19',['get_user',['../user_8h.html#aeb5775256bbddb4a07257aeec43a5409',1,'user.c']]],
-  ['get_5fuser_5fby_5fusername_20',['get_user_by_username',['../user_8h.html#a3dc956fe95a2e713ea832c949a46a360',1,'user.c']]]
+  ['filter_5fby_5fmatchid_0',['filter_by_matchid',['../history_8c.html#a17aaaea000d1f364aed147a2a52518ae',1,'history.c']]],
+  ['filter_5fby_5fuserid_1',['filter_by_userid',['../history_8c.html#a416b0f19d88c22fe0156d2133612daef',1,'history.c']]]
 ];

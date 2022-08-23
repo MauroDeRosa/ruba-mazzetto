@@ -26,6 +26,7 @@ var user_8h =
     [ "user_update", "user_8h.html#a9ba6303d03f0dc88206758492be774cf", null ],
     [ "username_exists", "user_8h.html#adaf74a6798c8d2ffed36c810af411a31", null ],
     [ "users_count", "user_8h.html#a07509d9b997db6bdea566c04eaf20dd2", null ],
+    [ "users_free", "user_8h.html#a43ae9aab687aedff619deca8599fdf74", null ],
     [ "users_init", "user_8h.html#a1f5bb15e839d96fd3967dfeec2a51052", null ],
     [ "users_save", "user_8h.html#ae115e53e41071da9190140e94fe19854", null ]
 ];

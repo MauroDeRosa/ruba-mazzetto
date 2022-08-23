@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['value_0',['value',['../structcard.html#aad72fbb770c9f76e7910b300f865b790',1,'card']]],
-  ['vector_1',['vector',['../structvector.html',1,'']]]
+  ['update_5fstatistics_5ffor_0',['update_statistics_for',['../statistics_8h.html#afa04604afed7f95e0935f79426d6559b',1,'update_statistics_for(userid user):&#160;statistics.c'],['../statistics_8c.html#afa04604afed7f95e0935f79426d6559b',1,'update_statistics_for(userid user):&#160;statistics.c']]],
+  ['user_1',['user',['../structhistory__entry.html#ac2ca5d7ed963470687a3a00deecb0849',1,'history_entry::user()'],['../structuser.html',1,'user']]],
+  ['user_2ec_2',['user.c',['../user_8c.html',1,'']]],
+  ['user_2eh_3',['user.h',['../user_8h.html',1,'']]],
+  ['user_5fdelete_4',['user_delete',['../user_8h.html#a6a9671932da3ab6e4e459628916b2344',1,'user_delete(userid id):&#160;user.c'],['../user_8c.html#a6a9671932da3ab6e4e459628916b2344',1,'user_delete(userid id):&#160;user.c']]],
+  ['user_5fexists_5',['user_exists',['../user_8h.html#a7cd4b82fba3ca2acc959c525c8a93aa3',1,'user_exists(userid id):&#160;user.c'],['../user_8c.html#a7cd4b82fba3ca2acc959c525c8a93aa3',1,'user_exists(userid id):&#160;user.c']]],
+  ['user_5fjson_6',['user_json',['../user_8h.html#a5b27590aa36d4890ebd2fce774940750',1,'user_json(user *u):&#160;user.c'],['../user_8c.html#a5b27590aa36d4890ebd2fce774940750',1,'user_json(user *u):&#160;user.c']]],
+  ['user_5fload_7',['user_load',['../user_8h.html#ab5b4d0f1ab51b3e206aaeeb5882302d6',1,'user_load():&#160;user.c'],['../user_8c.html#ab5b4d0f1ab51b3e206aaeeb5882302d6',1,'user_load():&#160;user.c']]],
+  ['user_5flogin_8',['user_login',['../user_8h.html#a9f45f37b04394abf31c3d9718cdcdae5',1,'user_login(const char *username, const char *password):&#160;user.c'],['../user_8c.html#a9f45f37b04394abf31c3d9718cdcdae5',1,'user_login(const char *username, const char *password):&#160;user.c']]],
+  ['user_5flogout_9',['user_logout',['../user_8h.html#aabd2ff934530b971a817bdad694afe6b',1,'user_logout(userid id):&#160;user.c'],['../user_8c.html#aabd2ff934530b971a817bdad694afe6b',1,'user_logout(userid id):&#160;user.c']]],
+  ['user_5fregister_10',['user_register',['../user_8c.html#a79ab4aff90c5f79d19d2603e9d9cad6f',1,'user_register(const char *username, const char *password):&#160;user.c'],['../user_8h.html#a79ab4aff90c5f79d19d2603e9d9cad6f',1,'user_register(const char *username, const char *password):&#160;user.c']]],
+  ['user_5ftable_5fdefault_5fsize_11',['USER_TABLE_DEFAULT_SIZE',['../user_8c.html#a136d26039e848fa53d7915727724e297',1,'user.c']]],
+  ['user_5ftable_5fpath_12',['USER_TABLE_PATH',['../user_8c.html#ad0fe3c49ffff064fed8690c046261be7',1,'user.c']]],
+  ['user_5fupdate_13',['user_update',['../user_8h.html#a9ba6303d03f0dc88206758492be774cf',1,'user_update(userid id, const char *password):&#160;user.c'],['../user_8c.html#a9ba6303d03f0dc88206758492be774cf',1,'user_update(userid id, const char *password):&#160;user.c']]],
+  ['userid_14',['userid',['../user_8h.html#af5849791e8146f8f7da65a6808a59a4e',1,'user.h']]],
+  ['userid_5finvalid_15',['USERID_INVALID',['../user_8h.html#a7245218329d86411fc9d387ee2b72396',1,'user.h']]],
+  ['userid_5fmax_16',['USERID_MAX',['../user_8c.html#a9e3c94f9f0f16091fd07bf0cbbf43c2d',1,'user.c']]],
+  ['username_17',['username',['../structplayer.html#a8b1a8c19018ca854a00a879975716248',1,'player::username()'],['../structuser.html#a1cab2ea6581a90720e64384da3f3f7b8',1,'user::username()']]],
+  ['username_5fexists_18',['username_exists',['../user_8h.html#adaf74a6798c8d2ffed36c810af411a31',1,'username_exists(const char *username):&#160;user.c'],['../user_8c.html#adaf74a6798c8d2ffed36c810af411a31',1,'username_exists(const char *username):&#160;user.c']]],
+  ['username_5fmax_5flen_19',['USERNAME_MAX_LEN',['../user_8h.html#a41b70e5bef96800d643c5b969910811a',1,'user.h']]],
+  ['username_5fmin_5flen_20',['USERNAME_MIN_LEN',['../user_8h.html#ada2635190026c63d98fcc2028a28cf09',1,'user.h']]],
+  ['username_5fsize_21',['USERNAME_SIZE',['../user_8h.html#ac7a1d08f4c988420cc930468c7ee0967',1,'user.h']]],
+  ['users_22',['users',['../user_8c.html#a2350e5e64aae16fbaa21de544b91f6f8',1,'user.c']]],
+  ['users_5fcount_23',['users_count',['../user_8h.html#a07509d9b997db6bdea566c04eaf20dd2',1,'users_count():&#160;user.c'],['../user_8c.html#a07509d9b997db6bdea566c04eaf20dd2',1,'users_count():&#160;user.c']]],
+  ['users_5ffree_24',['users_free',['../user_8h.html#a43ae9aab687aedff619deca8599fdf74',1,'users_free():&#160;user.c'],['../user_8c.html#a43ae9aab687aedff619deca8599fdf74',1,'users_free():&#160;user.c']]],
+  ['users_5finit_25',['users_init',['../user_8h.html#a1f5bb15e839d96fd3967dfeec2a51052',1,'users_init():&#160;user.c'],['../user_8c.html#a1f5bb15e839d96fd3967dfeec2a51052',1,'users_init():&#160;user.c']]],
+  ['users_5fsave_26',['users_save',['../user_8h.html#ae115e53e41071da9190140e94fe19854',1,'users_save():&#160;user.c'],['../user_8c.html#ae115e53e41071da9190140e94fe19854',1,'users_save():&#160;user.c']]]
 ];

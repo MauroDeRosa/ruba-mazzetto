@@ -16,5 +16,5 @@ var searchData=
   ['bgr_5fred_13',['BGR_RED',['../ansi-color_8h.html#a9c9134cd88889c97f6bb5b97136c1ff7',1,'ansi-color.h']]],
   ['bgr_5fwht_14',['BGR_WHT',['../ansi-color_8h.html#a07c63455f34ada2b289e1b09d208ca81',1,'ansi-color.h']]],
   ['bgr_5fyel_15',['BGR_YEL',['../ansi-color_8h.html#a385dbd94b30f9a4705dd5ed6f5e9a1e2',1,'ansi-color.h']]],
-  ['binary_5fsearch_16',['binary_search',['../array_8h.html#aa30af0c48e8df3b559c8caac2303393f',1,'array.c']]]
+  ['binary_5fsearch_16',['binary_search',['../array_8h.html#aa30af0c48e8df3b559c8caac2303393f',1,'binary_search(void *value, void *array, size_t array_size, size_t data_size, __compar_fn_t compare_function):&#160;array.c'],['../array_8c.html#aa30af0c48e8df3b559c8caac2303393f',1,'binary_search(void *value, void *array, size_t array_size, size_t data_size, __compar_fn_t compare_function):&#160;array.c']]]
 ];

@@ -1,6 +1,7 @@
 var history_8h =
 [
     [ "history_entry", "structhistory__entry.html", "structhistory__entry" ],
+    [ "matchid", "history_8h.html#a895b7a006888a6c587dfc28c49cb9ed6", null ],
     [ "add_history_entry", "history_8h.html#a06329fce2f00e192f8a0fbba55c86196", null ],
     [ "get_history_for", "history_8h.html#a4feba307059830839ac4302d7aae2fc2", null ],
     [ "history_init", "history_8h.html#a05333dbae8ebfcaf8861dc4c01e96c0d", null ],

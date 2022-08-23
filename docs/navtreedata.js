@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "Ruba Mazzetto", "index.html", [
-    [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -38,7 +37,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -52,7 +51,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structgame__data.html#adfd3750ceec61fccaa66a0b87c8a7e3c"
+"history_8h.html#a4feba307059830839ac4302d7aae2fc2",
+"user_8c.html#a136d26039e848fa53d7915727724e297"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,18 +1,10 @@
 var searchData=
 [
-  ['remove_5fuser_5ffrom_5fhistory_0',['remove_user_from_history',['../history_8h.html#a2109245b21538a012dbf89b72cf3910d',1,'history.h']]],
-  ['response_5ffailed_5fjson_1',['response_failed_json',['../responses_8h.html#a7ebac9370986ef39a72042c3b0de4267',1,'responses.c']]],
-  ['response_5ffailed_5fmessage_2',['response_failed_message',['../responses_8h.html#a2029b734e62a1883cb44afeec4587bbd',1,'responses.c']]],
-  ['response_5fgame_5fdata_3',['response_game_data',['../responses_8h.html#a7d355ac4ab288071a84b83ea453b3d97',1,'responses.c']]],
-  ['response_5fgame_5fsave_4',['response_game_save',['../responses_8h.html#a302da7f1bc46695d0836f79111a9f7e1',1,'responses.c']]],
-  ['response_5fgame_5fsaves_5flist_5',['response_game_saves_list',['../responses_8h.html#a4655984befbe6a983b27ba9c409b9c10',1,'responses.c']]],
-  ['response_5fhistory_6',['response_history',['../responses_8h.html#aff2267fc19c085d5ea008895cf9fe482',1,'responses.c']]],
-  ['response_5fjson_7',['response_json',['../responses_8h.html#a57780d8cb9d912077ffc0fe0e9e02420',1,'responses.c']]],
-  ['response_5fleaderboard_8',['response_leaderboard',['../responses_8h.html#a2b05640521fa7c3ce8b38f88d77bc90e',1,'responses.c']]],
-  ['response_5fmessage_9',['response_message',['../responses_8h.html#ab5441b1204fb50fbec8cfb468fee0e93',1,'responses.c']]],
-  ['response_5fquit_10',['response_quit',['../responses_8h.html#af2bb49af75c3ec71168cfd86acd189f3',1,'responses.c']]],
-  ['response_5fstatistics_11',['response_statistics',['../responses_8h.html#a5e2436d84153f6de07b76fab235a4efd',1,'responses.c']]],
-  ['response_5fsuccess_5fjson_12',['response_success_json',['../responses_8h.html#ab96481afdc1b1dcf6944a69453d3b9c0',1,'responses.c']]],
-  ['response_5fsuccess_5fmessage_13',['response_success_message',['../responses_8h.html#a17660d4aea1c2599607c591be2bc8743',1,'responses.c']]],
-  ['response_5fuser_14',['response_user',['../responses_8h.html#a36fbfcc6b10d6dab3daa494d664e06ae',1,'responses.c']]]
+  ['parse_5frequest_0',['parse_request',['../parser_8h.html#a07f688c1da21abc51fbd7ccaf3edee1f',1,'parse_request(char *message):&#160;parser.c'],['../parser_8c.html#a07f688c1da21abc51fbd7ccaf3edee1f',1,'parse_request(char *message):&#160;parser.c']]],
+  ['parse_5frequest_5fgame_1',['parse_request_game',['../parser_8c.html#ada2f5dc965cb85c7d8be713c7b42c82f',1,'parser.c']]],
+  ['parse_5frequest_5fhistory_2',['parse_request_history',['../parser_8c.html#a3937b8c7d8a52b4692f43150f0b868a6',1,'parser.c']]],
+  ['parse_5frequest_5fstatistics_3',['parse_request_statistics',['../parser_8c.html#ae13059270ff70ca2711b87c0c4c4792f',1,'parser.c']]],
+  ['parse_5frequest_5fuser_4',['parse_request_user',['../parser_8c.html#a862e7286a666d198269bef10c0e5c606',1,'parser.c']]],
+  ['player_5fhand_5fjson_5',['player_hand_json',['../player_8h.html#ad1e8abfe49d27090a012cb3ec517286b',1,'player_hand_json(player_hand *ph):&#160;player.c'],['../player_8c.html#ad1e8abfe49d27090a012cb3ec517286b',1,'player_hand_json(player_hand *ph):&#160;player.c']]],
+  ['player_5fjson_6',['player_json',['../player_8h.html#aa3275b99a2e5ca09ec78f72bd5d552e9',1,'player_json(player *p):&#160;player.c'],['../player_8c.html#aa3275b99a2e5ca09ec78f72bd5d552e9',1,'player_json(player *p):&#160;player.c']]]
 ];

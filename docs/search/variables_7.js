@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['matches_0',['matches',['../structstatistics__data.html#a0c59b99204fe4e9388040a178aff0b6a',1,'statistics_data']]],
-  ['max_5fpoints_1',['max_points',['../structstatistics__data.html#ae09bff2260be8e6a047169d6216d9446',1,'statistics_data']]],
-  ['max_5fsteals_2',['max_steals',['../structstatistics__data.html#aa68bc910dff727fe78c1eb3ab2e5aa9b',1,'statistics_data']]],
-  ['max_5fwin_5fstreak_3',['max_win_streak',['../structstatistics__data.html#acba3c74109ee52b02793d2a713422fa3',1,'statistics_data']]],
-  ['min_5fpoints_4',['min_points',['../structstatistics__data.html#aae46e6d4685f8a11c6975346cc6e5fb7',1,'statistics_data']]],
-  ['min_5fsteals_5',['min_steals',['../structstatistics__data.html#a24c8e66cbe6620be86529ca49e31faa9',1,'statistics_data']]],
-  ['modified_6',['modified',['../structuser.html#a3e123e2b00fb37de282d900aaad6af77',1,'user']]]
+  ['last_5fid_0',['last_id',['../user_8c.html#a47fcf3cc611ce094cee35d5cc31c735c',1,'user.c']]],
+  ['last_5flog_1',['last_log',['../log_8h.html#ad15001b42f3f6460a8348d1897c1b38d',1,'last_log():&#160;log.c'],['../log_8c.html#ae2c34fb96605bcf5b7aec7737c3c21d5',1,'last_log():&#160;log.c']]],
+  ['last_5fmatch_5fid_2',['last_match_id',['../history_8c.html#a813c7d561875c4c54b0d7c8c2a0ced40',1,'history.c']]],
+  ['last_5ftake_3',['last_take',['../structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154',1,'game_data']]],
+  ['length_4',['length',['../structdeck.html#a37aad061db94f21c10a20956917c5134',1,'deck::length()'],['../structplayer__hand.html#aa94f752091772340abc2bb00007ebe51',1,'player_hand::length()']]],
+  ['logged_5fcount_5',['logged_count',['../user_8c.html#adb5bd88f85dc855b8724d468c22901bd',1,'user.c']]],
+  ['logged_5ftable_6',['logged_table',['../user_8c.html#a3f7c7e0d8fa22e8401d8ce41704a0e43',1,'user.c']]],
+  ['losses_7',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
 ];

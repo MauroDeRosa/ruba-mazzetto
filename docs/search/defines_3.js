@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hand_5fsize_0',['HAND_SIZE',['../player_8h.html#a9fb2964d9bd5ff5cdb21e5884c26c6c5',1,'player.h']]]
+  ['game_5fsaves_5fpath_0',['GAME_SAVES_PATH',['../game_8c.html#abeea7b2fea8cf675b333b071a2464f0a',1,'game.c']]]
 ];
