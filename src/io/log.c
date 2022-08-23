@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char last_log[2048];
+char last_log[4096];
 
 void __log(short type, int line, const char *file, const char *function, const char *fmt, ...)
 {
