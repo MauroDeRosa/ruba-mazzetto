@@ -15,11 +15,48 @@ matchid last_match_id;
 
 #pragma region private_prototypes
 
+/**
+ * @brief filtering function to filter history by user id
+ * 
+ * @param entry the currently checked entry
+ * @param id the user id for which you want to filter history
+ * @return true id equals the current entry user id
+ * @return false id is not equal to the current entry user id
+ */
 bool filter_by_userid(void *entry, void *id);
+
+/**
+ * @brief filtering function to filter history by match id
+ * 
+ * @param entry the currently checked entry
+ * @param id the match id for which you want to filter history
+ * @return true id equals the current entry match id
+ * @return false id is not equal to the current entry match id
+ */
 bool filter_by_matchid(void *entry, void *id);
+
+/**
+ * @brief compare history entries by timestamp in descending order
+ * 
+ * @param a first entry
+ * @param b second entry
+ * @return int [<0] a > b [=0] a == b [>0] b > a
+ */
 int compare_history_by_timestamp(const void *a, const void *b);
+
+/**
+ * @brief save history vector to file
+ */
 void save_history();
+
+/**
+ * @brief load history vector from file
+ */
 void load_history();
+
+/**
+ * @brief free history vector
+ */
 void history_free();
 
 #pragma endregion prototypes
@@ -31,7 +68,7 @@ bool filter_by_userid(void *entry, void *id)
     history_entry *history_entry = entry;
     userid *user_id = id;
     
-    // returns matches history of the given user
+    // returns true if the current entry has the same user id of the one you're filtering for
     return history_entry->user == *user_id;
 }
 
@@ -40,7 +77,7 @@ bool filter_by_matchid(void *entry, void *id)
     history_entry *history_entry = entry;
     matchid *match_id = id;
     
-    // returns match history
+    // returns true if the current entry has the same match id of the one you're filtering for
     return history_entry->id == *match_id;
 }
 
@@ -49,7 +86,7 @@ int compare_history_by_timestamp(const void *a, const void *b)
     const history_entry *ae = a;
     const history_entry *be = b;
     
-    // returns wether a match was done before than the other
+    // returns time difference between two timestamps in descending order
     return compare_datetime_desc(&ae->timestamp, &be->timestamp);
 }
 
@@ -59,40 +96,46 @@ int compare_history_by_timestamp(const void *a, const void *b)
 
 void history_init()
 {
+    // on program closure free history vector
     atexit(history_free);
+
+    // initialize history vector
     history = VEC_INIT(history_entry);
 
     if (access(HISTORY_PATH, F_OK) == 0)
     {
-        // file exists
+        // if file exists load history vector from it
         load_history();
     }
     else
     {
-        // file doesn't exist
+        // if file doesn't exist set last_match_id to zero
         last_match_id = 0;
     }
 }
 
 void add_history_entry(game_data *game)
 {
-    last_match_id++;
+    // increase last match id and create an entry
+    last_match_id++; 
     history_entry entry;
     
-    // adds all the players info in the entry
+    // adds game info for each player (1 history entry for each user with the same match_id)
     for (size_t i = 0; i < game->players_count; i++)
     {
         entry = (history_entry){
-            .id = last_match_id,
-            .user = game->players[i].id,
-            .players = game->players_count,
-            .timestamp = game->timestamp,
-            .points = game->players[i].deck.length,
-            .steals = game->players[i].steals,
-            .won = i == game->winner};
+            .id = last_match_id, // match id
+            .user = game->players[i].id, // current player's id
+            .players = game->players_count, // count of players
+            .timestamp = game->timestamp, // timestamp of the game
+            .points = game->players[i].deck.length, // points of the current player
+            .steals = game->players[i].steals, // steals made by the current player
+            .won = i == game->winner}; // true if current player index equals winner index
+        // append the created entry to the history vector
         VEC_APPEND(history_entry, history, entry);
     };
 
+    // save history to file
     save_history();
 }
 
@@ -102,28 +145,35 @@ void add_history_entry(game_data *game)
 
 void save_history()
 {
-    // opens the history file and writes all the information
+    // opens the history file in write mode
     FILE *f = fopen(HISTORY_PATH, "wb");
     check_null_pointer(f);
+    // writes last match id
     fwrite(&last_match_id, sizeof(matchid), 1, f);
+    // writes history count
     fwrite(&history->count, sizeof(size_t), 1, f);
+    // writes history array
     fwrite(history->elements, history->element_size, history->count, f);
     fclose(f);
 }
 
 void load_history()
 {
-    // opens the history file and reads all the info
+    // opens the history file in read mode
     FILE *f = fopen(HISTORY_PATH, "rb");
     check_null_pointer(f);
+    // reads the last match id
     fread(&last_match_id, sizeof(matchid), 1, f);
+    // reads the history array count
     fread(&history->count, sizeof(size_t), 1, f);
 
     if (history->count > history->size)
     {
+        // resize vector if history count is greater then vector size
         VEC_RESIZE(history, history->count);
     }
 
+    // reads history array
     fread(history->elements, history->element_size, history->count, f);
     fclose(f);
 }
@@ -136,26 +186,29 @@ history_entry *get_history_for(userid user, size_t *history_size)
 {
     check_null_pointer(history_size);
 
-    // checks if there's an histroy and the user actually exists
+    // checks if there's any match entry in history and the user actually exists
     if (history->count > 0 && user_exists(user))
     {
-        // allocates and filter an array with the history info
+        // filtered array with history entries for the specified user
         history_entry *filtered = array_filter(history->elements, history->count, history->element_size, filter_by_userid, &user, history_size);
         
-        // checks if the array isn't null, if so returns the history
+        // if the history's not null
         if (filtered != NULL)
         {
+            // sort history entries by their timestamp in decreasing order and return the filtered list
             qsort(filtered, *history_size, sizeof(history_entry), compare_history_by_timestamp);
             return filtered;
         }
         else
         {
+            // set filtered array size to 0 and return NULL
             *history_size = 0;
             return NULL;
         }
     }
     else
     {
+        // if there isn't any history entry return null with history array size set to 0
         *history_size = 0;
         return NULL;
     }

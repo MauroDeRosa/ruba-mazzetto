@@ -1,7 +1,7 @@
 var searchData=
 [
   ['last_5fid_0',['last_id',['../user_8c.html#a47fcf3cc611ce094cee35d5cc31c735c',1,'user.c']]],
-  ['last_5flog_1',['last_log',['../log_8h.html#ad15001b42f3f6460a8348d1897c1b38d',1,'last_log():&#160;log.c'],['../log_8c.html#ae2c34fb96605bcf5b7aec7737c3c21d5',1,'last_log():&#160;log.c']]],
+  ['last_5flog_1',['last_log',['../log_8h.html#ad15001b42f3f6460a8348d1897c1b38d',1,'last_log():&#160;log.c'],['../log_8c.html#ad15001b42f3f6460a8348d1897c1b38d',1,'last_log():&#160;log.c']]],
   ['last_5fmatch_5fid_2',['last_match_id',['../history_8c.html#a813c7d561875c4c54b0d7c8c2a0ced40',1,'history.c']]],
   ['last_5ftake_3',['last_take',['../structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154',1,'game_data']]],
   ['leaderboard_5fentry_4',['leaderboard_entry',['../structleaderboard__entry.html',1,'']]],

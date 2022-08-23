@@ -121,16 +121,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a416b0f19d88c22fe0156d2133612daef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a416b0f19d88c22fe0156d2133612daef">filter_by_userid</a> (void *entry, void *id)</td></tr>
+<tr class="memdesc:a416b0f19d88c22fe0156d2133612daef"><td class="mdescLeft">&#160;</td><td class="mdescRight">filtering function to filter history by user id  <a href="history_8c.html#a416b0f19d88c22fe0156d2133612daef">More...</a><br /></td></tr>
 <tr class="separator:a416b0f19d88c22fe0156d2133612daef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17aaaea000d1f364aed147a2a52518ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a17aaaea000d1f364aed147a2a52518ae">filter_by_matchid</a> (void *entry, void *id)</td></tr>
+<tr class="memdesc:a17aaaea000d1f364aed147a2a52518ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">filtering function to filter history by match id  <a href="history_8c.html#a17aaaea000d1f364aed147a2a52518ae">More...</a><br /></td></tr>
 <tr class="separator:a17aaaea000d1f364aed147a2a52518ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040a829e730802599b52a8d958c830ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a040a829e730802599b52a8d958c830ac">compare_history_by_timestamp</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:a040a829e730802599b52a8d958c830ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare history entries by timestamp in descending order  <a href="history_8c.html#a040a829e730802599b52a8d958c830ac">More...</a><br /></td></tr>
 <tr class="separator:a040a829e730802599b52a8d958c830ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b7d2a829665d653cefbe0bea795603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a09b7d2a829665d653cefbe0bea795603">save_history</a> ()</td></tr>
+<tr class="memdesc:a09b7d2a829665d653cefbe0bea795603"><td class="mdescLeft">&#160;</td><td class="mdescRight">save history vector to file  <a href="history_8c.html#a09b7d2a829665d653cefbe0bea795603">More...</a><br /></td></tr>
 <tr class="separator:a09b7d2a829665d653cefbe0bea795603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430dfdf5895b99b13d24f0cd542eda06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a430dfdf5895b99b13d24f0cd542eda06">load_history</a> ()</td></tr>
+<tr class="memdesc:a430dfdf5895b99b13d24f0cd542eda06"><td class="mdescLeft">&#160;</td><td class="mdescRight">load history vector from file  <a href="history_8c.html#a430dfdf5895b99b13d24f0cd542eda06">More...</a><br /></td></tr>
 <tr class="separator:a430dfdf5895b99b13d24f0cd542eda06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27961bb33428494979c0732324b0d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#ad27961bb33428494979c0732324b0d04">history_free</a> ()</td></tr>
+<tr class="memdesc:ad27961bb33428494979c0732324b0d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">free history vector  <a href="history_8c.html#ad27961bb33428494979c0732324b0d04">More...</a><br /></td></tr>
 <tr class="separator:ad27961bb33428494979c0732324b0d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05333dbae8ebfcaf8861dc4c01e96c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="history_8c.html#a05333dbae8ebfcaf8861dc4c01e96c0d">history_init</a> ()</td></tr>
 <tr class="memdesc:a05333dbae8ebfcaf8861dc4c01e96c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize history table and load it from file if yet exists  <a href="history_8c.html#a05333dbae8ebfcaf8861dc4c01e96c0d">More...</a><br /></td></tr>
@@ -234,6 +240,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>compare history entries by timestamp in descending order </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first entry </td></tr>
+    <tr><td class="paramname">b</td><td>second entry </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int [&lt;0] a &gt; b [=0] a == b [&gt;0] b &gt; a </dd></dl>
+
 </div>
 </div>
 <a id="a17aaaea000d1f364aed147a2a52518ae" name="a17aaaea000d1f364aed147a2a52518ae"></a>
@@ -262,6 +278,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>filtering function to filter history by match id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the currently checked entry </td></tr>
+    <tr><td class="paramname">id</td><td>the match id for which you want to filter history </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true id equals the current entry match id </dd>
+<dd>
+false id is not equal to the current entry match id </dd></dl>
+
 </div>
 </div>
 <a id="a416b0f19d88c22fe0156d2133612daef" name="a416b0f19d88c22fe0156d2133612daef"></a>
@@ -289,6 +317,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>filtering function to filter history by user id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the currently checked entry </td></tr>
+    <tr><td class="paramname">id</td><td>the user id for which you want to filter history </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true id equals the current entry user id </dd>
+<dd>
+false id is not equal to the current entry user id </dd></dl>
 
 </div>
 </div>
@@ -344,6 +384,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>free history vector </p>
 
 </div>
 </div>
@@ -408,6 +450,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>load history vector from file </p>
+
 </div>
 </div>
 <a id="a09b7d2a829665d653cefbe0bea795603" name="a09b7d2a829665d653cefbe0bea795603"></a>
@@ -424,6 +468,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>save history vector to file </p>
 
 </div>
 </div>
