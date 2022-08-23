@@ -30,7 +30,8 @@ bool filter_by_userid(void *entry, void *id)
 {
     history_entry *history_entry = entry;
     userid *user_id = id;
-
+    
+    // returns matches history of the given user
     return history_entry->user == *user_id;
 }
 
@@ -38,7 +39,8 @@ bool filter_by_matchid(void *entry, void *id)
 {
     history_entry *history_entry = entry;
     matchid *match_id = id;
-
+    
+    // returns match history
     return history_entry->id == *match_id;
 }
 
@@ -46,7 +48,8 @@ int compare_history_by_timestamp(const void *a, const void *b)
 {
     const history_entry *ae = a;
     const history_entry *be = b;
-
+    
+    // returns wether a match was done before than the other
     return compare_datetime_desc(&ae->timestamp, &be->timestamp);
 }
 
@@ -75,7 +78,8 @@ void add_history_entry(game_data *game)
 {
     last_match_id++;
     history_entry entry;
-
+    
+    // adds all the players info in the entry
     for (size_t i = 0; i < game->players_count; i++)
     {
         entry = (history_entry){
@@ -98,6 +102,7 @@ void add_history_entry(game_data *game)
 
 void save_history()
 {
+    // opens the history file and writes all the information
     FILE *f = fopen(HISTORY_PATH, "wb");
     check_null_pointer(f);
     fwrite(&last_match_id, sizeof(matchid), 1, f);
@@ -108,6 +113,7 @@ void save_history()
 
 void load_history()
 {
+    // opens the history file and reads all the info
     FILE *f = fopen(HISTORY_PATH, "rb");
     check_null_pointer(f);
     fread(&last_match_id, sizeof(matchid), 1, f);
@@ -130,10 +136,13 @@ history_entry *get_history_for(userid user, size_t *history_size)
 {
     check_null_pointer(history_size);
 
+    // checks if there's an histroy and the user actually exists
     if (history->count > 0 && user_exists(user))
     {
+        // allocates and filter an array with the history info
         history_entry *filtered = array_filter(history->elements, history->count, history->element_size, filter_by_userid, &user, history_size);
         
+        // checks if the array isn't null, if so returns the history
         if (filtered != NULL)
         {
             qsort(filtered, *history_size, sizeof(history_entry), compare_history_by_timestamp);
@@ -178,7 +187,8 @@ char *history_json(history_entry *entry)
             timestamp_str,
             entry->user,
             entry->won ? "true" : "false");
-
+    
+    // returns history as json
     return json;
 }
 

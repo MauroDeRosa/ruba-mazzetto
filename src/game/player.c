@@ -14,12 +14,14 @@ bool is_hand_empty(player *p)
 card hand_at(player *p, size_t hand_index)
 {
     check_null_pointer(p);
-
+    
+    // check if the player has the card at the given index
     if(hand_index >= p->hand.length)
     {
         log_error("index out of bound");
     }
-
+    
+    // returns the player card at the given index
     return p->hand.cards[hand_index];
 }
 
@@ -31,7 +33,8 @@ card hand_throw(player *p, size_t hand_index)
     {
         log_error("index out of bound");
     }
-
+    
+    //takes the card, removes it from the hand and return it
     card c = hand_at(p, hand_index);
     array_delete(hand_index, p->hand.cards, &(p->hand.length), sizeof(card));
     return c;
@@ -60,6 +63,8 @@ char *player_json(player *p)
                          p->deck.length > 1 ? card_string(deck_top(&p->deck)) : "ZZ",
                          hand_str, p->deck.length, p->steals);
     free(hand_str);
+    
+    // returns player's info as json
     return player_json;
 }
 
@@ -79,6 +84,8 @@ char *player_hand_json(player_hand *ph)
     }
 
     strcat(json, "]");
+    
+    // returns player's hand as json
     return json;
 }
 
