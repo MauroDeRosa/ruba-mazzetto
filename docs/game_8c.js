@@ -1,8 +1,6 @@
 var game_8c =
 [
-    [ "DEFAULT_SAVES_SIZE", "game_8c.html#a2ddf0aa63aaa631ed4882925a69d7ca1", null ],
     [ "GAME_SAVES_PATH", "game_8c.html#abeea7b2fea8cf675b333b071a2464f0a", null ],
-    [ "INVALID_TABLE_INDEX", "game_8c.html#a56ee75574303fe8fdf3300fba2cc6bb0", null ],
     [ "__game_init", "game_8c.html#afdbe4d159ba4814a31f47beec871844d", null ],
     [ "check_user_validity", "game_8c.html#a1e02203a0d910a312b8cb7e8aa7d2f13", null ],
     [ "current_player", "game_8c.html#adec9c05f22ab3e3c96697c0813afb890", null ],

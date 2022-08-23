@@ -12,7 +12,7 @@ var searchData=
   ['dealer_5fdeck_9',['dealer_deck',['../structgame__data.html#a7cb2be5bbd214ff9b8214954582658c4',1,'game_data']]],
   ['deck_10',['deck',['../structplayer.html#adc1603f72fb92c72df7c65c70393ce30',1,'player::deck()'],['../structdeck.html',1,'deck']]],
   ['deck_5fappend_11',['deck_append',['../cards_8h.html#a7e753c37e8753bcf8b1b445981b58111',1,'deck_append(deck *destination, deck *source):&#160;cards.c'],['../cards_8c.html#a7e753c37e8753bcf8b1b445981b58111',1,'deck_append(deck *destination, deck *source):&#160;cards.c']]],
-  ['deck_5fappend_5fcard_12',['deck_append_card',['../cards_8c.html#af8507d9df2deec04f43e7c5a74766a67',1,'deck_append_card(deck *destination, card c):&#160;cards.c'],['../cards_8h.html#af8507d9df2deec04f43e7c5a74766a67',1,'deck_append_card(deck *destination, card c):&#160;cards.c']]],
+  ['deck_5fappend_5fcard_12',['deck_append_card',['../cards_8h.html#af8507d9df2deec04f43e7c5a74766a67',1,'deck_append_card(deck *destination, card c):&#160;cards.c'],['../cards_8c.html#af8507d9df2deec04f43e7c5a74766a67',1,'deck_append_card(deck *destination, card c):&#160;cards.c']]],
   ['deck_5fat_13',['deck_at',['../cards_8h.html#a9e69f147fdb7c13599f800cb1996b0fd',1,'deck_at(deck *d, size_t index):&#160;cards.c'],['../cards_8c.html#a9e69f147fdb7c13599f800cb1996b0fd',1,'deck_at(deck *d, size_t index):&#160;cards.c']]],
   ['deck_5finit_5fempty_14',['deck_init_empty',['../cards_8h.html#ac44fb9b5d6f56e0f0f19e2d95f9f5a84',1,'deck_init_empty(deck *d):&#160;cards.c'],['../cards_8c.html#ac44fb9b5d6f56e0f0f19e2d95f9f5a84',1,'deck_init_empty(deck *d):&#160;cards.c']]],
   ['deck_5finit_5ffull_15',['deck_init_full',['../cards_8h.html#abbb553f0e8ed66de3e9565b4e8e9b0e7',1,'deck_init_full(deck *d):&#160;cards.c'],['../cards_8c.html#abbb553f0e8ed66de3e9565b4e8e9b0e7',1,'deck_init_full(deck *d):&#160;cards.c']]],
@@ -23,6 +23,5 @@ var searchData=
   ['deck_5fsize_20',['DECK_SIZE',['../cards_8h.html#ab48a679225d82ec51e09e62d14313b34',1,'cards.h']]],
   ['deck_5ftop_21',['deck_top',['../cards_8h.html#a22b45fddb7859c304974eb291691f299',1,'deck_top(deck *d):&#160;cards.c'],['../cards_8c.html#a22b45fddb7859c304974eb291691f299',1,'deck_top(deck *d):&#160;cards.c']]],
   ['default_5fhistory_5fsize_22',['DEFAULT_HISTORY_SIZE',['../history_8c.html#a03279e3a908f5d4c42f0333c2f80a887',1,'history.c']]],
-  ['default_5fsaves_5fsize_23',['DEFAULT_SAVES_SIZE',['../game_8c.html#a2ddf0aa63aaa631ed4882925a69d7ca1',1,'game.c']]],
-  ['default_5fvector_5fsize_24',['DEFAULT_VECTOR_SIZE',['../vector_8c.html#aa1fbc5c401441fea94177fc0b1c5c115',1,'vector.c']]]
+  ['default_5fvector_5fsize_23',['DEFAULT_VECTOR_SIZE',['../vector_8c.html#aa1fbc5c401441fea94177fc0b1c5c115',1,'vector.c']]]
 ];

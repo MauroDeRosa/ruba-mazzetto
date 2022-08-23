@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "dfgmsu",
   6: "cg",
   7: "cg",
-  8: "bcdghilmpsuv"
+  8: "bcdghlmpsuv"
 };
 
 var indexSectionNames =
