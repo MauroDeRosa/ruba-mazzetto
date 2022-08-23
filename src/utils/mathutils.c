@@ -6,12 +6,6 @@ unsigned int clamp_uint(unsigned int value, unsigned int min, unsigned int max)
     return value > max ? max : value;
 }
 
-/**
- * @brief djb2 @todo document hashing function
- * 
- * @param str 
- * @return unsigned long 
- */
 unsigned long hash(unsigned char *str)
 {
     unsigned long hash = 5381;

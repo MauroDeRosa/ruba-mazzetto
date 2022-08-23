@@ -38,7 +38,7 @@ typedef struct
     deck deck; ///< the player's deck @see deck
     player_hand hand; ///< the player's hand @see player_hand
     size_t steals; ///< count of steals in a game
-    size_t steal_streak; ///< count of consecutive steals in a game @todo give it a functionality for statistics
+    size_t steal_streak; ///< count of consecutive steals in a game
 } player;
 
 /**

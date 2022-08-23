@@ -5,7 +5,7 @@
 /**
  * @file log.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
- * @brief 
+ * @brief console logging system
  * @version 0.1
  * @date 2022-08-23
  * 

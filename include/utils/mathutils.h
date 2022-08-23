@@ -27,7 +27,7 @@
 unsigned int clamp_uint(unsigned int value, unsigned int min, unsigned int max);
 
 /**
- * @brief generate an hash value from a given string
+ * @brief generate an hash value from a given string (djb2 hash algorithm)
  * 
  * @param str the string from which the hash value will be calculated
  * @return unsigned long the calculated hash value

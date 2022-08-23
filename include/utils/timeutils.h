@@ -4,7 +4,7 @@
 /**
  * @file timeutils.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
- * @brief 
+ * @brief utility functions for timestamp management and formatting
  * @version 0.1
  * @date 2022-08-23
  * 

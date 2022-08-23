@@ -29,7 +29,7 @@ typedef struct
 {
     userid id; ///< id of the user
     char username[USERNAME_SIZE]; ///< the username of the user of length
-    unsigned long password; ///< @todo document this
+    unsigned long password; ///< hashed password
     struct tm created; ///< timestamp of the user creation
     struct tm modified; ///< timestamp fo the last user update
 } user; ///< user data structure
@@ -124,7 +124,6 @@ user* get_user_by_username(const char* username);
  * @param password the password of the new user it's checked by is_password_valid @see is_password_valid
  * @return userid the user has been created successfully @see userid
  * @return USERID_INVALID the user was not created @see USERID_INVALID
- * @todo check for unused userid if maximum id is used
  */
 userid user_register(const char *username, const char *password);
 

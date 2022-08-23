@@ -4,7 +4,7 @@
 /**
  * @file game.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
- * @brief 
+ * @brief core game functionality
  * @version 0.1
  * @date 2022-08-22
  * 
