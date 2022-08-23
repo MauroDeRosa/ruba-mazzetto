@@ -175,7 +175,7 @@ userid user_register(const char *username, const char *password)
     new_user.created = datetime_now();
     new_user.modified = new_user.created;
     strcpy(new_user.username, username);
-    new_user.password = hash(password);
+    new_user.password = hash((unsigned char*) password);
     new_user.id = ++last_id;
 
     VEC_APPEND(user, users, new_user);
@@ -201,7 +201,7 @@ userid user_update(userid id, const char *password)
 
     time_t time_now = time(NULL);
     u->modified = *localtime(&time_now);
-    u->password = hash(password);
+    u->password = hash((unsigned char*) password);
     users_save();
     return id;
 }
@@ -232,7 +232,7 @@ userid user_login(const char *username, const char *password)
         log_warning("user %s is already logged in", u->username, u->id);
         return USERID_INVALID;
     }
-    else if (u->password == hash(password))
+    else if (u->password == hash((unsigned char*) password))
     {
         logged_table[logged_count++] = u->id;
         return u->id;
