@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('cards_8c.html',''); initResizable(); }
   <div class="headertitle"><div class="title">cards.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>card module implementation  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="log_8h_source.html">io/log.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cards_8h_source.html">game/cards.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="array_8h_source.html">types/array.h</a>&gt;</code><br />
@@ -113,6 +116,7 @@ $(document).ready(function(){initNavTree('cards_8c.html',''); initResizable(); }
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ab0af1c472bd6923daa1ad14dc78a373c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cards_8c.html#ab0af1c472bd6923daa1ad14dc78a373c">CARDS_FOR_SUIT</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:ab0af1c472bd6923daa1ad14dc78a373c"><td class="mdescLeft">&#160;</td><td class="mdescRight">how many cards are in a suit  <a href="cards_8c.html#ab0af1c472bd6923daa1ad14dc78a373c">More...</a><br /></td></tr>
 <tr class="separator:ab0af1c472bd6923daa1ad14dc78a373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -163,11 +167,21 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2c2f0bdedf10a387d06081dbbebdf21f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcard.html">card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cards_8c.html#a2c2f0bdedf10a387d06081dbbebdf21f">cards</a> [<a class="el" href="cards_8h.html#ab48a679225d82ec51e09e62d14313b34">DECK_SIZE</a>]</td></tr>
+<tr class="memdesc:a2c2f0bdedf10a387d06081dbbebdf21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">array containing all the possible cards of a deck (lookup table)  <a href="cards_8c.html#a2c2f0bdedf10a387d06081dbbebdf21f">More...</a><br /></td></tr>
 <tr class="separator:a2c2f0bdedf10a387d06081dbbebdf21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6d638770b6418f619bc19bf388889f6"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cards_8c.html#aa6d638770b6418f619bc19bf388889f6">cards_representation</a> [<a class="el" href="cards_8h.html#ab48a679225d82ec51e09e62d14313b34">DECK_SIZE</a>][3] = {&quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;, &quot;D5&quot;, &quot;D6&quot;, &quot;D7&quot;, &quot;D8&quot;, &quot;D9&quot;, &quot;DK&quot;, &quot;S1&quot;, &quot;S2&quot;, &quot;S3&quot;, &quot;S4&quot;, &quot;S5&quot;, &quot;S6&quot;, &quot;S7&quot;, &quot;S8&quot;, &quot;S9&quot;, &quot;SK&quot;, &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;, &quot;B4&quot;, &quot;B5&quot;, &quot;B6&quot;, &quot;B7&quot;, &quot;B8&quot;, &quot;B9&quot;, &quot;BK&quot;, &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;, &quot;C6&quot;, &quot;C7&quot;, &quot;C8&quot;, &quot;C9&quot;, &quot;CK&quot;}</td></tr>
+<tr class="memdesc:aa6d638770b6418f619bc19bf388889f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">string representation of every possible card in a deck (lookup table)  <a href="cards_8c.html#aa6d638770b6418f619bc19bf388889f6">More...</a><br /></td></tr>
 <tr class="separator:aa6d638770b6418f619bc19bf388889f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >card module implementation </p>
+<dl class="section author"><dt>Author</dt><dd>Mauro De Rosa (<a href="#" onclick="location.href='mai'+'lto:'+'it.'+'ma'+'uro'+'.d'+'ero'+'sa'+'@gm'+'ai'+'l.c'+'om'; return false;">it.ma<span class="obfuscator">.nosp@m.</span>uro.<span class="obfuscator">.nosp@m.</span>deros<span class="obfuscator">.nosp@m.</span>a@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="cards_8h.html" title="cards and deck data structures and functions">cards.h</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-08-23</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
+<dl class="section user"><dt>License:</dt><dd>licensed under MIT license </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab0af1c472bd6923daa1ad14dc78a373c" name="ab0af1c472bd6923daa1ad14dc78a373c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0af1c472bd6923daa1ad14dc78a373c">&#9670;&nbsp;</a></span>CARDS_FOR_SUIT</h2>
 
@@ -179,6 +193,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>how many cards are in a suit </p>
 
 </div>
 </div>
@@ -629,6 +645,8 @@ false at least one card </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>array containing all the possible cards of a deck (lookup table) </p>
+
 </div>
 </div>
 <a id="aa6d638770b6418f619bc19bf388889f6" name="aa6d638770b6418f619bc19bf388889f6"></a>
@@ -642,6 +660,8 @@ false at least one card </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>string representation of every possible card in a deck (lookup table) </p>
 
 </div>
 </div>

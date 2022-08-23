@@ -1,14 +1,28 @@
+/**
+ * @file cards.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief card module implementation @see cards.h
+ * @version 0.1
+ * @date 2022-08-23
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <io/log.h>
 #include <game/cards.h>
 #include <types/array.h>
 #include <types/memory.h>
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#define CARDS_FOR_SUIT 10
+#define CARDS_FOR_SUIT 10 ///< how many cards are in a suit
 
+/**
+ * @brief array containing all the possible cards of a deck (lookup table)
+ */
 const card cards[DECK_SIZE] = {
     (card){CARD_SUIT_DENARI, 1},
     (card){CARD_SUIT_DENARI, 2},
@@ -51,7 +65,11 @@ const card cards[DECK_SIZE] = {
     (card){CARD_SUIT_COPPE, 9},
     (card){CARD_SUIT_COPPE, 10}};
 
+/**
+ * @brief string representation of every possible card in a deck (lookup table)
+ */
 const char cards_representation[DECK_SIZE][3] = {"D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "DK", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "SK", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BK", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "CK"};
+
 
 bool is_card_valid(card c)
 {
@@ -72,10 +90,12 @@ const char *card_string(card c)
 {
     if (is_card_valid(c))
     {
+        // return card string representation from the lookup table
         return cards_representation[(c.suit - 1) * CARDS_FOR_SUIT + (c.value - 1)];
     }
     else
     {
+        // return value for empty card
         return "ZZ";
     }
 }
@@ -89,14 +109,16 @@ bool is_deck_empty(deck *d)
 void deck_init_empty(deck *d)
 {
     check_null_pointer(d);
+    //initialize an empty deck with length = 0, and all cards set to invalid values
     memset(d, 0, sizeof(deck));
 }
 
 void deck_init_full(deck *d)
 {
     check_null_pointer(d);
+    //copy the lookup table containing each possible card in the game and set the length to DECK_SIZE
     memcpy(d->cards, cards, DECK_SIZE * sizeof(card));
-    d->length = 40;
+    d->length = DECK_SIZE;
 }
 
 void deck_shuffle(deck *d)
@@ -104,6 +126,7 @@ void deck_shuffle(deck *d)
     check_null_pointer(d);
     if (is_deck_empty(d) == false)
     {
+        // if not empty shuffle the deck
         array_shuffle(d->cards, d->length, sizeof(card));
     }
     else
@@ -114,21 +137,27 @@ void deck_shuffle(deck *d)
 
 card deck_top(deck *d)
 {
-    if (d->length < 1)
+    check_null_pointer(d);
+
+    if (is_deck_empty(d))
     {
         log_error("deck is empty");
     }
 
+    // if deck's not empty return the card on the top
     return d->cards[d->length - 1];
 }
 
 card deck_pop(deck *d)
 {
-    if (d->length < 1)
+    check_null_pointer(d);
+
+    if (is_deck_empty(d))
     {
         log_error("deck is empty");
     }
 
+    // if deck's not empty remove the card on top of the deck and return it
     return d->cards[--(d->length)];
 }
 
@@ -141,16 +170,20 @@ card deck_at(deck *d, size_t index)
         log_error("out of bound index");
     }
 
+    // if index is valid get the card at the given index
     return d->cards[index];
 }
 
 card deck_pop_index(deck *d, size_t index)
 {
+    check_null_pointer(d);
+
     if (index >= d->length)
     {
         log_error("out of bound index");
     }
-
+    
+    // if index is valid remove the card at the given index and return it
     card out = deck_at(d, index);
     array_delete(index, d->cards, &d->length, sizeof(card));
     return out;
@@ -165,6 +198,7 @@ void deck_append_card(deck *destination, card c)
         log_error("invalid card");
     }
 
+    // append the given card if valid on top of the deck
     destination->cards[destination->length++] = c;
 }
 
@@ -184,8 +218,11 @@ void deck_append(deck *destination, deck *source)
     }
     else
     {
+        // if source deck is not empty copy the deck on top of the destination one
         memcpy(&destination->cards[destination->length], source->cards, source->length * sizeof(card));
+        // increase the length of the destination deck by the source deck length
         destination->length += source->length;
+        // reset the source deck as an empty deck
         memset(source, 0, sizeof(deck));
     }
 }
@@ -208,6 +245,8 @@ char *deck_json(deck *d)
     }
 
     strcat(json, "]");
+
+    // return deck as a json string array
     return json;
 }
 
