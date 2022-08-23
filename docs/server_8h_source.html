@@ -93,29 +93,41 @@ $(document).ready(function(){initNavTree('server_8h_source.html',''); initResiza
   <div class="headertitle"><div class="title">server.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __SERVER_H__</span></div>
+<a href="server_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __SERVER_H__</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __SERVER_H__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SRV_PORT_NUMBER 11666</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define SRV_BUFF_SIZE 8192</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> server_quit;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">extern</span> <span class="keywordtype">char</span> server_message[SRV_BUFF_SIZE], client_message[SRV_BUFF_SIZE];</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> server_recv();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> server_send(<span class="keyword">const</span> <span class="keywordtype">char</span> *message);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> server_init();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> server_close();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">/* __SERVER_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="server_8h.html#ae02b2d658f8d60ee2100c3a9fa7a2a11">   18</a></span><span class="preprocessor">#define SRV_PORT_NUMBER 11666 </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="server_8h.html#a5cf6dc5728b52bb0c8b03c3ad1f3b264">   19</a></span><span class="preprocessor">#define SRV_BUFF_SIZE 8192 </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="server_8h.html#a870f52ee99bc0ba30b23f810af338f74">server_quit</a>; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="server_8h.html#a023023fde2220db462cfc72885165b6f">server_message</a>[<a class="code hl_define" href="server_8h.html#a5cf6dc5728b52bb0c8b03c3ad1f3b264">SRV_BUFF_SIZE</a>], </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="server_8h.html#a502272382754294c289b489371dc7ec2">   23</a></span>            <a class="code hl_variable" href="server_8h.html#a502272382754294c289b489371dc7ec2">client_message</a>[<a class="code hl_define" href="server_8h.html#a5cf6dc5728b52bb0c8b03c3ad1f3b264">SRV_BUFF_SIZE</a>]; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="server_8h.html#a4065b59c817d7d94d3ced5abb073335c">server_recv</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="server_8h.html#a5bd6e32ba6b826613e475b57de66afee">server_send</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *message);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="server_8h.html#a8712ba6aedf237a0382274a52abeecd7">server_init</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="server_8h.html#a5331b8705fc0b897b7a8d5262ebea8ec">server_close</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">/* __SERVER_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aserver_8h_html_a023023fde2220db462cfc72885165b6f"><div class="ttname"><a href="server_8h.html#a023023fde2220db462cfc72885165b6f">server_message</a></div><div class="ttdeci">char server_message[SRV_BUFF_SIZE]</div><div class="ttdoc">server message buffer</div><div class="ttdef"><b>Definition:</b> server.c:20</div></div>
+<div class="ttc" id="aserver_8h_html_a4065b59c817d7d94d3ced5abb073335c"><div class="ttname"><a href="server_8h.html#a4065b59c817d7d94d3ced5abb073335c">server_recv</a></div><div class="ttdeci">void server_recv()</div><div class="ttdoc">receive a message from the connected client</div><div class="ttdef"><b>Definition:</b> server.c:22</div></div>
+<div class="ttc" id="aserver_8h_html_a502272382754294c289b489371dc7ec2"><div class="ttname"><a href="server_8h.html#a502272382754294c289b489371dc7ec2">client_message</a></div><div class="ttdeci">char client_message[SRV_BUFF_SIZE]</div><div class="ttdoc">client message buffer</div><div class="ttdef"><b>Definition:</b> server.h:23</div></div>
+<div class="ttc" id="aserver_8h_html_a5331b8705fc0b897b7a8d5262ebea8ec"><div class="ttname"><a href="server_8h.html#a5331b8705fc0b897b7a8d5262ebea8ec">server_close</a></div><div class="ttdeci">void server_close()</div><div class="ttdoc">closes the socket connection</div><div class="ttdef"><b>Definition:</b> server.c:94</div></div>
+<div class="ttc" id="aserver_8h_html_a5bd6e32ba6b826613e475b57de66afee"><div class="ttname"><a href="server_8h.html#a5bd6e32ba6b826613e475b57de66afee">server_send</a></div><div class="ttdeci">void server_send(const char *message)</div><div class="ttdoc">send a message to the connected client</div><div class="ttdef"><b>Definition:</b> server.c:32</div></div>
+<div class="ttc" id="aserver_8h_html_a5cf6dc5728b52bb0c8b03c3ad1f3b264"><div class="ttname"><a href="server_8h.html#a5cf6dc5728b52bb0c8b03c3ad1f3b264">SRV_BUFF_SIZE</a></div><div class="ttdeci">#define SRV_BUFF_SIZE</div><div class="ttdoc">server buffer size (used for client and server messages)</div><div class="ttdef"><b>Definition:</b> server.h:19</div></div>
+<div class="ttc" id="aserver_8h_html_a870f52ee99bc0ba30b23f810af338f74"><div class="ttname"><a href="server_8h.html#a870f52ee99bc0ba30b23f810af338f74">server_quit</a></div><div class="ttdeci">bool server_quit</div><div class="ttdoc">used to check if the server must close or continue polling messages from the connected client</div><div class="ttdef"><b>Definition:</b> server.c:13</div></div>
+<div class="ttc" id="aserver_8h_html_a8712ba6aedf237a0382274a52abeecd7"><div class="ttname"><a href="server_8h.html#a8712ba6aedf237a0382274a52abeecd7">server_init</a></div><div class="ttdeci">void server_init()</div><div class="ttdoc">initialize server and wait for client connection</div><div class="ttdef"><b>Definition:</b> server.c:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_dafb25a37831a87d2e2e8b780f24e872.html">network</a></li><li class="navelem"><b>server.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_dafb25a37831a87d2e2e8b780f24e872.html">network</a></li><li class="navelem"><a class="el" href="server_8h.html">server.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

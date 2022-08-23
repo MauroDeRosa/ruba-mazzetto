@@ -11,8 +11,6 @@
  * @copyright Copyright (c) 2022
  * @license licensed under MIT license
  * 
- * @todo document this
- * 
  */
 
 #include <game/cards.h>

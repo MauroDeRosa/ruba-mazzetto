@@ -8,7 +8,7 @@ var annotated_dup =
     [ "player", "structplayer.html", "structplayer" ],
     [ "player_hand", "structplayer__hand.html", "structplayer__hand" ],
     [ "statistics_data", "structstatistics__data.html", "structstatistics__data" ],
-    [ "statistics_entry", "structstatistics__entry.html", null ],
+    [ "statistics_entry", "structstatistics__entry.html", "structstatistics__entry" ],
     [ "user", "structuser.html", "structuser" ],
-    [ "vector", "structvector.html", null ]
+    [ "vector", "structvector.html", "structvector" ]
 ];

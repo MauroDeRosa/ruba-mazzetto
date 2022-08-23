@@ -1,6 +1,18 @@
 #ifndef __GAME_H__
 #define __GAME_H__
 
+/**
+ * @file game.h
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-08-22
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <utils/timeutils.h>
 #include <game/player.h>
 #include <game/cards.h>

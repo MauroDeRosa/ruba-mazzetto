@@ -1,15 +1,20 @@
 var searchData=
 [
-  ['password_0',['password',['../structuser.html#a6c96d1567f48ddbe1f200b3380ab6fb9',1,'user']]],
-  ['password_5fmax_5flen_1',['PASSWORD_MAX_LEN',['../user_8h.html#a97a0682af847021bb0e2826c904e5c97',1,'user.h']]],
-  ['password_5fmin_5flen_2',['PASSWORD_MIN_LEN',['../user_8h.html#a8919c0aee8c53dc0db80133a19761197',1,'user.h']]],
-  ['password_5fsize_3',['PASSWORD_SIZE',['../user_8h.html#a4beb8dccd4fdbe871c5ffe78ac63b0cb',1,'user.h']]],
-  ['player_4',['player',['../structplayer.html',1,'']]],
-  ['player_2eh_5',['player.h',['../player_8h.html',1,'']]],
-  ['player_5fhand_6',['player_hand',['../structplayer__hand.html',1,'']]],
-  ['player_5fhand_5fjson_7',['player_hand_json',['../player_8h.html#ad1e8abfe49d27090a012cb3ec517286b',1,'player.c']]],
-  ['player_5fjson_8',['player_json',['../player_8h.html#aa3275b99a2e5ca09ec78f72bd5d552e9',1,'player.c']]],
-  ['players_9',['players',['../structgame__data.html#a0bfc38a9f95fb8ee81d1b2a73c25b05c',1,'game_data::players()'],['../structhistory__entry.html#aec3a52bd33a4b847119626030146f020',1,'history_entry::players()']]],
-  ['players_5fcount_10',['players_count',['../structgame__data.html#ac1c1430038688e67d10d3d1c1d041676',1,'game_data']]],
-  ['points_11',['points',['../structhistory__entry.html#a36e205ba411fe5673f907f7746c229d3',1,'history_entry']]]
+  ['matches_0',['matches',['../structstatistics__data.html#a0c59b99204fe4e9388040a178aff0b6a',1,'statistics_data']]],
+  ['mathutils_2eh_1',['mathutils.h',['../mathutils_8h.html',1,'']]],
+  ['max_2',['MAX',['../mathutils_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'mathutils.h']]],
+  ['max_5fpoints_3',['max_points',['../structstatistics__data.html#ae09bff2260be8e6a047169d6216d9446',1,'statistics_data']]],
+  ['max_5fsteals_4',['max_steals',['../structstatistics__data.html#aa68bc910dff727fe78c1eb3ab2e5aa9b',1,'statistics_data']]],
+  ['max_5fwin_5fstreak_5',['max_win_streak',['../structstatistics__data.html#acba3c74109ee52b02793d2a713422fa3',1,'statistics_data']]],
+  ['memory_2eh_6',['memory.h',['../memory_8h.html',1,'']]],
+  ['memory_5fallocate_7',['memory_allocate',['../memory_8h.html#a7d9ee68471fc001f8ef7a10666a0c8d8',1,'memory.h']]],
+  ['memory_5fallocate_5ftyped_8',['memory_allocate_typed',['../memory_8h.html#ab55f646c1a7f1633e7409e98a0d55f0f',1,'memory.h']]],
+  ['memory_5fallocate_5fzero_9',['memory_allocate_zero',['../memory_8h.html#a218194f282c8ca355f9d2f63878d1190',1,'memory.h']]],
+  ['memory_5fresize_10',['memory_resize',['../memory_8h.html#a93c422d0adbb16253e9d46b737b98c35',1,'memory.h']]],
+  ['memory_5fresize_5ftyped_11',['memory_resize_typed',['../memory_8h.html#a1f3bc6c693767a8ef8ef927a3aafa31c',1,'memory.h']]],
+  ['memory_5fswap_12',['memory_swap',['../memory_8h.html#a88f37192c8d06d928c4d0e260f41a0cd',1,'memory.c']]],
+  ['min_13',['MIN',['../mathutils_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'mathutils.h']]],
+  ['min_5fpoints_14',['min_points',['../structstatistics__data.html#aae46e6d4685f8a11c6975346cc6e5fb7',1,'statistics_data']]],
+  ['min_5fsteals_15',['min_steals',['../structstatistics__data.html#a24c8e66cbe6620be86529ca49e31faa9',1,'statistics_data']]],
+  ['modified_16',['modified',['../structuser.html#a3e123e2b00fb37de282d900aaad6af77',1,'user']]]
 ];

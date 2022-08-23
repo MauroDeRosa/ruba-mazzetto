@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['password_5fmax_5flen_0',['PASSWORD_MAX_LEN',['../user_8h.html#a97a0682af847021bb0e2826c904e5c97',1,'user.h']]],
-  ['password_5fmin_5flen_1',['PASSWORD_MIN_LEN',['../user_8h.html#a8919c0aee8c53dc0db80133a19761197',1,'user.h']]],
-  ['password_5fsize_2',['PASSWORD_SIZE',['../user_8h.html#a4beb8dccd4fdbe871c5ffe78ac63b0cb',1,'user.h']]]
+  ['datetime_5fstr_5fsize_0',['DATETIME_STR_SIZE',['../timeutils_8h.html#a3e4c5ac41ac4cb232e9a45c1051cc36f',1,'timeutils.h']]],
+  ['deck_5fsize_1',['DECK_SIZE',['../cards_8h.html#ab48a679225d82ec51e09e62d14313b34',1,'cards.h']]]
 ];

@@ -1,6 +1,18 @@
 #ifndef __HISTORY_H__
 #define __HISTORY_H__
 
+/**
+ * @file history.h
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-08-22
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <stdlib.h>
 #include <game/user.h>
 #include <game/game.h>

@@ -1,9 +1,24 @@
 #ifndef __STATISTICS_H__
 #define __STATISTICS_H__
 
+/**
+ * @file statistics.h
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-08-22
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <stdlib.h>
 #include <game/user.h>
 
+/**
+ * @brief statistic data for a single category
+ */
 typedef struct
 {
     size_t matches;        ///< number of played matches
@@ -19,18 +34,28 @@ typedef struct
     double avg_steals;      ///< average end game points
 } statistics_data;
 
+/**
+ * @brief statistic entry for each user containing all the three game categories (2 / 3 / 4 players)
+ */
 typedef struct
 {
-    userid id;
-    statistics_data players[3];
+    userid id; ///< the id of the user
+    statistics_data players[3]; ///< the statistics for each category
 } statistics_entry;
 
+/**
+ * @brief statistic entry for each user containing a single game category
+ */
 typedef struct 
 {
     userid id;
     statistics_data data;
 } leaderboard_entry;
 
+
+/**
+ * @brief initialize statistics vector and load data from file if exists
+ */
 void statistics_init();
 
 /**

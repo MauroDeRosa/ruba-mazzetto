@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['matches_0',['matches',['../structstatistics__data.html#a0c59b99204fe4e9388040a178aff0b6a',1,'statistics_data']]],
-  ['max_5fpoints_1',['max_points',['../structstatistics__data.html#ae09bff2260be8e6a047169d6216d9446',1,'statistics_data']]],
-  ['max_5fsteals_2',['max_steals',['../structstatistics__data.html#aa68bc910dff727fe78c1eb3ab2e5aa9b',1,'statistics_data']]],
-  ['max_5fwin_5fstreak_3',['max_win_streak',['../structstatistics__data.html#acba3c74109ee52b02793d2a713422fa3',1,'statistics_data']]],
-  ['memory_2eh_4',['memory.h',['../memory_8h.html',1,'']]],
-  ['memory_5fswap_5',['memory_swap',['../memory_8h.html#a88f37192c8d06d928c4d0e260f41a0cd',1,'memory.c']]],
-  ['min_5fpoints_6',['min_points',['../structstatistics__data.html#aae46e6d4685f8a11c6975346cc6e5fb7',1,'statistics_data']]],
-  ['min_5fsteals_7',['min_steals',['../structstatistics__data.html#a24c8e66cbe6620be86529ca49e31faa9',1,'statistics_data']]],
-  ['modified_8',['modified',['../structuser.html#a3e123e2b00fb37de282d900aaad6af77',1,'user']]]
+  ['last_5flog_0',['last_log',['../log_8h.html#ad15001b42f3f6460a8348d1897c1b38d',1,'log.c']]],
+  ['last_5ftake_1',['last_take',['../structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154',1,'game_data']]],
+  ['leaderboard_5fentry_2',['leaderboard_entry',['../structleaderboard__entry.html',1,'']]],
+  ['leaderboard_5fjson_3',['leaderboard_json',['../statistics_8h.html#aef65549682b6de521ba1fd096515f0f7',1,'statistics.c']]],
+  ['length_4',['length',['../structdeck.html#a37aad061db94f21c10a20956917c5134',1,'deck::length()'],['../structplayer__hand.html#aa94f752091772340abc2bb00007ebe51',1,'player_hand::length()']]],
+  ['log_2eh_5',['log.h',['../log_8h.html',1,'']]],
+  ['log_5fdebug_6',['log_debug',['../log_8h.html#a0e37223ab9f5df7af8cb2a59b7c4dc18',1,'log.h']]],
+  ['log_5ferror_7',['log_error',['../log_8h.html#a887f83dbb884a13949e4f2ad710e5ddf',1,'log.h']]],
+  ['log_5finfo_8',['log_info',['../log_8h.html#a442f23202cd03383ed8e3ec6bbae5bd2',1,'log.h']]],
+  ['log_5ftype_5fdebug_9',['LOG_TYPE_DEBUG',['../log_8h.html#a542529c1654a19379e8db5625bc7801e',1,'log.h']]],
+  ['log_5ftype_5ferror_10',['LOG_TYPE_ERROR',['../log_8h.html#a7c5fd30f5e43b34be24326642d1a4c6d',1,'log.h']]],
+  ['log_5ftype_5finfo_11',['LOG_TYPE_INFO',['../log_8h.html#a8b181b7eaaab11e988e2c6b7cdc0d80a',1,'log.h']]],
+  ['log_5ftype_5fwarning_12',['LOG_TYPE_WARNING',['../log_8h.html#a5781a92890ba75559c17d6c7f613ab29',1,'log.h']]],
+  ['log_5fwarning_13',['log_warning',['../log_8h.html#ace74930da408748431f70d185fa9ec0c',1,'log.h']]],
+  ['losses_14',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
 ];

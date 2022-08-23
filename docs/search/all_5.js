@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['game_5fdata_0',['game_data',['../structgame__data.html',1,'']]],
-  ['get_5fuser_1',['get_user',['../user_8h.html#aeb5775256bbddb4a07257aeec43a5409',1,'user.c']]],
-  ['get_5fuser_5fby_5fusername_2',['get_user_by_username',['../user_8h.html#a3dc956fe95a2e713ea832c949a46a360',1,'user.c']]]
+  ['element_5fsize_0',['element_size',['../structvector.html#a43b41255b07403063ec636e4e82569f2',1,'vector']]],
+  ['elements_1',['elements',['../structvector.html#a8eced345863537167ebfcdf7a812516b',1,'vector']]]
 ];

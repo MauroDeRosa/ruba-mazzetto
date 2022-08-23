@@ -1,7 +1,24 @@
 var searchData=
 [
-  ['win_5frate_0',['win_rate',['../structstatistics__data.html#af81e67f3260a9e99fff437aeb6bb04b3',1,'statistics_data']]],
-  ['winner_1',['winner',['../structgame__data.html#a340b1cf2a6e5c8c869c8fd0ef044a15f',1,'game_data']]],
-  ['wins_2',['wins',['../structstatistics__data.html#a7bd9c7c7bfcecc9ab33dfd210ed154bc',1,'statistics_data']]],
-  ['won_3',['won',['../structhistory__entry.html#a921fd279c345a129d43f21d273454c3e',1,'history_entry']]]
+  ['update_5fstatistics_5ffor_0',['update_statistics_for',['../statistics_8h.html#afa04604afed7f95e0935f79426d6559b',1,'statistics.c']]],
+  ['user_1',['user',['../structhistory__entry.html#ac2ca5d7ed963470687a3a00deecb0849',1,'history_entry::user()'],['../structuser.html',1,'user']]],
+  ['user_2eh_2',['user.h',['../user_8h.html',1,'']]],
+  ['user_5fdelete_3',['user_delete',['../user_8h.html#a6a9671932da3ab6e4e459628916b2344',1,'user.c']]],
+  ['user_5fexists_4',['user_exists',['../user_8h.html#a7cd4b82fba3ca2acc959c525c8a93aa3',1,'user.c']]],
+  ['user_5fjson_5',['user_json',['../user_8h.html#a5b27590aa36d4890ebd2fce774940750',1,'user.c']]],
+  ['user_5fload_6',['user_load',['../user_8h.html#ab5b4d0f1ab51b3e206aaeeb5882302d6',1,'user.c']]],
+  ['user_5flogin_7',['user_login',['../user_8h.html#a9f45f37b04394abf31c3d9718cdcdae5',1,'user.c']]],
+  ['user_5flogout_8',['user_logout',['../user_8h.html#aabd2ff934530b971a817bdad694afe6b',1,'user.c']]],
+  ['user_5fregister_9',['user_register',['../user_8h.html#a79ab4aff90c5f79d19d2603e9d9cad6f',1,'user.c']]],
+  ['user_5fupdate_10',['user_update',['../user_8h.html#a9ba6303d03f0dc88206758492be774cf',1,'user.c']]],
+  ['userid_11',['userid',['../user_8h.html#af5849791e8146f8f7da65a6808a59a4e',1,'user.h']]],
+  ['userid_5finvalid_12',['USERID_INVALID',['../user_8h.html#a7245218329d86411fc9d387ee2b72396',1,'user.h']]],
+  ['username_13',['username',['../structuser.html#a1cab2ea6581a90720e64384da3f3f7b8',1,'user::username()'],['../structplayer.html#a8b1a8c19018ca854a00a879975716248',1,'player::username()']]],
+  ['username_5fexists_14',['username_exists',['../user_8h.html#adaf74a6798c8d2ffed36c810af411a31',1,'user.c']]],
+  ['username_5fmax_5flen_15',['USERNAME_MAX_LEN',['../user_8h.html#a41b70e5bef96800d643c5b969910811a',1,'user.h']]],
+  ['username_5fmin_5flen_16',['USERNAME_MIN_LEN',['../user_8h.html#ada2635190026c63d98fcc2028a28cf09',1,'user.h']]],
+  ['username_5fsize_17',['USERNAME_SIZE',['../user_8h.html#ac7a1d08f4c988420cc930468c7ee0967',1,'user.h']]],
+  ['users_5fcount_18',['users_count',['../user_8h.html#a07509d9b997db6bdea566c04eaf20dd2',1,'user.c']]],
+  ['users_5finit_19',['users_init',['../user_8h.html#a1f5bb15e839d96fd3967dfeec2a51052',1,'user.c']]],
+  ['users_5fsave_20',['users_save',['../user_8h.html#ae115e53e41071da9190140e94fe19854',1,'user.c']]]
 ];

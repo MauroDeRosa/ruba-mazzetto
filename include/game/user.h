@@ -29,7 +29,6 @@ typedef struct
 {
     userid id; ///< id of the user
     char username[USERNAME_SIZE]; ///< the username of the user of length
-    // char password[PASSWORD_SIZE]; ///< plain text user password @todo TODO: add hashing functions
     unsigned long password; ///< @todo document this
     struct tm created; ///< timestamp of the user creation
     struct tm modified; ///< timestamp fo the last user update
@@ -160,7 +159,6 @@ void user_logout(userid id);
  * @brief delete a registered user
  * 
  * @param id the user id
- * @todo decrease user table size if there's too much memory allocated
  */
 void user_delete(userid id);
 

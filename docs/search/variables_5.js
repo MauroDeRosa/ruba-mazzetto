@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['last_5ftake_0',['last_take',['../structgame__data.html#a5c127d3c94dec53dccaa14dad09ae154',1,'game_data']]],
-  ['length_1',['length',['../structdeck.html#a37aad061db94f21c10a20956917c5134',1,'deck::length()'],['../structplayer__hand.html#aa94f752091772340abc2bb00007ebe51',1,'player_hand::length()']]],
-  ['losses_2',['losses',['../structstatistics__data.html#aec7aad39e0a3d3a3893b91c8140bd61b',1,'statistics_data']]]
+  ['id_0',['id',['../structhistory__entry.html#a82556d767bdcb162cf73eb79fc0c6b3a',1,'history_entry::id()'],['../structplayer.html#ae1efed0740823624a63b9d009aa500e7',1,'player::id()'],['../structstatistics__entry.html#aea95fa3e1b26c842c1f19be1b77db7c9',1,'statistics_entry::id()'],['../structuser.html#aee76e1455bfebae159feb17fcb87b1fa',1,'user::id()']]]
 ];

@@ -1,26 +1,27 @@
+
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
-
-#define check_null_pointer(pointer) __check_null_pointer(pointer, __FILE__, __FUNCTION__, __LINE__)
-#define memory_allocate(heap_size) __memory_allocate(heap_size, __FILE__, __FUNCTION__, __LINE__)
-#define memory_allocate_typed(n, data_size) __memory_allocate_typed(n, data_size, __FILE__, __FUNCTION__, __LINE__)
-#define memory_resize(pointer, heap_size) __memory_resize(pointer, heap_size, __FILE__, __FUNCTION__, __LINE__)
-#define memory_resize_typed(pointer, n, data_size) __memory_resize_typed(pointer, n, data_size, __FILE__, __FUNCTION__, __LINE__)
-#define memory_allocate_zero(n, data_size) __memory_allocate_zero(n, data_size, __FILE__, __FUNCTION__, __LINE__)
-
 
 /**
  * @file memory.h
  * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
- * @brief memory helper functions
+ * @brief 
  * @version 0.1
- * @date 2022-07-27
+ * @date 2022-08-23
  * 
  * @copyright Copyright (c) 2022
  * @license licensed under MIT license
+ * 
  */
 
 #include <stdlib.h>
+
+#define check_null_pointer(pointer) __check_null_pointer(pointer, __FILE__, __FUNCTION__, __LINE__) ///< @see __check_null_pointer
+#define memory_allocate(heap_size) __memory_allocate(heap_size, __FILE__, __FUNCTION__, __LINE__) ///< @see __memory_allocate
+#define memory_allocate_typed(n, data_size) __memory_allocate_typed(n, data_size, __FILE__, __FUNCTION__, __LINE__) ///< @see __memory_allocate_typed
+#define memory_resize(pointer, heap_size) __memory_resize(pointer, heap_size, __FILE__, __FUNCTION__, __LINE__) ///< @see __memory_resize
+#define memory_resize_typed(pointer, n, data_size) __memory_resize_typed(pointer, n, data_size, __FILE__, __FUNCTION__, __LINE__) ///< @see __memory_resize_typed
+#define memory_allocate_zero(n, data_size) __memory_allocate_zero(n, data_size, __FILE__, __FUNCTION__, __LINE__) ///< @see __memory_allocate_zero
 
 /**
  * @brief swap memory sections

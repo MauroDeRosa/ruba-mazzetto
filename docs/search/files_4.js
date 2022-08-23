@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_2eh_0',['user.h',['../user_8h.html',1,'']]]
+  ['log_2eh_0',['log.h',['../log_8h.html',1,'']]]
 ];
