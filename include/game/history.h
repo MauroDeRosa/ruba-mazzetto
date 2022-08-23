@@ -20,6 +20,9 @@
 
 typedef size_t matchid;
 
+/**
+ * @brief single match history data for one user
+ */
 typedef struct
 {
     matchid id; ///< the match id

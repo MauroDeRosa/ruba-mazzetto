@@ -1,6 +1,18 @@
 #ifndef __VECTOR_H__
 #define __VECTOR_H__
 
+/**
+ * @file vector.h
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief Generic type vector data structure
+ * @version 0.1
+ * @date 2022-08-23
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <stdlib.h>
 
 /**

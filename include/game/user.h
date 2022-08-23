@@ -25,6 +25,9 @@
 
 typedef size_t userid; ///< user id
 
+/**
+ * @brief user datatype of the user system
+ */
 typedef struct
 {
     userid id; ///< id of the user
