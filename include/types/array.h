@@ -19,7 +19,7 @@
 typedef bool (*filter_callback)(void* element, void* value);
 
 /**
- * @brief generic array binary search function
+ * @brief generic array binary search function (automatically sorts the array)
  * 
  * @param value pointer to the variable (primitive/struct/etc.) containing the searched value 
  * @param array array base pointer
@@ -88,7 +88,7 @@ void *array_copy(void *array, size_t array_size, size_t data_size);
  * @param filter filter function callback
  * @param filtered_size pointer to a size_t variable which will contain the length of the filtered array
  * @param filter_value the value that will be used by the filter callback
- * @return void* the filtered (must be freed)
+ * @return void* the filtered array (must be freed) or NULL if no element's found
  */
 void* array_filter(void *array, size_t array_size, size_t data_size, filter_callback filter, void* filter_value, size_t *filtered_size);
 

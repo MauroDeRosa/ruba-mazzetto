@@ -1,3 +1,15 @@
+/**
+ * @file responses.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief responses module implementation @see responses.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-24
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <io/log.h>
 #include <network/responses.h>
 #include <network/server.h>

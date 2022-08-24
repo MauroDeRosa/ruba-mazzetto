@@ -5,3 +5,5 @@ frontend/.venv
 frontend/build
 frontend/dist
 frontend/*.spec
+dist/gui
+dist/ruba-mazzetto

@@ -1,6 +1,6 @@
 var timeutils_8c =
 [
-    [ "compare_datetime", "timeutils_8c.html#a82ba4d7e5b0db7888d6e1d10b564bd5e", null ],
+    [ "compare_datetime_asc", "timeutils_8c.html#a95bb93bcdf2325b054133289a86759f7", null ],
     [ "compare_datetime_desc", "timeutils_8c.html#ac82a970ed97b2e8242909413534ee730", null ],
     [ "datetime_date_string", "timeutils_8c.html#a8df276b5bf5d783d03ad70ade4559230", null ],
     [ "datetime_new", "timeutils_8c.html#a0ea020609f623935c997498fe8dd2008", null ],

@@ -100,6 +100,9 @@ $(document).ready(function(){initNavTree('timeutils_8c.html',''); initResizable(
   <div class="headertitle"><div class="title">timeutils.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>time utilities module implementation  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="mathutils_8h_source.html">utils/mathutils.h</a>&gt;</code><br />
@@ -126,21 +129,30 @@ Functions</h2></td></tr>
 <tr class="memitem:a864d57eddc21752e4172363aa4576450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timeutils_8c.html#a864d57eddc21752e4172363aa4576450">datetime_time_string</a> (<a class="el" href="timeutils_8h.html#a92435a7528d5213313a69f5656c510f2">datetime</a> dt, char string[<a class="el" href="timeutils_8h.html#a3e4c5ac41ac4cb232e9a45c1051cc36f">DATETIME_STR_SIZE</a>])</td></tr>
 <tr class="memdesc:a864d57eddc21752e4172363aa4576450"><td class="mdescLeft">&#160;</td><td class="mdescRight">formatted time string  <a href="timeutils_8c.html#a864d57eddc21752e4172363aa4576450">More...</a><br /></td></tr>
 <tr class="separator:a864d57eddc21752e4172363aa4576450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ba4d7e5b0db7888d6e1d10b564bd5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timeutils_8c.html#a82ba4d7e5b0db7888d6e1d10b564bd5e">compare_datetime</a> (const void *a, const void *b)</td></tr>
-<tr class="separator:a82ba4d7e5b0db7888d6e1d10b564bd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bb93bcdf2325b054133289a86759f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timeutils_8c.html#a95bb93bcdf2325b054133289a86759f7">compare_datetime_asc</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:a95bb93bcdf2325b054133289a86759f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two datetime (ascending order)  <a href="timeutils_8c.html#a95bb93bcdf2325b054133289a86759f7">More...</a><br /></td></tr>
+<tr class="separator:a95bb93bcdf2325b054133289a86759f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82a970ed97b2e8242909413534ee730"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timeutils_8c.html#ac82a970ed97b2e8242909413534ee730">compare_datetime_desc</a> (const void *a, const void *b)</td></tr>
 <tr class="memdesc:ac82a970ed97b2e8242909413534ee730"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two datetime (descending order)  <a href="timeutils_8c.html#ac82a970ed97b2e8242909413534ee730">More...</a><br /></td></tr>
 <tr class="separator:ac82a970ed97b2e8242909413534ee730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a82ba4d7e5b0db7888d6e1d10b564bd5e" name="a82ba4d7e5b0db7888d6e1d10b564bd5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82ba4d7e5b0db7888d6e1d10b564bd5e">&#9670;&nbsp;</a></span>compare_datetime()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >time utilities module implementation </p>
+<dl class="section author"><dt>Author</dt><dd>Mauro De Rosa (<a href="#" onclick="location.href='mai'+'lto:'+'it.'+'ma'+'uro'+'.d'+'ero'+'sa'+'@gm'+'ai'+'l.c'+'om'; return false;">it.ma<span class="obfuscator">.nosp@m.</span>uro.<span class="obfuscator">.nosp@m.</span>deros<span class="obfuscator">.nosp@m.</span>a@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="timeutils_8h.html" title="utility functions for timestamp management and formatting">timeutils.h</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.0 alpha </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-08-24</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
+<dl class="section user"><dt>License:</dt><dd>licensed under MIT license </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a95bb93bcdf2325b054133289a86759f7" name="a95bb93bcdf2325b054133289a86759f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bb93bcdf2325b054133289a86759f7">&#9670;&nbsp;</a></span>compare_datetime_asc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int compare_datetime </td>
+          <td class="memname">int compare_datetime_asc </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -158,6 +170,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>compare two datetime (ascending order) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first datetime </td></tr>
+    <tr><td class="paramname">b</td><td>second datetime </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int time difference between the two </dd></dl>
 
 </div>
 </div>

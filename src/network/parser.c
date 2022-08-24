@@ -1,3 +1,15 @@
+/**
+ * @file parser.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief parser module implementation @see parser.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-24
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <network/parser.h>
 #include <network/server.h>
 #include <network/responses.h>
@@ -11,22 +23,69 @@
 #include <stdio.h>
 #include <utils/timeutils.h>
 
-char *tokens[1024];
-size_t tokens_count;
-size_t current_token;
+char *tokens[1024]; ///< pointers to tokenized request
+size_t tokens_count; ///< number of tokens
+size_t current_token; ///< pointer to the current token
 
+#pragma region private_prototypes
+
+/**
+ * @brief splits the request message by space into tokens
+ * 
+ * @param message request message string
+ */
+void tokenize_request(char *message);
+
+/**
+ * @brief get next token
+ * 
+ * @return char* token string
+ */
+char *token_next();
+
+/**
+ * @brief if the next token equals to the given string advance to next token and return true
+ * 
+ * @param str the string to compare
+ * @return true next token equals to str, advance token
+ * @return false next token doesn't equal to str
+ */
+bool token_next_equal_to(const char *str);
+
+/**
+ * @brief user request tokens parsing
+ */
 void parse_request_user();
+
+/**
+ * @brief game request tokens parsing
+ */
 void parse_request_game();
+
+/**
+ * @brief history request tokens parsing
+ */
 void parse_request_history();
+
+/**
+ * @brief statistics request tokens parsing
+ */
 void parse_request_statistics();
+
+#pragma endregion private_prototypes
+
+#pragma region tokenization
 
 void tokenize_request(char *message)
 {
     check_null_pointer(message);
+    // reset tokens
     current_token = 0;
     tokens_count = 0;
+    // start splitting message into tokens
     tokens[tokens_count] = strtok(message, " ");
 
+    // split message into tokens until string is not ended
     while (tokens[tokens_count] != NULL)
     {
         tokens_count++;
@@ -41,11 +100,14 @@ char *token_next()
         log_error("no more tokens");
     }
 
+    // get current token and advance
     return tokens[current_token++];
 }
 
 bool token_next_equal_to(const char *str)
 {
+    check_null_pointer((void*) str);
+
     if (current_token >= tokens_count)
     {
         log_error("no more tokens");
@@ -57,14 +119,19 @@ bool token_next_equal_to(const char *str)
     }
     else if (strcmp(tokens[current_token], str) == 0)
     {
+        // if str is equal to the current token return true and advance token
         current_token++;
         return true;
     }
     else
     {
+        // if str is not equal to the current token return false
         return false;
     }
 }
+
+#pragma endregion tokenization
+
 
 void parse_request(char *message)
 {
@@ -72,23 +139,23 @@ void parse_request(char *message)
 
     if (token_next_equal_to("user"))
     {
-        parse_request_user();
+        parse_request_user(); // user request parsing
     }
     else if (token_next_equal_to("game"))
     {
-        parse_request_game();
+        parse_request_game(); // game request parsing
     }
     else if (token_next_equal_to("history"))
     {
-        parse_request_history();
+        parse_request_history(); // history request parsing
     }
     else if (token_next_equal_to("statistics"))
     {
-        parse_request_statistics();
+        parse_request_statistics(); // statistics request parsing
     }
     else if (token_next_equal_to("quit"))
     {
-        response_quit();
+        response_quit(); // quit request parsing
     }
     else
     {

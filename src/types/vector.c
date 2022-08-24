@@ -1,9 +1,21 @@
+/**
+ * @file vector.c
+ * @author Mauro De Rosa (it.mauro.derosa@gmail.com)
+ * @brief vector module implementation @see vector.h
+ * @version 1.0.0 alpha
+ * @date 2022-08-24
+ * 
+ * @copyright Copyright (c) 2022
+ * @license licensed under MIT license
+ * 
+ */
+
 #include <types/vector.h>
 #include <types/array.h>
 #include <types/memory.h>
 #include <io/log.h>
 
-#define DEFAULT_VECTOR_SIZE 5
+#define DEFAULT_VECTOR_SIZE 20 ///< how big is a vector when initialized
 
 vector* generic_vector_init(size_t element_size)
 {
@@ -23,6 +35,7 @@ void generic_vector_resize(vector *v, size_t elements_count)
 
     if (v->count > v->size)
     {
+        // if elements are disposed by resizing update elements count
         v->count = v->size;
     }
 }
@@ -33,9 +46,11 @@ void* generic_vector_append(vector *v)
 
     if(v->count == v->size)
     {
+        // resize if no more space available
         generic_vector_resize(v, v->size + DEFAULT_VECTOR_SIZE);
     }
 
+    // return last first empty vector slot
     void *out = v->elements + (v->count * v->element_size);
     v->count++;
     return out;
