@@ -2,14 +2,12 @@
 
 ## Guidelines
 [Italian [pdf]](docs/traccia.pdf)
-
-[English [pdf] (not available yet)](#)
 ## Documentation
 
-[Doxygen documentation](https://mauroderosa.github.io/ruba-mazzetto/files.html)
+[Doxygen documentation [English]](https://mauroderosa.github.io/ruba-mazzetto/files.html)
 
 [Project overview [Italian][pdf]](docs/overview/overview.pdf)
-[Project overview [English][pdf] (not available yet)](#)
+
 ## Dependencies
 
 ### Ubuntu/Debian
