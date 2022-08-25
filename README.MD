@@ -6,7 +6,7 @@
 [English [pdf] (not available yet)](#)
 ## Documentation
 
-[Doxygen documentation](https://mauroderosa.github.io/ruba-mazzetto/)
+[Doxygen documentation](https://mauroderosa.github.io/ruba-mazzetto/files.html)
 
 [Project overview [Italian][pdf]](docs/overview/overview.pdf)
 [Project overview [English][pdf] (not available yet)](#)
